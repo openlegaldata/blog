@@ -1,0 +1,12 @@
+title: Open Legal Data
+author: Panoramedia
+email: hello@openlegaldata.io
+icon: fa-balance-scale
+description: > # this means to ignore newlines until "baseurl:"
+  Free Access to Legal Information.
+
+twitter_username: openlegaldata
+github_username:  openlegaldata
+
+sass:
+    style: compressed

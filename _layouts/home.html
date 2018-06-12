@@ -1,0 +1,117 @@
+---
+layout: default
+---
+
+<div class="container text-center">
+    <h1 class="homepage">{{ site.description }}</h1>
+    <div class="row">
+        <h5 class="">{{ content }}</h5>
+    </div>
+
+    <div class="">
+        <p>Select your country:</p>
+        <p>
+            <a href="//de.openlegaldata.io/" class="btn btn-lg btn-primary">Germany / Deutschland </a>
+        </p>
+    </div>
+
+</div>
+
+
+<div class="container">
+    <div class="section">
+
+        <!--   Icon Section   -->
+        <div class="row row-eq-height">
+            <div class="col s12 m3">
+                <section class="icon-block">
+                    <h2 class="text-center"><i class="fa fa-eye"></i></h2>
+                    <h5 class="text-center">Increase Transparency</h5>
+
+                    <p class="text-justify">We did most of the heavy lifting for you to provide a default stylings that
+                        incorporate our
+                        custom components. Additionally, we refined animations and transitions to provide a smoother
+                        experience for
+                        developers.</p>
+                </section>
+            </div>
+
+            <div class="col s12 m3">
+                <section class="icon-block">
+                    <h2 class="text-center"><i class="fa fa-users"></i></h2>
+                    <h5 class="text-center">Contributions Welcome!</h5>
+
+                    <p class="text-justify">By utilizing elements and principles of Material Design, we were able to
+                        create a framework
+                        that incorporates components and animations that provide more feedback to users. Additionally, a
+                        single
+                        underlying responsive system across all platforms allow for a more unified user experience.</p>
+                </section>
+            </div>
+
+            <div class="col s12 m3">
+                <section class="icon-block">
+                    <h2 class="text-center"><i class="fa fa-lock"></i></h2>
+                    <h5 class="text-center">Open Data</h5>
+
+                    <p class="text-justify">We have provided detailed documentation as well as specific code examples to
+                        help new users
+                        get started. We are also always open to feedback and can answer any questions a user may have
+                        about
+                        Materialize.</p>
+                </section>
+            </div>
+
+
+            <div class="col s12 m3">
+                <section class="icon-block">
+                    <h2 class="text-center"><i class="fa fa-legal"></i></h2>
+                    <h5 class="text-center">Citizen</h5>
+
+                    <p class="text-justify">We have provided detailed documentation as well as specific code examples to
+                        help new users
+                        get started. We are also always open to feedback and can answer any questions a user may have
+                        about
+                        Materialize.</p>
+                </section>
+            </div>
+        </div>
+
+    </div>
+
+    <hr>
+
+</div>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <section>
+                <h2>Our Blog</h2>
+
+                <ul class="collection">
+                    {% for post in site.posts %}
+                    <li class="collection-item avatar">
+                        {% assign date_format = site.minima.date_format | default: "%m/%d" %}
+                        <div class="date-post">{{ post.date | date: date_format }}</div>
+                        <span class="title">
+                    <a class="post-link"
+                       href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></span>
+                        <p>
+                            {{ post.content | truncatewords: 10 }}
+                        </p>
+                        <!--<a href="{{ post.url | relative_url }}" class="secondary-content"><i-->
+                        <!--class="material-icons">navigate_next</i></a>-->
+                    </li>
+                    {% endfor %}
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
