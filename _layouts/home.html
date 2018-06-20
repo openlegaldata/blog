@@ -1,5 +1,6 @@
 ---
 layout: default
+
 ---
 
 <div class="container text-center">
@@ -20,6 +21,21 @@ layout: default
 
 <div class="container">
     <div class="section">
+        <div class="row">
+            <div class="col">
+
+                <section>
+                    <p class="text-justify" style="padding-top: 15px;">
+                        <strong>OPENLEGALDATA.IO</strong> is a free and open platform that makes legal documents and information
+                        accessible to the public. Our goal is to enhance the transparency of the jurisdiction with the
+                        help of open data and by supporting people without legal education to understand the justice
+                        system. The project is committed to the Open Data Principles and the Free Access to Law Movement.
+
+                        <a href="{{ "/about" | relative_url }}">Read more about the project.</a>
+                    </p>
+                </section>
+            </div>
+        </div>
 
         <!--   Icon Section   -->
         <div class="row row-eq-height">
@@ -28,11 +44,7 @@ layout: default
                     <h2 class="text-center"><i class="fa fa-eye"></i></h2>
                     <h5 class="text-center">Increase Transparency</h5>
 
-                    <p class="text-justify">We did most of the heavy lifting for you to provide a default stylings that
-                        incorporate our
-                        custom components. Additionally, we refined animations and transitions to provide a smoother
-                        experience for
-                        developers.</p>
+                    <p class="text-justify"></p>
                 </section>
             </div>
 
@@ -41,11 +53,8 @@ layout: default
                     <h2 class="text-center"><i class="fa fa-users"></i></h2>
                     <h5 class="text-center">Contributions Welcome!</h5>
 
-                    <p class="text-justify">By utilizing elements and principles of Material Design, we were able to
-                        create a framework
-                        that incorporates components and animations that provide more feedback to users. Additionally, a
-                        single
-                        underlying responsive system across all platforms allow for a more unified user experience.</p>
+                    <p class="text-justify">
+                        </p>
                 </section>
             </div>
 
@@ -54,33 +63,26 @@ layout: default
                     <h2 class="text-center"><i class="fa fa-lock"></i></h2>
                     <h5 class="text-center">Open Data</h5>
 
-                    <p class="text-justify">We have provided detailed documentation as well as specific code examples to
-                        help new users
-                        get started. We are also always open to feedback and can answer any questions a user may have
-                        about
-                        Materialize.</p>
+                    <p class="text-justify">
+
+                    </p>
                 </section>
             </div>
 
 
             <div class="col s12 m3">
                 <section class="icon-block">
-                    <h2 class="text-center"><i class="fa fa-legal"></i></h2>
-                    <h5 class="text-center">Citizen</h5>
+                    <h2 class="text-center"><i class="fa fa-flask"></i></h2>
+                    <h5 class="text-center">Legal Research</h5>
 
-                    <p class="text-justify">We have provided detailed documentation as well as specific code examples to
-                        help new users
-                        get started. We are also always open to feedback and can answer any questions a user may have
-                        about
-                        Materialize.</p>
+                    <p class="text-justify"></p>
                 </section>
             </div>
         </div>
 
     </div>
 
-    <hr>
-
+    <br>
 </div>
 
 
@@ -92,7 +94,7 @@ layout: default
                 <h2>Our Blog</h2>
 
                 <ul class="collection">
-                    {% for post in site.posts %}
+                    {% for post in paginator.posts %}
                     <li class="collection-item avatar">
                         {% assign date_format = site.minima.date_format | default: "%m/%d" %}
                         <div class="date-post">{{ post.date | date: date_format }}</div>
@@ -102,12 +104,28 @@ layout: default
                         <p>
                             {{ post.content | truncatewords: 10 }}
                         </p>
-                        <!--<a href="{{ post.url | relative_url }}" class="secondary-content"><i-->
-                        <!--class="material-icons">navigate_next</i></a>-->
                     </li>
                     {% endfor %}
                 </ul>
             </section>
+
+            {% if paginator.total_pages > 1 %}
+            <ul class="pagination justify-content-center">
+                {% if paginator.previous_page %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
+                        Newer Posts</a>
+                </li>
+                {% endif %}
+                {% if paginator.next_page %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts
+                        &rarr;</a>
+                </li>
+                {% endif %}
+            </ul>
+            {% endif %}
+
         </div>
     </div>
 </div>

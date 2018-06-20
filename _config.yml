@@ -1,5 +1,5 @@
 title: Open Legal Data
-author: Panoramedia
+author: Open Legal Data
 email: hello@openlegaldata.io
 icon: fa-balance-scale
 description: > # this means to ignore newlines until "baseurl:"
@@ -7,6 +7,22 @@ description: > # this means to ignore newlines until "baseurl:"
 
 twitter_username: openlegaldata
 github_username:  openlegaldata
-
+google_analytics: UA-1090820-32
+plugins:
+    - jekyll-paginate-v2
 sass:
     style: compressed
+
+exclude:
+    - Gemfile
+    - Gemfile.lock
+
+# Pagination Settings
+pagination:
+    enabled: true
+    per_page: 3
+    permalink: '/page/:num/'
+    title: ':title - page :num of :max'
+    limit: 0
+    sort_field: 'date'
+    sort_reverse: true
