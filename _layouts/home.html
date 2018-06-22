@@ -94,7 +94,7 @@ layout: default
                 <h2>Our Blog</h2>
 
                 <ul class="collection">
-                    {% for post in paginator.posts %}
+                    {% for post in site.posts limit:5 %}
                     <li class="collection-item avatar">
                         {% assign date_format = site.minima.date_format | default: "%m/%d" %}
                         <div class="date-post">{{ post.date | date: date_format }}</div>
@@ -107,24 +107,11 @@ layout: default
                     </li>
                     {% endfor %}
                 </ul>
-            </section>
+                <p>
 
-            {% if paginator.total_pages > 1 %}
-            <ul class="pagination justify-content-center">
-                {% if paginator.previous_page %}
-                <li class="page-item">
-                    <a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
-                        Newer Posts</a>
-                </li>
-                {% endif %}
-                {% if paginator.next_page %}
-                <li class="page-item">
-                    <a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts
-                        &rarr;</a>
-                </li>
-                {% endif %}
-            </ul>
-            {% endif %}
+                    <a href="{{ "/blog" | relative_url }}" class="btn btn-default">Show more posts</a>
+                </p>
+            </section>
 
         </div>
     </div>

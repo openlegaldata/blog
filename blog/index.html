@@ -1,0 +1,51 @@
+---
+layout: default
+
+---
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <section>
+                <h2>Our Blog</h2>
+
+                <ul class="collection">
+                    {% for post in site.posts %}
+                    <li class="collection-item avatar">
+                        {% assign date_format = site.minima.date_format | default: "%m/%d" %}
+                        <div class="date-post">{{ post.date | date: date_format }}</div>
+                        <span class="title">
+                    <a class="post-link"
+                       href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></span>
+                        <p>
+                            {{ post.content | truncatewords: 10 }}
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </section>
+
+            {% if paginator.total_pages > 1 %}
+            <ul class="pagination justify-content-center">
+                {% if paginator.previous_page %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
+                        Newer Posts</a>
+                </li>
+                {% endif %}
+                {% if paginator.next_page %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts
+                        &rarr;</a>
+                </li>
+                {% endif %}
+            </ul>
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+
+
+</div>
+

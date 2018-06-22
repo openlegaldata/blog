@@ -9,7 +9,8 @@ twitter_username: openlegaldata
 github_username:  openlegaldata
 google_analytics: UA-1090820-32
 plugins:
-    - jekyll-paginate-v2
+    # - jekyll-paginate-v2
+    - jekyll-paginate
 sass:
     style: compressed
 
@@ -18,11 +19,14 @@ exclude:
     - Gemfile.lock
 
 # Pagination Settings
-pagination:
-    enabled: true
-    per_page: 3
-    permalink: '/page/:num/'
-    title: ':title - page :num of :max'
-    limit: 0
-    sort_field: 'date'
-    sort_reverse: true
+paginate: 3
+paginate_path: "/blog/page:num/"
+
+#pagination:  # for v2
+#    enabled: true
+#    per_page: 3
+#    permalink: '/page/:num/'
+#    title: ':title - page :num of :max'
+#    limit: 0
+#    sort_field: 'date'
+#    sort_reverse: true
