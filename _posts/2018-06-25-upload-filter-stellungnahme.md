@@ -1,3 +1,9 @@
+---
+layout: post
+title: "OPENLEGALDATA.IO wins Faculty4Makers Challenge 2018"
+categories: media
+---
+
 # Upload Filter: EU Parlament beschließt über Upload Filter im Internet
 
 ## Was sind Upload - Filter ?
