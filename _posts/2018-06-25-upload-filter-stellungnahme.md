@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "OPENLEGALDATA.IO wins Faculty4Makers Challenge 2018"
+title: "Upload Filter Stellungnahme von OPENLEGALDATA.IO"
 categories: media
 ---
 
