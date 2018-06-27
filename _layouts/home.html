@@ -101,9 +101,6 @@ layout: default
                         <span class="title">
                     <a class="post-link"
                        href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></span>
-                        <p>
-                            {{ post.content | truncatewords: 10 }}
-                        </p>
                     </li>
                     {% endfor %}
                 </ul>
