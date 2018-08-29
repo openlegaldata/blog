@@ -21,4 +21,4 @@ Aus unserer Sicht ist eine Regelung wünschenswert, die die Veröffentlichung un
 
 Mit dem Beschluss sorgt der 5. Strafsenat nunmehr für Rechtsunsicherheit hinsichtlich der Übersendung von anonymisierten Gerichtsentscheidungen. 
 
-OPENLEGALDATA.IO verfolgt die neu entstandene Diskussion und hält euch auf dem laufenden! 
+OPENLEGALDATA.IO verfolgt die neu entstandene Diskussion. Keep posted! 
