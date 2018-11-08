@@ -29,6 +29,10 @@ body {
 .content {
   padding-top: 5px;
   min-height: 500px;
+  
+  img {
+  max-width: 100%;
+  }
 }
 
 header {
@@ -138,7 +142,8 @@ section {
     padding: 20px 5px 10px 20px;
   }
 
-  & > ul {
+  & > ul, 
+  & > ol {
     margin-left: 20px;
     padding: 10px 20px;
   }
