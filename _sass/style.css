@@ -2732,6 +2732,11 @@ footer { padding: 25px 0; }
 
 footer p { margin: 0; }
 
+footer .funded-by {
+    clear: both;
+    padding: 10px;
+}
+
 .shadow { box-shadow: 2px 2px 15px #000; }
 
 h1, h2, h3, h4, h5 { color: #0379C4; font-weight: 300; /*margin-top: 1.1em;*/ /*margin-bottom: .5em*/ }
