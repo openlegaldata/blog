@@ -9,18 +9,17 @@ layout: default
             <section>
                 <h2>Our Blog</h2>
 
-                <ul class="collection">
-                    {% for post in site.posts %}
-                    <li class="collection-item avatar">
-                        {% assign date_format = site.minima.date_format | default: "%m/%d" %}
-                        <div class="date-post">{{ post.date | date: date_format }}</div>
-                        <span class="title">
-                    <a class="post-link"
-                       href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></span>
-     
-                    </li>
-                    {% endfor %}
-                </ul>
+                {% for post in site.posts %}
+                {% assign date_format = site.minima.date_format | default: "%m/%d" %}
+                <div class="post-item">
+                    <div class="post-title">
+                        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                    </div>
+                    <div class="post-meta">
+                        Published on {{ post.date | date: date_format }}
+                    </div>
+                </div>
+                {% endfor %}
             </section>
 
             {% if paginator.total_pages > 1 %}

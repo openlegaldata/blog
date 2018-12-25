@@ -3,124 +3,114 @@ layout: default
 
 ---
 
-<div class="container text-center">
- 
 
-    <section class="view img-rounded" style="background-image: url('/assets/img/background.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; height:180px; display: block; margin-left: auto; margin-right: auto;">
-	    <h1 class="homepage"></h1>
 
-        <p> 
-		<div class="row align-items-center justify-content-md-center justify-content-xs-center justify-content-sm-center">
-			<div class="col align-self-center input-group" style="max-width: 420px;">
-				<select class="form-control" id="sel1">
-					<option>Germany / Deutschland</option>
-				</select>
-				<div class="input-group-append">
-					<a href="//de.openlegaldata.io/" class="btn btn-md btn-primary" type="button" id="button-addon2">Enter Platform</a>
-				</div>
-			</div>   
-		</div>		
+<div class="row align-items-center">
+    <div class="col-6 mx-auto col-md-6 order-md-2 homepage-logo">
+        <img class="img-fluid mb-3 mb-md-0 d-none d-md-block" src="/assets/logo.svg" alt="" width="500" height="500">
+    </div>
+    <div class="col-md-6 order-md-1 text-center text-md-left pr-md-5">
+        <h1 class="mb-3">Free Access to Legal Information</h1>
+        <p class="lead">
+            Our open data platform is currently available for the following countries:
         </p>
-    </section>
+        <p>
+            <a class="btn btn-primary" href="https://de.openlegaldata.io/" style="font-size: 1.2rem;">
+                <img src="/assets/flags/de.svg" alt="" style="height: 20px; display: inline; vertical-align:middle;">
+                Germany / Deutschland
+                <i class="fa fa-arrow-circle-right"></i>
+            </a>
 
-</div>
-
-
-<div class="container">
-    <div class="section">
-        <div class="row">
-            <div class="col">
-                <section>
-                    <p class="text-justify" style="padding-top: 15px;">
-                        <strong>OPENLEGALDATA.IO</strong> is a free and open platform that makes legal documents and information
-                        accessible to the public. Our goal is to enhance the transparency of the jurisdiction with the
-                        help of open data and by supporting people without legal education to understand the justice
-                        system. The project is committed to the Open Data Principles and the Free Access to Law Movement.
-
-                        <a href="{{ "/about" | relative_url }}">Read more about the project.</a>
-                    </p>
-                </section>
-            </div>
-        </div>
-
-        <!--   Icon Section   -->
-        <div class="row row-eq-height">
-            <div class="col s12 m3">
-				<a href="/transparency">
-                <section class="icon-block">
-                    <h2 class="text-center"><i class="fa fa-eye"></i></h2>
-                    <h5 class="text-center">Increase Transparency</h5>
-                    <p class="text-justify"></p>
-                </section>
-				</a>
-            </div>
-
-            <div class="col s12 m3">
-				<a href="/team">
-                <section class="icon-block">
-                    <h2 class="text-center"><i class="fa fa-users"></i></h2>
-                    <h5 class="text-center">Join the team!</h5>
-                    <p class="text-justify"></p>
-                </section>
-				</a>
-            </div>
-
-            <div class="col s12 m3">
-				<a href="/open-data">
-                <section class="icon-block">
-                    <h2 class="text-center"><i class="fa fa-lock"></i></h2>
-                    <h5 class="text-center">Open Data</h5>
-                    <p class="text-justify"></p>
-                </section>
-				</a>
-            </div>
-
-
-            <div class="col s12 m3">
-				<a href="/research">
-                <section class="icon-block">
-                    <h2 class="text-center"><i class="fa fa-flask"></i></h2>
-                    <h5 class="text-center">Legal Research</h5>
-                    <p class="text-justify"></p>
-                </section>
-				</a>
-            </div>
-        </div>
+        </p>
 
     </div>
-
-    <br>
 </div>
 
-
-
-<div class="container">
+<div class="section">
     <div class="row">
         <div class="col">
             <section>
-                <h2>Our Blog</h2>
+                <p class="text-justify" style="padding-top: 15px;">
+                    <strong>OPENLEGALDATA.IO</strong> is a free and open platform that makes legal documents and information
+                    accessible to the public. Our goal is to enhance the transparency of the jurisdiction with the
+                    help of open data and by supporting people without legal education to understand the justice
+                    system. The project is committed to the Open Data Principles and the Free Access to Law Movement.
 
-                <ul class="collection">
-                    {% for post in site.posts limit:5 %}
-                    <li class="collection-item avatar">
-                        {% assign date_format = site.minima.date_format | default: "%m/%d" %}
-                        <div class="date-post">{{ post.date | date: date_format }}</div>
-                        <span class="title">
-                    <a class="post-link"
-                       href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></span>
-                    </li>
-                    {% endfor %}
-                </ul>
-                <p>
-
-                    <a href="{{ "/blog" | relative_url }}" class="btn btn-default">Show more posts</a>
+                    <a href="{{ '/about' | relative_url }}">Read more about the project.</a>
                 </p>
             </section>
-
         </div>
     </div>
+
+    <!--   Icon Section   -->
+    <div class="row row-eq-height">
+        <div class="col s12 m3">
+            <a href="/transparency">
+            <section class="icon-block">
+                <h2 class="text-center"><i class="fa fa-eye"></i></h2>
+                <h5 class="text-center">Increase Transparency</h5>
+                <p class="text-justify"></p>
+            </section>
+            </a>
+        </div>
+
+        <div class="col s12 m3">
+            <a href="/team">
+            <section class="icon-block">
+                <h2 class="text-center"><i class="fa fa-users"></i></h2>
+                <h5 class="text-center">Join the team!</h5>
+                <p class="text-justify"></p>
+            </section>
+            </a>
+        </div>
+
+        <div class="col s12 m3">
+            <a href="/open-data">
+            <section class="icon-block">
+                <h2 class="text-center"><i class="fa fa-lock"></i></h2>
+                <h5 class="text-center">Open Data</h5>
+                <p class="text-justify"></p>
+            </section>
+            </a>
+        </div>
+
+
+        <div class="col s12 m3">
+            <a href="/research">
+            <section class="icon-block">
+                <h2 class="text-center"><i class="fa fa-flask"></i></h2>
+                <h5 class="text-center">Legal Research</h5>
+                <p class="text-justify"></p>
+            </section>
+            </a>
+        </div>
+    </div>
+
 </div>
 
+<br>
 
+<div class="row">
+    <div class="col">
+        <section class="blog">
+            <h2>Our Blog</h2>
+            {% for post in site.posts limit:5 %}
+                {% assign date_format = site.minima.date_format | default: "%m/%d" %}
+                <div class="post-item">
+                    <div class="post-title">
+                        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                    </div>
+                    <div class="post-meta">
+                        Published on {{ post.date | date: date_format }}
+                    </div>
+                </div>
+            {% endfor %}
+            <p>
+                <a href="{{ '/blog' | relative_url }}" class="btn btn-default">Show more posts</a>
+            </p>
+        </section>
+
+
+    </div>
 </div>
 
