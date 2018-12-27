@@ -2,6 +2,8 @@
 layout: post
 title: "Stellungnahme von OPENLEGALDATA.IO zum Beschluss des BGH vom 20. Juni 2018 Az. 5 AR (Vs) 112/17 "
 categories: statements
+author: Saskia
+language: de
 ---
 
 Der Beschluss des 5. Strafsenats des [BGH vom 20. Juni 2018](https://de.openlegaldata.io/case/bgh-2018-06-20-5-ar-vs-11217) zum Thema Veröffentlichung von Gerichtsentscheidungen stellt die Transparenz der Rechtsprechung unserer Gerichte erneut in Frage. 

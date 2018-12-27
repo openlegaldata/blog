@@ -2,6 +2,8 @@
 layout: post
 title: "German OLDP version goes online"
 categories: oldp
+language: en
+author: Malte
 ---
 
 After weeks of hard work we finally launched the [German Open Legal Data Platform](https://de.openlegaldata.io/) which 

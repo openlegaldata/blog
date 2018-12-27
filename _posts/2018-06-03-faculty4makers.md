@@ -2,6 +2,8 @@
 layout: post
 title: "OPENLEGALDATA.IO wins Faculty4Makers Challenge 2018"
 categories: media
+author: Malte
+language: en
 ---
 
 We are proud to announce that we won the faculty4makers challenge 2018 at TU Berlin! We are glad that our 

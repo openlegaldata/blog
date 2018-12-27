@@ -2,6 +2,8 @@
 layout: post
 title: "Upload Filter Stellungnahme von OPENLEGALDATA.IO"
 categories: statements
+author: Saskia
+language: de
 ---
 
 ### Upload Filter: EU Parlament beschließt über Upload Filter im Internet
