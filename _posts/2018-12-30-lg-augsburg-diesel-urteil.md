@@ -45,7 +45,7 @@ hier die Täuschung, überhaupt erst den Kauf und die damit verbundene Nutzung v
 Durch eine Zahlung von Nutzungsersatz würde der Verkäufer trotz der sittenwidrigen Schädigung noch einen Vorteil erlangen, 
 der mit dem Gedanken den Schadensersatzrechts unvereinbar ist - nämlich eine Bereicherung.  
 
-Es handelt sich bei dem Schadensersatz nach § 826 BGB auch nicht um eine bloße Schlechterfüllung, 
+Es handelt sich bei dem Schadensersatz nach [§ 826 BGB](https://de.openlegaldata.io/law/bgb/826) auch nicht um eine bloße Schlechterfüllung, 
 sondern um eine vorsätzlich sittenwidrige Schädigung dessen Konsequenzen der Verkäufer in vollem Maße tragen muss. 
 Gerade bei vorsätzlichem Verhalten, kann der Verkäufer nicht noch einen Nutzungsersatz verlangen. 
 
