@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include head.html %}
+</head>
+<body>
+    <header class="navbar-dark bd-navbar text-center" style="display: flex;  align-items: center;  justify-content: center;">
+        <a class="navbar-brand" href="{{ '/' | relative_url }}" aria-label="Open Legal Data">
+            <img src="{{ '/assets/logo_white.svg' | relative_url }}">
+            Open Legal Data
+        </a>
+    </header>
+
+    {{ content }}
+
+    <br>
+    {% include footer.html %}
+    {% include script.html %}
+</body>
+</html>

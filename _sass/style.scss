@@ -485,12 +485,12 @@
 
 /*!
  * Select2 Bootstrap4 Theme v1.0.0 (https://github.com/berkan52/select2-bootstrap4-theme)
- * 
- * A theme for Select2 v4 and Bootstrap 4.0.0-beta.2 
- * 
- * Release v1.0.0 - 12-12-2017 
- * Copyright 2017 Berkan Akyürek <berkan52@gmail.com> 
- * Licensed under MIT 
+ *
+ * A theme for Select2 v4 and Bootstrap 4.0.0-beta.2
+ *
+ * Release v1.0.0 - 12-12-2017
+ * Copyright 2017 Berkan Akyürek <berkan52@gmail.com>
+ * Licensed under MIT
  */
 .select2-container--bootstrap4 {
   display: block;
@@ -1912,16 +1912,16 @@ h1, .h1 {
   font-size: 2.5rem; }
 
 h2, .h2 {
-  font-size: 2rem; }
-
-h3, .h3 {
   font-size: 1.75rem; }
 
-h4, .h4 {
+h3, .h3 {
   font-size: 1.5rem; }
 
-h5, .h5 {
+h4, .h4 {
   font-size: 1.25rem; }
+
+h5, .h5 {
+  font-size: 1.1rem; }
 
 h6, .h6 {
   font-size: 1rem; }
@@ -5792,7 +5792,7 @@ a.close.disabled {
   .bs-popover-top .arrow::before, .bs-popover-auto[x-placement^="top"] .arrow::before {
     bottom: 0;
     border-top-color: rgba(0, 0, 0, 0.25); }
-  
+
   .bs-popover-top .arrow::after,
   .bs-popover-auto[x-placement^="top"] .arrow::after {
     bottom: 1px;
@@ -5812,7 +5812,7 @@ a.close.disabled {
   .bs-popover-right .arrow::before, .bs-popover-auto[x-placement^="right"] .arrow::before {
     left: 0;
     border-right-color: rgba(0, 0, 0, 0.25); }
-  
+
   .bs-popover-right .arrow::after,
   .bs-popover-auto[x-placement^="right"] .arrow::after {
     left: 1px;
@@ -5829,7 +5829,7 @@ a.close.disabled {
   .bs-popover-bottom .arrow::before, .bs-popover-auto[x-placement^="bottom"] .arrow::before {
     top: 0;
     border-bottom-color: rgba(0, 0, 0, 0.25); }
-  
+
   .bs-popover-bottom .arrow::after,
   .bs-popover-auto[x-placement^="bottom"] .arrow::after {
     top: 1px;
@@ -5858,7 +5858,7 @@ a.close.disabled {
   .bs-popover-left .arrow::before, .bs-popover-auto[x-placement^="left"] .arrow::before {
     right: 0;
     border-left-color: rgba(0, 0, 0, 0.25); }
-  
+
   .bs-popover-left .arrow::after,
   .bs-popover-auto[x-placement^="left"] .arrow::after {
     right: 1px;
