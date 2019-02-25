@@ -22,6 +22,7 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
   #gem "jekyll-paginate-v2"  # is not supported by github-pages
   gem "jekyll-paginate"
+  gem "jekyll-feed"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
