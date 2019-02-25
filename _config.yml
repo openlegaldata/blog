@@ -11,6 +11,7 @@ google_analytics: UA-1090820-32
 plugins:
     # - jekyll-paginate-v2
     - jekyll-paginate
+    - jekyll-feed
 sass:
     style: compressed
 
