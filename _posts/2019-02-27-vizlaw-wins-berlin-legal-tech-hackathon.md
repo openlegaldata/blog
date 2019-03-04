@@ -14,7 +14,6 @@ and the [citation dataset](http://openlegaldata.io/research/2019/02/19/court-dec
 As winner of the Berlin hackathon, VizLaw has qualified for the final round the Global Legal Hackathon 
 and will present their prototype soon in New York in front of an even bigger audience.
 
-![Team VizLaw]({{ "/assets/img/2019-02_legal-tech-vizlaw.jpg" | relative_url }})
 ![Screenshot]({{ "/assets/img/2019-02_vizlaw-screenshot.png" | relative_url }})
 
 We are proud see that other projects start using our data. 
