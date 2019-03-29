@@ -1,9 +1,14 @@
-# WWW-Landingpage with Jekyll
+# Open Legal Data
 
-*A Site Starter Materialize Templates.
+This is our international landing page [www.openlegaldata.io](https://openlegaldata.io/). Build with Jekyll.
 
-# Build
+## Run locally
 
 ```
-bundle exec jekyll serve
+./sbin/www
 ```
+
+## License
+
+- Code: MIT
+- Content: [CC 4.0 Attribution](https://creativecommons.org/licenses/by/4.0/)
