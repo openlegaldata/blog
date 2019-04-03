@@ -140,3 +140,4 @@ aus der Spruchpraxis ziehen, aus denen wiederum der Gesetzgeber seine
 Schlüsse ziehen kann.
 
 Herr Breyer, vielen Dank für das Interview.
+(Das Interview führte Saskia Ostendorff)
