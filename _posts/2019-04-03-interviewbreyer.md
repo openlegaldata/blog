@@ -7,15 +7,15 @@ language: de
 author: Saskia
 ---
 
-Herr Breyer, Sie sind Bürgerrechtler und setzten sich für eine
+**Herr Breyer, Sie sind Bürgerrechtler und setzten sich für eine
 transparente Justiz ein, wie steht es um die Veröffentlichungspraxis der
-Gerichte in Deutschland?
+Gerichte in Deutschland?**
 
 Von Gericht zu Gericht, von Richter zu Richter ist die
 Veröffentlichungspraxis sehr uneinheitlich. Wünschenswert wäre eine
 gesetzliche Regelung.
 
-Was verstehen Sie unter transparenter Justiz?
+**Was verstehen Sie unter transparenter Justiz?**
 
 Als die Öffentlichkeit von Gerichtsverhandlungen eingeführt wurde,
 sollte Machtmissbrauch begegnet werden. Heutzutage werden - mit Ausnahme
@@ -29,8 +29,8 @@ erleichtert vor allem auch dieser selbst die Arbeit. So können Richter
 nachlesen, wie Kollegen und übergeordnete Instanzen entschieden haben.
 Das kann auch Rechtsmittel vermeiden und die Justiz entlasten.
 
-Was ist Ihre Motivation für den Einsatz für eine offene, transparente
-Justiz?
+**Was ist Ihre Motivation für den Einsatz für eine offene, transparente
+Justiz?**
 
 Die EU-Kommission klagte vor dem EuGH, weil einige EU-Mitgliedsstaaten
 keine verdachtslose Vorratsdatenspeicherung sämtlicher Verbindungs- und
@@ -42,7 +42,7 @@ Millionen Betroffener. Beim Europäischen Gerichtshof für Menschenrechte
 gibt es bereits eine Regelung über den öffentlichen Zugang zu
 Schriftsätzen auch in laufenden Verfahren.
 
-Wann müssen Urteile veröffentlicht werden? Welche Kriterien gibt es dazu?
+**Wann müssen Urteile veröffentlicht werden? Welche Kriterien gibt es dazu?**
 
 In Deutschland zu veröffentlichen sind alle Entscheidungen, an deren
 Veröffentlichung die Öffentlichkeit ein Interesse hat oder haben kann.
@@ -53,8 +53,8 @@ diejenigen Entscheidungen zu ergänzen, an deren Veröffentlichung
 ersichtlich ein öffentliches Interesse besteht. Das ist in der Regel bei
 entsprechenden Anfragen aus Presse und Öffentlichkeit zu bejahen.
 
-Wo werden Urteile veröffentlicht? Sind Urteile der Allgemeinheit immer
-zugänglich?
+**Wo werden Urteile veröffentlicht? Sind Urteile der Allgemeinheit immer
+zugänglich?**
 
 Zwar unterhalten inzwischen wohl alle Länder und der Bund kostenfreie
 Urteilsdatenbanken. Viele Urteile finden sich aber nur in kommerziellen,
@@ -66,12 +66,12 @@ eine anonymisierte Abschrift - etwa unter Angabe des Aktenzeichens -
 anfordern. Laut Bundesgerichtshof setzt dies in Zivilsachen kein
 "berechtigtes Interesse" voraus, in Strafsachen aber doch.
 
-Es gibt den Anspruch auf Herausgabe einer sog. anonymisierten
+**Es gibt den Anspruch auf Herausgabe einer sog. anonymisierten
 Urteilsabschrift. Von diesem Anspruch haben Sie bei der sog.
 Rocker-Affäre Gebrauch gemacht und wollten ein Urteil des Landgerichts
 Kiel herausverlangen. Nach Ablehnung ihres Antrags haben Sie Beschwerde
 beim Bundesgerichtshof eingereicht. Ihre Beschwerde wurde abgelehnt (Az.
-5 AR (Vs) 112/17). Wie ist Ihre Auffassung zu dieser Entscheidung?
+5 AR (Vs) 112/17). Wie ist Ihre Auffassung zu dieser Entscheidung?**
 
 Der Bundesgerichtshof hat zwar nur über das zuständige Gericht
 entschieden und noch nicht in der Sache; mein Antrag liegt zurzeit dem
@@ -86,12 +86,12 @@ muss jeder Bürger seine Rechte und Pflichten in Erfahrung bringen
 können. Auch eine kritische Diskussion von Urteilen setzt voraus, dass
 sie auf Anfrage anonymisiert herausgegeben werden.
 
-In Ihrem Fall kannten Sie das Aktenzeichen des Verfahrens. Wie denken
+**In Ihrem Fall kannten Sie das Aktenzeichen des Verfahrens. Wie denken
 Sie über den Fall, wenn jemand sich über Urteile im Allgemeinen
 informieren möchte, um sich bspw. ein Bild von der Rechtsprechung zu
 verschaffen, aber die Aktenzeichen der Urteile nicht vorhanden sind.
 Greift dann der Anspruch auf Herausgabe einer anonymisierten
-Urteilsabschrift? Welche Wege gibt es Ihrer Ansicht nach?
+Urteilsabschrift? Welche Wege gibt es Ihrer Ansicht nach?**
 
 Hier lässt sich wohl die Praxis zu Informationsfreiheitsgesetzen
 übertragen. Wer anfragt, muss die gewünschten Informationen so genau wie
@@ -105,8 +105,8 @@ Regelveröffentlichung von Gerichtsentscheidungen in kostenfreien
 Internet-Datenbanken einzuführen, das mit möglichst wenig Aufwand
 verbunden ist.
 
-Wie würde für Sie eine transparente Justiz und Rechtsprechung
-idealerweise aussehen?
+**Wie würde für Sie eine transparente Justiz und Rechtsprechung
+idealerweise aussehen?**
 
 Dazu gehört die geregelte Veröffentlichung anonymisierter Entscheidungen
 über kostenfreie Internet-Datenbanken, ein grundsätzliches Recht auf
@@ -114,13 +114,13 @@ Zugang zu Verfahrensunterlagen, eine Information der Öffentlichkeit über
 die Geschäftsverteilung im Internet und eine Information über laufende
 Verfahren von öffentlichem Interesse im Internet.
 
-Denken Sie, dass alle Urteile veröffentlicht werden sollten?
+**Denken Sie, dass alle Urteile veröffentlicht werden sollten?**
 
 Nein. Bei Urteilen ohne Begründung (z.B. Versäumnisurteilen)
 beispielsweise macht eine Veröffentlichung wenig Sinn.
 
-Welche Vor- und Nachteile sehen Sie für die Justiz mit Open Data für
-juristische Informationen?
+**Welche Vor- und Nachteile sehen Sie für die Justiz mit Open Data für
+juristische Informationen?**
 
 Eine transparente Rechtsprechung erleichtert zuallererst dieser selbst
 die Arbeit. So können Richter nachlesen, wie Kollegen und übergeordnete
@@ -131,8 +131,8 @@ vermieden werden. Als Nachteile genannt werden der Arbeits- und
 Kostenaufwand sowie Daten- und Persönlichkeitsschutz der Beteiligten.
 Hier ist Überzeugungsarbeit nötig, dass der Nutzen die Kosten rechtfertigt.
 
-Welche anderen Bereiche könnten Ihrer Meinung nach von juristischer Open
-Data profitieren?
+**Welche anderen Bereiche könnten Ihrer Meinung nach von juristischer Open
+Data profitieren?**
 
 Bürger, Wirtschaft und Verwaltung als Rechtsunterworfene profitieren von
 einer transparenten Justiz. Aber auch die Wissenschaft kann Erkenntnisse
@@ -140,4 +140,4 @@ aus der Spruchpraxis ziehen, aus denen wiederum der Gesetzgeber seine
 Schlüsse ziehen kann.
 
 Herr Breyer, vielen Dank für das Interview.
-(Das Interview führte Saskia Ostendorff)
+*Das Interview führte Saskia Ostendorff.*
