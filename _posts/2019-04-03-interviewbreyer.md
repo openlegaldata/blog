@@ -7,6 +7,17 @@ language: de
 author: Saskia
 ---
 
+Wir haben mit dem Bürgerrechtler [Patrick Breyer](https://www.patrick-breyer.de/) ein Interview zum Thema Urteilsveröffentlichungen und Open Data in der Justiz geführt. 
+Er ist einer derjenige, der sich für eine transparente Justiz stark macht und im vergangenen Jahr 
+eine Antrag auf Herausgabe einer anonymisierten Urteilsabschrift in der sog. Rocker-Affäre in 
+Schleswig Holstein stellte. Er hatte als Landtagsabgeordneter den Vorwurf aufgedeckt, 
+dass Kieler Kriminalbeamte in einem Strafverfahren gegen Rocker entlastende Aussagen unterdrückt haben sollen. 
+[Der Antrag wurde abgelehnt.](https://www.patrick-breyer.de/?p=573821)
+Patrick Breyer hat 2017 erreicht, dass der EuGH gerichtliche Schriftsätze öffentlich zugänglich machen muss [(Az.C-213/15P)](http://curia.europa.eu/juris/document/document.jsf?text=&docid=192887&pageIndex=0&doclang=DE&mode=req&dir=&occ=first&part=1). 
+
+>>"Der Rechtsunterworfene muss wissen, welche Rechte und Pflichten er hat."
+*Patrick Breyer*
+
 **Herr Breyer, Sie sind Bürgerrechtler und setzten sich für eine
 transparente Justiz ein, wie steht es um die Veröffentlichungspraxis der
 Gerichte in Deutschland?**
