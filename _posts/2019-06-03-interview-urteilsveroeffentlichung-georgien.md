@@ -6,8 +6,6 @@ language: de
 author: Saskia
 ---
 
-# Urteilsveröffentlichungen in Georgien
-
 In dem folgenden Interview zum Thema „Urteilsveröffentlichungen in Georgien“ hat Tamar Ergemlidze, LL.M. im deutschen Recht (Universität Köln), Juristin aus Georgien und derzeit Gast-Forscherin an der FU-Berlin. Sie beschäftigt sich mit der Analyse der Rechtsprechung vom EGMR und untersucht die Standards der unabhängigen Justiz, sowohl im Allgemeinen als im Besonderen die Rolle der Rechtsprechung und des Richterrechts. In Georgien arbeitet sie am Berufungsgericht in Tbilissi, wo sie als Beraterin im Büro des Präsidenten des Gerichts angestellt ist. Sie beantwortet uns Fragen rund um das Rechtssystem in Georgien und wie dort Urteile veröffentlicht werden. 
 
 >>„In 2016 hat der Höchsten Justizrat Georgiens eine Art von Verordnung (dem Gesetz untergeordnete normativer Akt) verabschiedet, die eine proaktive Veröffentlichung aller gerichtlichen Entscheidungen vorsieht.“
