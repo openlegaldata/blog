@@ -8,6 +8,14 @@ This is our international landing page [www.openlegaldata.io](https://openlegald
 ./sbin/www
 ```
 
+## Install
+
+```bash
+git clone ... blog
+cd blog
+bundle install
+```
+
 ## License
 
 - Code: MIT
