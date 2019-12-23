@@ -13,7 +13,7 @@ Die Präsentation der Ergebnisse stand im März 2019 an.
 
 <!-- more -->
 
-<div class="p-5 text-center"><img src="{{ "/assets/img/stocks/2018.jpg" | relative_url }}" alt="" class="img img-thumbnail"></div>
+<div class="p-5 text-center"><img src="{{ "/assets/img/stocks/2019.jpg" | relative_url }}" alt="" class="img img-thumbnail"></div>
 
 In den letzten 5 Monaten haben wir auf die Problematik der Veröffentlichungspraxis aufmerksam gemacht 
 und [unsere Plattform](https://de.openlegaldata.io/) von einem eher einfachen Prototypen zu einer voll funktionsfähigen Plattform gebracht. 
