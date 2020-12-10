@@ -109,6 +109,29 @@ Citing states
 
 ![Citing states]({{ "/assets/img/ref_case_states.png" | relative_url }})
 
+### Citation
+
+If you end up using our dataset, please link to this blog post or cite the following [research paper](https://arxiv.org/abs/2005.13342):
+
+```bibtex
+@inproceedings{10.1145/3383583.3398616,
+author = {Ostendorff, Malte and Blume, Till and Ostendorff, Saskia},
+title = {Towards an Open Platform for Legal Information},
+year = {2020},
+isbn = {9781450375856},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3383583.3398616},
+doi = {10.1145/3383583.3398616},
+booktitle = {Proceedings of the ACM/IEEE Joint Conference on Digital Libraries in 2020},
+pages = {385–388},
+numpages = {4},
+keywords = {open data, open source, legal information system, legal data},
+location = {Virtual Event, China},
+series = {JCDL '20}
+}
+```
+
 
 ### Update
 
