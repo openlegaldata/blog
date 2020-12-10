@@ -108,3 +108,9 @@ Citing states
 
 
 ![Citing states]({{ "/assets/img/ref_case_states.png" | relative_url }})
+
+
+### Update
+
+For more recent dumps, please refer to this link: [https://static.openlegaldata.io/dumps/de/](https://static.openlegaldata.io/dumps/de/)
+
