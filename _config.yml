@@ -12,18 +12,20 @@ github_username:  openlegaldata
 google_analytics: UA-1090820-32
 plugins:
     # - jekyll-paginate-v2
-    - jekyll-paginate
+    # - jekyll-paginate
     - jekyll-feed
+
 sass:
-    style: compressed
+  style: compressed    # or :expanded, :nested, etc.
+  sass_dir: _sass      # default; change only if you move your partials
 
 exclude:
     - Gemfile
     - Gemfile.lock
 
 # Pagination Settings
-paginate: 3
-paginate_path: "/blog/page:num/"
+# paginate: 3
+# paginate_path: "/blog/page:num/"
 
 #pagination:  # for v2
 #    enabled: true

@@ -704,7 +704,7 @@
 .select2-container--bootstrap4 .select2-selection--multiple .select2-search--inline .select2-search__field {
   background: transparent;
   padding: 0 0.375rem;
-  height: calc(2.25rem + 2px)-2;
+  height: calc(2.25rem + 2px - 2px);
   line-height: 1;
   margin-top: 0;
   min-width: 5em;
@@ -748,7 +748,7 @@
 .select2-container--bootstrap4 .select2-selection--multiple.input-sm .select2-search--inline .select2-search__field, .input-group-sm .select2-container--bootstrap4 .select2-selection--multiple .select2-search--inline .select2-search__field, .form-group-sm .select2-container--bootstrap4 .select2-selection--multiple .select2-search--inline .select2-search__field {
   padding: 0 0.25rem;
   font-size: 75%;
-  height: calc(1.8125rem + 2px)-2;
+  height: calc(1.8125rem + 2px);
   line-height: 1;
 }
 .select2-container--bootstrap4 .select2-selection--multiple.input-sm .select2-selection__clear, .input-group-sm .select2-container--bootstrap4 .select2-selection--multiple .select2-selection__clear, .form-group-sm .select2-container--bootstrap4 .select2-selection--multiple .select2-selection__clear {
@@ -784,7 +784,7 @@
 .select2-container--bootstrap4 .select2-selection--multiple.input-lg .select2-search--inline .select2-search__field, .input-group-lg .select2-container--bootstrap4 .select2-selection--multiple .select2-search--inline .select2-search__field, .form-group-lg .select2-container--bootstrap4 .select2-selection--multiple .select2-search--inline .select2-search__field {
   padding: 0 0.5rem;
   font-size: 1.25rem;
-  height: calc(2.875rem + 2px)-2;
+  height: calc(2.875rem + 2px);
   line-height: 1;
 }
 .select2-container--bootstrap4 .select2-selection--multiple.input-lg .select2-selection__clear, .input-group-lg .select2-container--bootstrap4 .select2-selection--multiple .select2-selection__clear, .form-group-lg .select2-container--bootstrap4 .select2-selection--multiple .select2-selection__clear {

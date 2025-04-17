@@ -2,18 +2,26 @@
 
 This is our international landing page [www.openlegaldata.io](https://openlegaldata.io/). Build with Jekyll.
 
-## Run locally
-
-```
-./sbin/www
-```
 
 ## Install
 
+To install this project, run the following commands:
+
 ```bash
+# clone this repository
 git clone ... blog
 cd blog
+
+# install Ruby dependencies
 bundle install
+```
+
+
+## Run locally
+
+```bash
+# Web server will start at: http://localhost:4000
+./sbin/www
 ```
 
 ## License
