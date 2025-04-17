@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+
+    <title>Open Legal Data releases dataset of 100,000 German court decisions and 444,000 citations - Open Legal Data</title>
+    <meta name="description" content="Our initiative has made a large dataset of Germany court decisions and the corresponding citation network publicly available to help the community to develop..." />
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css" integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/solid.min.css" integrity="sha512-DzC7h7+bDlpXPDQsX/0fShhf1dLxXlHuhPBkBo/5wJWRoTU6YL7moeiNoej6q3wh5ti78C57Tu1JwTNlcgHSjg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css" integrity="sha512-58P9Hy7II0YeXLv+iFiLCv1rtLW47xmiRpC1oFafeKNShp8V5bKV/ciVtYqbk2YfxXQMt58DjNfkXFOn62xE+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="canonical" href="/research/2019/02/19/court-decision-dataset.html" />
+    <link rel="alternate" type="application/rss+xml" title="Open Legal Data" href="/feed.xml" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon image_src" href="/assets/apple-touch-icon.png">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+    
+    
+</head>
+
+</head>
+<body>
+    <header class="navbar-dark bd-navbar text-center" style="display: flex;  align-items: center;  justify-content: center;">
+        <a class="navbar-brand" href="/" aria-label="Open Legal Data">
+            <img src="/assets/logo_white.svg">
+            Open Legal Data
+        </a>
+    </header>
+
+        <div class="container">
+
+    <section>
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h2 class="title-center post-title" itemprop="name headline">Open Legal Data releases dataset of 100,000 German court decisions and 444,000 citations</h2>
+    <p class="post-meta">
+      <time datetime="2019-02-19T00:00:00+00:00" itemprop="datePublished">
+        
+        Feb 19, 2019
+      </time>
+      
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Malte</span></span>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Our initiative has made a large dataset of Germany court decisions and the corresponding citation network publicly 
+available to help the community to development new techniques for processing legal text. 
+As far as we know there is no similar dataset for German court decisions yet. 
+Having no data available, limits the opportunities for researchers and start-ups likewise. 
+With the release of the dataset, Open Legal Data hopes to foster both areas, especially in Germany.</p>
+
+<p>All decisions are anonymized by the responsible court and have additional meta data, e.g. date and decision type.
+Citation were automatically extracted with our <a href="https://github.com/openlegaldata/legal-reference-extraction">Legal Reference Extraction</a> 
+tool that is also freely available under an Open Source license.</p>
+
+<p>We are excited to see what the community can achieve with the dataset. 
+Feel free to share your results with us or to contact us if you have any questions.</p>
+
+<h3 id="download">Download</h3>
+
+<ul>
+  <li><a href="https://static.openlegaldata.io/dumps/de/2019-02-19_oldp_cases.json.gz">German court decisions</a> (json.gz: 772M)</li>
+  <li><a href="https://static.openlegaldata.io/dumps/de/refs/refs.csv.gz">Citation network</a> (csv.gz: 4.4M)</li>
+</ul>
+
+<h3 id="what-can-you-do-with-the-data">What can you do with the data?</h3>
+
+<p>One of the principals of Open Data is, that you should release data and let the people decide what to do with it.
+However, if you are not creative enough, just have a look at our examples:</p>
+
+<ul>
+  <li><a href="https://github.com/openlegaldata/oldp-notebooks/blob/master/notebooks/references.ipynb">Citation analysis</a>: 
+  What cites what?</li>
+  <li><a href="http://openlegaldata.io/de/citation-network.html">Citation network visualization</a>: 
+  An inactive plot where you can zoom and click on each nodes.</li>
+  <li><a href="https://github.com/openlegaldata/oldp-notebooks/blob/master/notebooks/litigation_value.ipynb">Litigation value extraction</a>: 
+  Extract information from the raw text</li>
+  <li><a href="https://github.com/openlegaldata/oldp-notebooks/blob/master/notebooks/ngram_model.ipynb">Learning a Predictive N-Gram Model</a></li>
+</ul>
+
+<h3 id="what-is-in-the-data">What is in the data?</h3>
+
+<p>In the following we presents some statistics on the dataset so you can a quick overview of its content:</p>
+
+<h4 id="court-decisions">Court decisions</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; SELECT COUNT(*) FROM cases_case;
++----------+
+| COUNT(*) |
++----------+
+|   104763 |
++----------+
+
+&gt; SELECT YEAR(`date`), COUNT(*) FROM cases_case GROUP BY YEAR(`date`) ORDER BY COUNT(*) DESC LIMIT 15;
++--------------+----------+
+| YEAR(`date`) | COUNT(*) |
++--------------+----------+
+|         2015 |    16430 |
+|         2016 |    15249 |
+|         2014 |    15180 |
+|         2017 |     9117 |
+|         2013 |     7597 |
+|         2012 |     7358 |
+|         2010 |     7221 |
+|         2018 |     7100 |
+|         2011 |     6339 |
+|         2009 |     2529 |
+|         2008 |     2127 |
+|         2006 |     1986 |
+|         2007 |     1976 |
+|         2005 |     1761 |
+|         2004 |     1617 |
++--------------+----------+
+
+&gt; SELECT s.name, COUNT(*) FROM cases_case c INNER JOIN courts_court cc ON c.court_id = cc.id INNER JOIN courts_state s ON cc.state_id = s.id GROUP BY cc.state_id ORDER BY COUNT(*) DESC LIMIT 15;
++----------------------------+----------+
+| name                       | COUNT(*) |
++----------------------------+----------+
+| Bundesrepublik Deutschland |    31267 |
+| Nordrhein-Westfalen        |    22782 |
+| Baden-Württemberg          |    15245 |
+| Rheinland-Pfalz            |     8142 |
+| Niedersachsen              |     6661 |
+| Sachsen-Anhalt             |     5569 |
+| Schleswig-Holstein         |     4057 |
+| Mecklenburg-Vorpommern     |     3751 |
+| Hamburg                    |     2526 |
+| Saarland                   |     2226 |
+| Europäische Union          |     2115 |
+| Bayern                     |      405 |
+| Sachsen                    |       17 |
++----------------------------+----------+
+</code></pre></div></div>
+
+<h4 id="citations">Citations</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ wc -l refs.csv 
+444034 refs.csv
+</code></pre></div></div>
+
+<p>What law books are cited most often?</p>
+
+<p><img src="/assets/img/ref_law_books.png" alt="What law books are cited most often?" /></p>
+
+<p>Citing states</p>
+
+<p><img src="/assets/img/ref_case_states.png" alt="Citing states" /></p>
+
+<h3 id="citation">Citation</h3>
+
+<p>If you end up using our dataset, please link to this blog post or cite the following <a href="https://arxiv.org/abs/2005.13342">research paper</a>:</p>
+
+<div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">10.1145/3383583.3398616</span><span class="p">,</span>
+<span class="na">author</span> <span class="p">=</span> <span class="s">{Ostendorff, Malte and Blume, Till and Ostendorff, Saskia}</span><span class="p">,</span>
+<span class="na">title</span> <span class="p">=</span> <span class="s">{Towards an Open Platform for Legal Information}</span><span class="p">,</span>
+<span class="na">year</span> <span class="p">=</span> <span class="s">{2020}</span><span class="p">,</span>
+<span class="na">isbn</span> <span class="p">=</span> <span class="s">{9781450375856}</span><span class="p">,</span>
+<span class="na">publisher</span> <span class="p">=</span> <span class="s">{Association for Computing Machinery}</span><span class="p">,</span>
+<span class="na">address</span> <span class="p">=</span> <span class="s">{New York, NY, USA}</span><span class="p">,</span>
+<span class="na">url</span> <span class="p">=</span> <span class="s">{https://doi.org/10.1145/3383583.3398616}</span><span class="p">,</span>
+<span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1145/3383583.3398616}</span><span class="p">,</span>
+<span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the ACM/IEEE Joint Conference on Digital Libraries in 2020}</span><span class="p">,</span>
+<span class="na">pages</span> <span class="p">=</span> <span class="s">{385–388}</span><span class="p">,</span>
+<span class="na">numpages</span> <span class="p">=</span> <span class="s">{4}</span><span class="p">,</span>
+<span class="na">keywords</span> <span class="p">=</span> <span class="s">{open data, open source, legal information system, legal data}</span><span class="p">,</span>
+<span class="na">location</span> <span class="p">=</span> <span class="s">{Virtual Event, China}</span><span class="p">,</span>
+<span class="na">series</span> <span class="p">=</span> <span class="s">{JCDL '20}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="update">Update</h3>
+
+<p>For more recent dumps, please refer to this link: <a href="https://static.openlegaldata.io/dumps/de/">https://static.openlegaldata.io/dumps/de/</a></p>
+
+
+  </div>
+
+  
+</article>
+</section>
+
+
+    </div>
+
+
+    <br>
+    
+    <footer class="bd-footer text-muted">
+        <div class="container p-3 p-md-5">
+            <ul class="bd-footer-links">
+
+                <li><a href="/about">About</a></li>
+                <li><a href="/imprint">Imprint</a></li>
+                <li><a href="/privacy">Privacy</a></li>
+                <li><a href="/blog">Blog</a></li>
+
+                <li><a href="https://github.com/openlegaldata"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a></li>
+
+            </ul>
+        </div>
+    </footer>
+
+    <!--  Scripts-->
+
+</body>
+</html>

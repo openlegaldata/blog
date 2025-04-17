@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+
+    <title>Legal Research - Open Legal Data</title>
+    <meta name="description" content="Free Access to Legal Information." />
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css" integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/solid.min.css" integrity="sha512-DzC7h7+bDlpXPDQsX/0fShhf1dLxXlHuhPBkBo/5wJWRoTU6YL7moeiNoej6q3wh5ti78C57Tu1JwTNlcgHSjg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css" integrity="sha512-58P9Hy7II0YeXLv+iFiLCv1rtLW47xmiRpC1oFafeKNShp8V5bKV/ciVtYqbk2YfxXQMt58DjNfkXFOn62xE+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="canonical" href="/research/" />
+    <link rel="alternate" type="application/rss+xml" title="Open Legal Data" href="/feed.xml" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon image_src" href="/assets/apple-touch-icon.png">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+    
+    
+</head>
+
+</head>
+<body>
+    <header class="navbar-dark bd-navbar text-center" style="display: flex;  align-items: center;  justify-content: center;">
+        <a class="navbar-brand" href="/" aria-label="Open Legal Data">
+            <img src="/assets/logo_white.svg">
+            Open Legal Data
+        </a>
+    </header>
+
+        <div class="container">
+
+    <div class="container">
+    <section class="text-justify">
+        <h2 id="legal-research">Legal Research</h2>
+
+<p>Recently, there has been an increasing interest in legal data mining tools and applications around the world. 
+For Open Legal Data, we focus mainly on two areas: 
+(1) Finding and Providing Legal Documents and 
+(2) Text Mining on Legal Documents.</p>
+
+<p>Our general approach is described in the following research paper:<br />
+<a href="https://ostendorff.org/assets/pdf/ostendorff2020b.pdf">Towards an Open Platform for Legal Information; In Proceedings of the ACM/IEEE Joint Conference on Digital Libraries (JCDL 2020).</a></p>
+
+<h4 id="finding-and-providing-legal-documents">Finding and Providing Legal Documents</h4>
+
+<p>The Free Law Project is a California non-profit public benefit corporation.
+The Free Law Project (and its service CourtListener) selfdeclared
+its mission to be “to provide free, public, and permanent
+access to primary legal materials on the Internet for educational,
+charitable, and scientific purposes to the benefit of the general public
+and the public interest” <sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>. 
+Online distribution of the opinions occurs through their CourtListener project. 
+CourtListener.com aims to ease this problem by providing a free and open source platform for the aggregation, organization, search and retrieval of legal documents.
+CourtListener.com seeks to collect and freely distribute
+online all United States court opinions, both state and federal, both
+historical and current.</p>
+
+<p>Frosterus et al. <sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> present how they transferred the Finnish
+government web service Finlex to a Linked Open Data Service for
+Finnish law and related judicial documents. 
+The original Finlex service made already documents openly available. However, the data
+was provided only as traditional XML schema without considering
+the Linked Data principles. They show how to model legislation
+and court decisions in RDF. They demonstrate the usefulness of
+linked open data for content producers, application developers and
+data analysts.</p>
+
+<p>In summary, there exist successful data collection efforts of legal
+documents across the world. However, in Germany, there is a clear
+gap.</p>
+
+<h4 id="text-mining-on-legal-documents">Text Mining on Legal Documents</h4>
+
+<p>Aletras et al. <sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">3</a></sup> present that NLP and ML techniques can be
+used to predict decisions of the European Court of Human Rights.
+They build a SVM model that predicts the decisions with a accuracy
+of 79% on average. As features sole textual representations of the
+case, i. e., N-grams, and topics, are used. As data source, Aletras et
+al. <sup id="fnref:3:1"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">3</a></sup> rely on a small sub-set of 80-250 cases that were available for a
+particular articles of the European Convention on Human Rights.
+Lippi et al. <sup id="fnref:4"><a href="#fn:4" class="footnote" rel="footnote" role="doc-noteref">4</a></sup> automatically evaluate terms of services of online
+platforms that is another resource of legal documents that is
+ubiquitous available.</p>
+
+<h4 id="references">References</h4>
+
+<p>Wolfgang Micklitz, Giovanni Sartor, and Paolo Torroni: CLAUDETTE: an
+Automated Detector of Potentially Unfair Clauses in Online Terms of Service.
+arXiv (2018).</p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Michael Lissner: CourtListener.com: A platform for researching and staying abreast of the latest in the law. (2010). <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Matias Frosterus, Jouni Tuominen, and Eero Hyvönen: Facilitating Re-use of Legal Data in Applications - Finnish Law as a Linked Open Data Service. Legal Knowledge and Information Systems: JURIX 2014: The Twenty-Seventh Annual Conference (2014), 115–124. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>Nikolaos Aletras, Dimitrios Tsarapatsanis, Daniel Preotiuc-Pietro, Vasileios Lampos: Predicting judicial decisions of the European Court of Human Rights: a Natural Language Processing perspective. PeerJ Computer Science 2: e93 (2016) <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:3:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:4">
+      <p>Marco Lippi, Przemyslaw Palka, Giuseppe Contissa, Francesca Lagioia, Hans- <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+    </section>
+</div>
+
+<div class="container">
+    <div class="section">		
+		<!--   Icon Section   -->
+        <div class="row row-eq-height">
+            <div class="col s12 m3">
+				<a href="/about">
+                <section class="icon-block">
+                    <h2 class="text-center"><i class="fa fa-info"></i></h2>
+                    <h5 class="text-center">About Open Legal Data</h5>
+                    <p class="text-justify"></p>
+                </section>
+				</a>
+            </div>
+
+           <div class="col s12 m3">
+				<a href="/transparency">
+                <section class="icon-block">
+                    <h2 class="text-center"><i class="fa fa-eye"></i></h2>
+                    <h5 class="text-center">Increase Transparency</h5>
+                    <p class="text-justify"></p>
+                </section>
+				</a>
+            </div>
+
+            <div class="col s12 m3">
+				<a href="/team">
+                <section class="icon-block">
+                    <h2 class="text-center"><i class="fa fa-users"></i></h2>
+                    <h5 class="text-center">Join the team!</h5>
+                    <p class="text-justify"></p>
+                </section>
+				</a>
+            </div>
+
+            <div class="col s12 m3">
+				<a href="/open-data">
+                <section class="icon-block">
+                    <h2 class="text-center"><i class="fa fa-lock"></i></h2>
+                    <h5 class="text-center">Open Data</h5>
+                    <p class="text-justify"></p>
+                </section>
+				</a>
+            </div>
+        </div>
+	</div>
+</div>
+
+<div class="container">	
+    <section class="view img-rounded" style="background-image: url('/assets/img/background.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; min-height:100px;">
+        <p> 
+		<div class="row align-items-center justify-content-md-center justify-content-xs-center justify-content-sm-center">
+			<div class="col align-self-center input-group" style="max-width: 420px; margin-top:25px;">
+				<select class="form-control" id="sel1">
+					<option>Germany / Deutschland</option>
+				</select>
+				<div class="input-group-append">
+					<a href="//de.openlegaldata.io/" class="btn btn-md btn-primary" type="button" id="button-addon2">Enter Platform</a>
+				</div>
+			</div>   
+		</div>		
+        </p>
+    </section>
+</div>
+
+
+
+
+    </div>
+
+
+    <br>
+    
+    <footer class="bd-footer text-muted">
+        <div class="container p-3 p-md-5">
+            <ul class="bd-footer-links">
+
+                <li><a href="/about">About</a></li>
+                <li><a href="/imprint">Imprint</a></li>
+                <li><a href="/privacy">Privacy</a></li>
+                <li><a href="/blog">Blog</a></li>
+
+                <li><a href="https://github.com/openlegaldata"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a></li>
+
+            </ul>
+        </div>
+    </footer>
+
+    <!--  Scripts-->
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+
+    <title>Citation Network of German Court Decisions - Open Legal Data</title>
+    <meta name="description" content="Free Access to Legal Information." />
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css" integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/solid.min.css" integrity="sha512-DzC7h7+bDlpXPDQsX/0fShhf1dLxXlHuhPBkBo/5wJWRoTU6YL7moeiNoej6q3wh5ti78C57Tu1JwTNlcgHSjg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css" integrity="sha512-58P9Hy7II0YeXLv+iFiLCv1rtLW47xmiRpC1oFafeKNShp8V5bKV/ciVtYqbk2YfxXQMt58DjNfkXFOn62xE+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="canonical" href="/de/citation-network.html" />
+    <link rel="alternate" type="application/rss+xml" title="Open Legal Data" href="/feed.xml" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon image_src" href="/assets/apple-touch-icon.png">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+    
+    
+</head>
+
+</head>
+<body>
+    <header class="navbar-dark bd-navbar text-center" style="display: flex;  align-items: center;  justify-content: center;">
+        <a class="navbar-brand" href="/" aria-label="Open Legal Data">
+            <img src="/assets/logo_white.svg">
+            Open Legal Data
+        </a>
+    </header>
+
+    <script type="text/javascript" src="exampleUtil.js"></script>
+<script type="text/javascript" src="https://unpkg.com/vis-network@latest/dist/vis-network.min.js"></script>
+<link type="text/css" rel="stylesheet" href="https://unpkg.com/vis-network@latest/dist/vis-network.min.css">
+
+<!--
+<script type="text/javascript" src="http://visjs.org/examples/network/exampleUtil.js"></script>
+
+http://visjs.org/dist/vis.js
+http://visjs.org/dist/vis-network.min.css
+
+ -->
+
+<div class="container-fluid">
+
+    <section>
+
+        <h2>Analysis: Citation Network of German Court Decisions</h2>
+
+        <p>Explore citation patterns of court decisions. Which court cites what law most often? Click on nodes to see details. Zoom and drag graph with mouse.</p>
+
+        <ul>
+            <li><u>Selected node:</u> <strong id="nodeLabel"></strong> <span id="nodeAttributes"></span></li>
+            <li>Nodes: Laws (blue) and courts (red); Edges: Citations</li>
+            <li>Dataset: <a href="https://static.openlegaldata.io/dumps/de/refs/">here</a> (grouped by court and law book, limited to 50,000 edges)</li>
+            <li>Graph processing: <a href="https://gephi.org/">Gephi</a> + <a href="https://gephi.org/plugins/#/plugin/jsonexporter-plugin">JSON exporter</a>
+                ; Visualization: <a href="http://visjs.org/">vis.js</a> (See <a href="http://visjs.org/examples/network/data/importingFromGephi.html">example</a>)
+
+            </li>
+        </ul>
+
+        <div id="mynetwork" style="width: 100%; height: 600px; border: 1px solid #999999;"></div>
+
+        <p>
+          <label><input type="checkbox" id="fixed" checked="checked"/> Fix in place after import.</label><br>
+          <label><input type="checkbox" id="parseColor"/> Parse the color instead of
+            copy (adds borders, highlights etc.)</label>
+        </p>
+    </section>
+
+
+</div>
+
+
+
+<script type="text/javascript">
+  var network;
+
+  var nodes = new vis.DataSet();
+  var edges = new vis.DataSet();
+  var gephiImported;
+  var fixedCheckbox = document.getElementById('fixed');
+  fixedCheckbox.onchange = redrawAll;
+
+  var parseColorCheckbox = document.getElementById('parseColor');
+  parseColorCheckbox.onchange = redrawAll;
+
+  var nodeContent = document.getElementById('nodeContent');
+  var nodeLabel = document.getElementById('nodeLabel');
+  var nodeAttributes = document.getElementById('nodeAttributes');
+
+  var dataUrl = 'https://static.openlegaldata.io/dumps/de/refs/refs-courts-books.json';
+  loadJSON(dataUrl, redrawAll, function(err) {console.log('error')});
+
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+    nodes: {
+      shape: 'dot',
+      font: {
+        face: 'Tahoma'
+      }
+    },
+    edges: {
+      width: 0.15,
+      smooth: {
+        type: 'continuous'
+      }
+    },
+    interaction: {
+      tooltipDelay: 200,
+      hideEdgesOnDrag: true
+    },
+    physics: {
+      stabilization: false,
+      barnesHut: {
+        gravitationalConstant: -10000,
+        springConstant: 0.002,
+        springLength: 150
+      }
+    }
+  };
+
+  network = new vis.Network(container, data, options);
+  network.on('click', function (params) {
+    if (params.nodes.length > 0) {
+      var data = nodes.get(params.nodes[0]); // get the data from selected node
+        //nodeContent.innerHTML = JSON.stringify(data, undefined, 3); // show the data in the div
+        nodeAttributes.innerHTML = JSON.stringify(data['attributes'], undefined, 3);
+        nodeLabel.innerHTML = data['label'];
+
+        console.log(data);
+    }
+  });
+
+  /**
+   * This function fills the DataSets. These DataSets will update the network.
+   */
+  function redrawAll(gephiJSON) {
+    if (gephiJSON.nodes === undefined) {
+      gephiJSON = gephiImported;
+    }
+    else {
+      gephiImported = gephiJSON;
+    }
+
+    nodes.clear();
+    edges.clear();
+
+    var fixed = fixedCheckbox.checked;
+    var parseColor = parseColorCheckbox.checked;
+
+    var parsed = vis.network.gephiParser.parseGephi(gephiJSON, {
+      fixed: fixed,
+      parseColor: parseColor
+    });
+
+    // add the parsed data to the DataSets.
+    nodes.add(parsed.nodes);
+    edges.add(parsed.edges);
+
+    var data = nodes.get(2); // get the data from node 2 as example
+    // nodeContent.innerHTML = JSON.stringify(data,undefined,3); // show the data in the div
+    if (data) {
+
+        nodeAttributes.innerHTML = JSON.stringify(data['attributes'], undefined, 3);
+        nodeLabel.innerHTML = data['label'];
+    }
+
+    network.fit(); // zoom to fit
+  }
+
+</script>
+
+
+    <br>
+    
+    <footer class="bd-footer text-muted">
+        <div class="container p-3 p-md-5">
+            <ul class="bd-footer-links">
+
+                <li><a href="/about">About</a></li>
+                <li><a href="/imprint">Imprint</a></li>
+                <li><a href="/privacy">Privacy</a></li>
+                <li><a href="/blog">Blog</a></li>
+
+                <li><a href="https://github.com/openlegaldata"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a></li>
+
+            </ul>
+        </div>
+    </footer>
+
+    <!--  Scripts-->
+
+</body>
+</html>
