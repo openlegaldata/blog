@@ -20,8 +20,11 @@ bundle install
 ## Run locally
 
 ```bash
-# Web server will start at: http://localhost:4000
-./sbin/www
+# Development Web server will start at: http://localhost:4000
+bundle exec jekyll serve
+
+# Build static Web site to: _site
+bundle exec jekyll build
 ```
 
 ## License
