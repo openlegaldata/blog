@@ -1,7 +1,9 @@
 name: build & deploy Jekyll site
 on:
   push:
-    branches: [ main ]
+    branches: 
+    - main
+    - master
 jobs:
   build:
     runs-on: ubuntu-latest
