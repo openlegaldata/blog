@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-04-17T20:41:14+00:00</updated><id>/feed.xml</id><title type="html">Open Legal Data</title><subtitle>Free Access to Legal Information.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2026-04-09T13:55:30+00:00</updated><id>/feed.xml</id><title type="html">Open Legal Data</title><subtitle>Free Access to Legal Information.
 </subtitle><author><name>Open Legal Data</name></author><entry><title type="html">Stellungnahme zum Referentenentwurf eines Gesetzes zur Änderung des E-Government-Gesetzes (eGovG) und zur Einführung des Gesetzes für die Nutzung von Daten des öffentlichen Sektors</title><link href="/statements/2021/01/12/stellungnahme-egovg.html" rel="alternate" type="text/html" title="Stellungnahme zum Referentenentwurf eines Gesetzes zur Änderung des E-Government-Gesetzes (eGovG) und zur Einführung des Gesetzes für die Nutzung von Daten des öffentlichen Sektors" /><published>2021-01-12T00:00:00+00:00</published><updated>2021-01-12T00:00:00+00:00</updated><id>/statements/2021/01/12/stellungnahme-egovg</id><content type="html" xml:base="/statements/2021/01/12/stellungnahme-egovg.html"><![CDATA[<p>Die Initiative Open Legal Data wurde am 17.12.2020 um eine Stellungnahme
 zu dem oben genannten Referentenentwurf gebeten. Open Legal Data begrüßt
 die Einbeziehung interdisziplinärer Projekte bei der Entwicklung eines
@@ -759,8 +759,8 @@ Feel free to share your results with us or to contact us if you have any questio
 <h3 id="download">Download</h3>
 
 <ul>
-  <li><a href="https://static.openlegaldata.io/dumps/de/2019-02-19_oldp_cases.json.gz">German court decisions</a> (json.gz: 772M)</li>
-  <li><a href="https://static.openlegaldata.io/dumps/de/refs/refs.csv.gz">Citation network</a> (csv.gz: 4.4M)</li>
+  <li><a href="https://huggingface.co/datasets/openlegaldata/court-decisions-germany">German court decisions</a> (json.gz: 772M)</li>
+  <li><a href="https://huggingface.co/datasets/openlegaldata/legal-citation-graph">Citation network</a> (csv.gz: 4.4M)</li>
 </ul>
 
 <h3 id="what-can-you-do-with-the-data">What can you do with the data?</h3>
@@ -870,4 +870,4 @@ However, if you are not creative enough, just have a look at our examples:</p>
 
 <h3 id="update">Update</h3>
 
-<p>For more recent dumps, please refer to this link: <a href="https://static.openlegaldata.io/dumps/de/">https://static.openlegaldata.io/dumps/de/</a></p>]]></content><author><name>Malte</name></author><category term="research" /><summary type="html"><![CDATA[Our initiative has made a large dataset of Germany court decisions and the corresponding citation network publicly available to help the community to development new techniques for processing legal text. As far as we know there is no similar dataset for German court decisions yet. Having no data available, limits the opportunities for researchers and start-ups likewise. With the release of the dataset, Open Legal Data hopes to foster both areas, especially in Germany.]]></summary></entry></feed>
+<p>For more recent dumps, please refer to our Huggingface datasets: <a href="https://huggingface.co/openlegaldata/datasets">https://huggingface.co/openlegaldata/datasets</a></p>]]></content><author><name>Malte</name></author><category term="research" /><summary type="html"><![CDATA[Our initiative has made a large dataset of Germany court decisions and the corresponding citation network publicly available to help the community to development new techniques for processing legal text. As far as we know there is no similar dataset for German court decisions yet. Having no data available, limits the opportunities for researchers and start-ups likewise. With the release of the dataset, Open Legal Data hopes to foster both areas, especially in Germany.]]></summary></entry></feed>
