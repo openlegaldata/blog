@@ -21,8 +21,8 @@ Feel free to share your results with us or to contact us if you have any questio
 
 ### Download
 
-- [German court decisions](https://static.openlegaldata.io/dumps/de/2019-02-19_oldp_cases.json.gz) (json.gz: 772M)
-- [Citation network](https://static.openlegaldata.io/dumps/de/refs/refs.csv.gz) (csv.gz: 4.4M)
+- [German court decisions](https://huggingface.co/datasets/openlegaldata/court-decisions-germany) (json.gz: 772M)
+- [Citation network](https://huggingface.co/datasets/openlegaldata/legal-citation-graph) (csv.gz: 4.4M)
 
 
 ### What can you do with the data?
@@ -135,5 +135,5 @@ series = {JCDL '20}
 
 ### Update
 
-For more recent dumps, please refer to this link: [https://static.openlegaldata.io/dumps/de/](https://static.openlegaldata.io/dumps/de/)
+For more recent dumps, please refer to our Huggingface datasets: [https://huggingface.co/openlegaldata/datasets](https://huggingface.co/openlegaldata/datasets)
 
