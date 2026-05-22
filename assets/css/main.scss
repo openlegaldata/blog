@@ -2,6 +2,7 @@
 # Must be present (even if empty)!
 ---
 
-@use "variables" as *;
-@use "base"      as *;
-@use "syntax"    as *;
+@use "variables"   as *;
+@use "base"        as *;
+@use "syntax"      as *;
+@use "post-tables" as *;

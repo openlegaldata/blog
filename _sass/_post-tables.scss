@@ -1,0 +1,39 @@
+// GitHub-flavoured markdown table style.
+// Scoped to `.post-content` so it only affects body-rendered tables
+// (not Bootstrap `.table-*` widgets used elsewhere on the site).
+
+.post-content {
+  table {
+    display: block;
+    width: max-content;
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 0 0 1rem;
+    border-spacing: 0;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  table th,
+  table td {
+    padding: 6px 13px;
+    border: 1px solid #d0d7de;
+  }
+
+  table th {
+    font-weight: 600;
+    background-color: #f6f8fa;
+    text-align: left;
+  }
+
+  // Zebra stripes — odd rows tinted, even rows white.
+  table tbody tr {
+    background-color: #ffffff;
+    border-top: 1px solid #d0d7de;
+  }
+
+  table tbody tr:nth-child(2n) {
+    background-color: #f6f8fa;
+  }
+}
