@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+
+    <title>May 2026 dataset available: 423,941 court decisions, 113,537 laws, 7,438,459 citations - Open Legal Data</title>
+    <meta name="description" content="We just published a fresh snapshot of the Open Legal Data corpus to the Hugging Face Hub. The 2026-05-20 dump covers every available record in the platform: ..." />
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css" integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/solid.min.css" integrity="sha512-DzC7h7+bDlpXPDQsX/0fShhf1dLxXlHuhPBkBo/5wJWRoTU6YL7moeiNoej6q3wh5ti78C57Tu1JwTNlcgHSjg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css" integrity="sha512-58P9Hy7II0YeXLv+iFiLCv1rtLW47xmiRpC1oFafeKNShp8V5bKV/ciVtYqbk2YfxXQMt58DjNfkXFOn62xE+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="canonical" href="/research/2026/05/22/may-2026-dataset-available.html" />
+    <link rel="alternate" type="application/rss+xml" title="Open Legal Data" href="/feed.xml" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon image_src" href="/assets/apple-touch-icon.png">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+    
+    
+</head>
+
+</head>
+<body>
+    <header class="navbar-dark bd-navbar text-center" style="display: flex;  align-items: center;  justify-content: center;">
+        <a class="navbar-brand" href="/" aria-label="Open Legal Data">
+            <img src="/assets/logo_white.svg">
+            Open Legal Data
+        </a>
+    </header>
+
+        <div class="container">
+
+    <section>
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h2 class="title-center post-title" itemprop="name headline">May 2026 dataset available: 423,941 court decisions, 113,537 laws, 7,438,459 citations</h2>
+    <p class="post-meta">
+      <time datetime="2026-05-22T00:00:00+00:00" itemprop="datePublished">
+        
+        May 22, 2026
+      </time>
+      
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Malte</span></span>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>We just published a fresh snapshot of the <a href="https://de.openlegaldata.io">Open Legal Data</a>
+corpus to the Hugging Face Hub. The 2026-05-20 dump covers every
+available record in the platform: <strong>423,941 German court
+decisions</strong>, <strong>113,537 laws</strong> across
+<strong>7,058 law books</strong>, and the
+<strong>7,438,459 citation edges</strong> between them. All three
+datasets are versioned per dump date, public, and load directly with
+the 🤗 <code class="language-plaintext highlighter-rouge">datasets</code> library.</p>
+
+<p>This is the first release after long time of inactivity. Expect more updates soon. Join us on <a href="https://discord.gg/WCy3aq25ZF">Discord</a> to contribute to the project.</p>
+
+<h2 id="datasets">Datasets</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dataset</th>
+      <th>Rows</th>
+      <th>Hub link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Court decisions</td>
+      <td>423,941</td>
+      <td><a href="https://huggingface.co/datasets/openlegaldata/court-decisions-germany"><code class="language-plaintext highlighter-rouge">openlegaldata/court-decisions-germany</code></a></td>
+    </tr>
+    <tr>
+      <td>Laws</td>
+      <td>113,537</td>
+      <td><a href="https://huggingface.co/datasets/openlegaldata/laws-germany"><code class="language-plaintext highlighter-rouge">openlegaldata/laws-germany</code></a></td>
+    </tr>
+    <tr>
+      <td>Citation graph</td>
+      <td>7,438,459</td>
+      <td><a href="https://huggingface.co/datasets/openlegaldata/legal-citation-graph-germany"><code class="language-plaintext highlighter-rouge">openlegaldata/legal-citation-graph-germany</code></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Each dataset is published as three configs:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">dump-20260520</code> — the full snapshot</li>
+  <li><code class="language-plaintext highlighter-rouge">dump-20260520-10k</code> — random sample of 10,000 rows (seed=42)</li>
+  <li><code class="language-plaintext highlighter-rouge">dump-20260520-1k</code> — random sample of 1,000 rows (seed=42; strict subset of the 10k)</li>
+</ul>
+
+<p>The 1k and 10k subsets are intended for quick exploration; both
+preserve the full schema and processing pipeline so prototypes scale
+to the full corpus without code changes.</p>
+
+<h2 id="loading-the-data">Loading the data</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">datasets</span> <span class="kn">import</span> <span class="n">load_dataset</span>
+
+<span class="c1"># Full court decisions corpus
+</span><span class="n">cases</span> <span class="o">=</span> <span class="nf">load_dataset</span><span class="p">(</span>
+    <span class="sh">"</span><span class="s">openlegaldata/court-decisions-germany</span><span class="sh">"</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">dump-20260520</span><span class="sh">"</span><span class="p">,</span>
+    <span class="n">split</span><span class="o">=</span><span class="sh">"</span><span class="s">train</span><span class="sh">"</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">cases</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="sh">"</span><span class="s">markdown_content</span><span class="sh">"</span><span class="p">][:</span><span class="mi">200</span><span class="p">])</span>
+
+<span class="c1"># Small subsample for exploration
+</span><span class="n">sample</span> <span class="o">=</span> <span class="nf">load_dataset</span><span class="p">(</span>
+    <span class="sh">"</span><span class="s">openlegaldata/court-decisions-germany</span><span class="sh">"</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">dump-20260520-1k</span><span class="sh">"</span><span class="p">,</span>
+    <span class="n">split</span><span class="o">=</span><span class="sh">"</span><span class="s">train</span><span class="sh">"</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<p>Each court decision carries both the original HTML in <code class="language-plaintext highlighter-rouge">content</code> and a
+clean Markdown rendering in <code class="language-plaintext highlighter-rouge">markdown_content</code>. Reference markers
+extracted with <a href="https://github.com/openlegaldata/legal-reference-extraction"><code class="language-plaintext highlighter-rouge">legal-reference-extraction</code></a>
+are attached as a JSON string in <code class="language-plaintext highlighter-rouge">reference_markers</code>. Laws follow the
+same <code class="language-plaintext highlighter-rouge">content</code> + <code class="language-plaintext highlighter-rouge">markdown_content</code> convention; references are a flat
+denormalised table of slug-based edges (no internal database IDs).</p>
+
+<h2 id="whats-in-the-data">What’s in the data</h2>
+
+<h3 id="court-decisions-423941">Court decisions (423,941)</h3>
+
+<p>By year:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Decisions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2026</td>
+      <td>2,793</td>
+    </tr>
+    <tr>
+      <td>2025</td>
+      <td>19,793</td>
+    </tr>
+    <tr>
+      <td>2024</td>
+      <td>23,076</td>
+    </tr>
+    <tr>
+      <td>2023</td>
+      <td>24,381</td>
+    </tr>
+    <tr>
+      <td>2022</td>
+      <td>19,671</td>
+    </tr>
+    <tr>
+      <td>2021</td>
+      <td>15,797</td>
+    </tr>
+    <tr>
+      <td>2020</td>
+      <td>15,982</td>
+    </tr>
+    <tr>
+      <td>2019</td>
+      <td>14,766</td>
+    </tr>
+    <tr>
+      <td>2018</td>
+      <td>19,392</td>
+    </tr>
+    <tr>
+      <td>2017</td>
+      <td>22,119</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>By state:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>State</th>
+      <th>Decisions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nordrhein-Westfalen</td>
+      <td>168,057</td>
+    </tr>
+    <tr>
+      <td>Bundesrepublik Deutschland</td>
+      <td>56,361</td>
+    </tr>
+    <tr>
+      <td>Hessen</td>
+      <td>27,427</td>
+    </tr>
+    <tr>
+      <td>Niedersachsen</td>
+      <td>27,262</td>
+    </tr>
+    <tr>
+      <td>Baden-Württemberg</td>
+      <td>24,757</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>By level of appeal:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Level of appeal</th>
+      <th>Decisions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Oberlandesgericht</td>
+      <td>67,410</td>
+    </tr>
+    <tr>
+      <td>Bundesgericht</td>
+      <td>56,361</td>
+    </tr>
+    <tr>
+      <td>Landgericht</td>
+      <td>33,949</td>
+    </tr>
+    <tr>
+      <td>Amtsgericht</td>
+      <td>13,495</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="laws-113537-sections-across-7058-books">Laws (113,537 sections across 7,058 books)</h3>
+
+<p>Largest law books by section count:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Law book</th>
+      <th>Sections</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>BGB</td>
+      <td>2,538</td>
+    </tr>
+    <tr>
+      <td>ZPO</td>
+      <td>1,091</td>
+    </tr>
+    <tr>
+      <td>BinSchStrO 2012</td>
+      <td>718</td>
+    </tr>
+    <tr>
+      <td>SGB 5</td>
+      <td>691</td>
+    </tr>
+    <tr>
+      <td>HGB</td>
+      <td>690</td>
+    </tr>
+    <tr>
+      <td>StPO</td>
+      <td>685</td>
+    </tr>
+    <tr>
+      <td>StGB</td>
+      <td>557</td>
+    </tr>
+    <tr>
+      <td>FamFG</td>
+      <td>527</td>
+    </tr>
+    <tr>
+      <td>AO 1977</td>
+      <td>503</td>
+    </tr>
+    <tr>
+      <td>SGB 6</td>
+      <td>501</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="citation-graph-7438459">Citation graph (7,438,459)</h3>
+
+<p>By source side:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Source side</th>
+      <th>Edges</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Case</td>
+      <td>7,008,351</td>
+    </tr>
+    <tr>
+      <td>Law</td>
+      <td>430,108</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>By target side:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Target side</th>
+      <th>Edges</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Law</td>
+      <td>6,787,718</td>
+    </tr>
+    <tr>
+      <td>Case</td>
+      <td>650,741</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Most-cited law books:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cited law book</th>
+      <th>Citations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>VwGO</td>
+      <td>938,514</td>
+    </tr>
+    <tr>
+      <td>BGB</td>
+      <td>936,118</td>
+    </tr>
+    <tr>
+      <td>ZPO</td>
+      <td>904,301</td>
+    </tr>
+    <tr>
+      <td>Grundgesetz</td>
+      <td>436,856</td>
+    </tr>
+    <tr>
+      <td>SGG</td>
+      <td>276,904</td>
+    </tr>
+    <tr>
+      <td>EStG</td>
+      <td>242,478</td>
+    </tr>
+    <tr>
+      <td>StGB</td>
+      <td>183,537</td>
+    </tr>
+    <tr>
+      <td>StPO</td>
+      <td>150,072</td>
+    </tr>
+    <tr>
+      <td>FGO</td>
+      <td>134,509</td>
+    </tr>
+    <tr>
+      <td>ArbGG</td>
+      <td>110,398</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="usage-ideas">Usage ideas</h2>
+
+<ul>
+  <li><strong>Citation analysis</strong> — the
+<a href="https://huggingface.co/datasets/openlegaldata/legal-citation-graph-germany"><code class="language-plaintext highlighter-rouge">openlegaldata/legal-citation-graph-germany</code></a>
+dataset is a slug-keyed edge list you can join straight back to the
+court-decision and laws datasets with pandas / DuckDB / Polars.</li>
+  <li><strong>Legal text generation / retrieval</strong> — <code class="language-plaintext highlighter-rouge">markdown_content</code> is clean
+enough to feed directly to tokenisers; the 1k subset is ideal for
+pipeline prototyping.</li>
+  <li><strong>Court-by-court analyses</strong> — every decision carries court metadata
+(<code class="language-plaintext highlighter-rouge">court.name</code>, <code class="language-plaintext highlighter-rouge">court.jurisdiction</code>, <code class="language-plaintext highlighter-rouge">court.level_of_appeal</code>, etc.)
+so you can filter or group without joins.</li>
+</ul>
+
+<p>The older notebooks under
+<a href="https://github.com/openlegaldata/oldp-notebooks"><code class="language-plaintext highlighter-rouge">openlegaldata/oldp-notebooks</code></a>
+still work and show end-to-end examples of citation extraction,
+litigation-value extraction, and n-gram modelling on the corpus.</p>
+
+<h2 id="licensing">Licensing</h2>
+
+<p>In Germany, acts, statutory instruments, official decrees and official
+notices, as well as decisions (including court decisions) and official
+head notes of decisions do not enjoy copyright protection (UrhG § 5).
+The collection and metadata are released under the
+<a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database License (ODbL) v1.0</a>.</p>
+
+<h2 id="citation">Citation</h2>
+
+<p>If you use these datasets, please cite our
+<a href="https://arxiv.org/abs/2005.13342">research paper</a>:</p>
+
+<div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">ostendorff2020oldp</span><span class="p">,</span>
+  <span class="na">author</span>    <span class="p">=</span> <span class="s">{Ostendorff, Malte and Blume, Till and Ostendorff, Saskia}</span><span class="p">,</span>
+  <span class="na">title</span>     <span class="p">=</span> <span class="s">{Towards an Open Platform for Legal Information}</span><span class="p">,</span>
+  <span class="na">year</span>      <span class="p">=</span> <span class="s">{2020}</span><span class="p">,</span>
+  <span class="na">isbn</span>      <span class="p">=</span> <span class="s">{9781450375856}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{Association for Computing Machinery}</span><span class="p">,</span>
+  <span class="na">doi</span>       <span class="p">=</span> <span class="s">{10.1145/3383583.3398616}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the ACM/IEEE Joint Conference on Digital Libraries in 2020}</span><span class="p">,</span>
+  <span class="na">pages</span>     <span class="p">=</span> <span class="s">{385--388}</span><span class="p">,</span>
+  <span class="na">series</span>    <span class="p">=</span> <span class="s">{JCDL '20}</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Questions, ideas or bugs? Join us on
+<a href="https://discord.gg/WCy3aq25ZF">Discord</a> or open an issue on the
+<a href="https://github.com/openlegaldata/oldp">oldp</a> repo.</p>
+
+  </div>
+
+  
+</article>
+</section>
+
+
+    </div>
+
+
+    <br>
+    
+    <footer class="bd-footer text-muted">
+        <div class="container p-3 p-md-5">
+            <ul class="bd-footer-links">
+
+                <li><a href="/about">About</a></li>
+                <li><a href="/imprint">Imprint</a></li>
+                <li><a href="/privacy">Privacy</a></li>
+                <li><a href="/blog">Blog</a></li>
+
+                <li><a href="https://github.com/openlegaldata"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a></li>
+
+            </ul>
+        </div>
+    </footer>
+
+    <!--  Scripts-->
+
+</body>
+</html>
