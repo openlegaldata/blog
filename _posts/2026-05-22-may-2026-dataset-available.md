@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "May 2026 dataset available: 423,941 court decisions, 113,537 laws, 7,438,459 citations"
+title: "May 2026 Dataset Available: 423,941 Court Decisions, 113,537 Laws, 7,438,459 Citations"
 categories: research
 author: Malte
 language: en
