@@ -29,7 +29,7 @@ Dependencies are pinned in `Gemfile.lock`. Upgrade with `bundle update` and chec
 - `open-data.md`: datasets, REST API and MCP server. `research.md`: research papers. `about.md`: project and
   call for contributors (`/team/` redirects here).
 - `_config.yml` → `links`: platform, API, MCP, Hugging Face, Discord URLs used across the site.
-- `_data/stats.yml`: corpus numbers on the homepage. Update them with each Hugging Face dump.
+- `_data/stats.yml`: rounded corpus numbers ("+400,000") for the homepage and data page. Raise them only when the corpus passes the next step; exact numbers go in the release blog post.
 
 ### Research papers
 

@@ -1,7 +1,6 @@
-# Corpus size shown on the homepage. Update with each Hugging Face dump
-# (numbers from the dump's blog post).
-dump_date: 2026-05-20
-dump_post: /research/2026/05/22/may-2026-dataset-available.html
-court_decisions: "423,941"
-laws: "113,537"
-citations: "7.4 M"
+# Corpus size on the homepage and the data page, rounded down with a leading
+# "+" so it stays true between dumps. Only raise a value when the corpus passes
+# the next step (exact numbers per dump belong in the release blog posts).
+court_decisions: "+400,000"
+laws: "+100,000"
+citations: "+7 million"

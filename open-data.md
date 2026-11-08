@@ -108,7 +108,7 @@ We publish regular snapshots of the database on
 [Hugging Face]({{ site.links.huggingface }}). Each dataset is versioned per
 dump and has random 1k and 10k samples for quick experiments.
 
-| Dataset | Content | Size (dump {{ site.data.stats.dump_date | date: "%Y-%m-%d" }}) |
+| Dataset | Content | Size |
 |---------|---------|------|
 | [court-decisions-germany](https://huggingface.co/datasets/openlegaldata/court-decisions-germany) | Court decisions with metadata, HTML and Markdown | {{ site.data.stats.court_decisions }} |
 | [laws-germany](https://huggingface.co/datasets/openlegaldata/laws-germany) | Laws, one row per section, HTML and Markdown | {{ site.data.stats.laws }} |
@@ -119,13 +119,13 @@ from datasets import load_dataset
 
 cases = load_dataset(
     "openlegaldata/court-decisions-germany",
-    name="dump-20260520-1k",  # or "dump-20260520" for the full corpus
+    name="dump-20260520-1k",  # see the dataset card for the latest dump
     split="train",
 )
 ```
 
-The [release post]({{ site.data.stats.dump_post | relative_url }}) has
-statistics and loading examples. To process the raw data yourself, use the
+The dataset cards list the available dumps; the release posts on our
+[blog]({{ '/blog/' | relative_url }}) have statistics per dump. To process the raw data yourself, use the
 [oldp-toolkit](https://github.com/openlegaldata/oldp-toolkit).
 
 #### License
