@@ -9,8 +9,6 @@ so the buttons of one row line up on desktop.
 {% endcomment %}
 {% assign llm = site.data.research_topics.topics | where: "id", "llm" | first %}
 {% assign paper_count = site.data.papers.size | minus: site.data.research_topics.hidden.size %}
-{% comment %} Rounded down to tens and strictly below the count, so "+60" / "over 60" stay true. {% endcomment %}
-{% assign papers_rounded = paper_count | minus: 1 | divided_by: 10 | times: 10 %}
 
 <div class="home-masthead bd-masthead">
     <div class="container">
@@ -60,7 +58,7 @@ so the buttons of one row line up on desktop.
                 <span class="stat-label">citations between them</span>
             </div>
             <div class="col-6 col-md-3 stat">
-                <span class="stat-value">+{{ papers_rounded }}</span>
+                <span class="stat-value">+{{ paper_count }}</span>
                 <span class="stat-label">research papers</span>
             </div>
         </div>
@@ -135,7 +133,7 @@ so the buttons of one row line up on desktop.
     <div class="col-12 col-lg-4 p-4 p-lg-5 bg-light border border-white d-flex flex-column">
         <h3>Legal research</h3>
         <p>
-            Open Legal Data is cited in over {{ papers_rounded }} research papers, and its court decisions and laws are part of
+            Open Legal Data is cited in {{ paper_count }} research papers, and its court decisions and laws are part of
             the training data of open language models such as:
         </p>
         <ul class="model-list">
