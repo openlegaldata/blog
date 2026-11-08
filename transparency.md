@@ -1,5 +1,5 @@
 ---
-layout: transparency
+layout: page
 title: Transparency
 permalink: /transparency/
 ---

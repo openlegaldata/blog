@@ -11,7 +11,7 @@ permalink: /blog/
                 <h2>Our Blog</h2>
 
                 {% for post in site.posts %}
-                {% assign date_format = site.minima.date_format | default: "%m/%d" %}
+                {% assign date_format = "%b %-d, %Y" %}
                 <div class="post-item">
                     <div class="post-title">
                         <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>

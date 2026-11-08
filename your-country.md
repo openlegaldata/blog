@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: page
 title: Your Country
 permalink: /your-country/
 ---
@@ -22,7 +22,7 @@ To illustrate what needs to be done to bring Open Legal Data to your country we 
    But you can also start right away without even asking us. The code is already freely available.
 
 2. Translate: Labels etc. must be available in your language. 
-   This should not be a big deal, since we are using the [Django framework](https://docs.djangoproject.com/en/2.1/topics/i18n/). 
+   This should not be a big deal, since we are using the [Django framework](https://docs.djangoproject.com/en/stable/topics/i18n/). 
  
 3. Adjust: You can easily change the templates depending on your needs. 
    For example see the [German theme repository](https://github.com/openlegaldata/oldp-de).

@@ -1,0 +1,7 @@
+# Corpus size shown on the homepage. Update with each Hugging Face dump
+# (numbers from the dump's blog post).
+dump_date: 2026-05-20
+dump_post: /research/2026/05/22/may-2026-dataset-available.html
+court_decisions: "423,941"
+laws: "113,537"
+citations: "7.4 M"
