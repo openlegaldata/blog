@@ -1,0 +1,35 @@
+{%- comment -%}
+Paper lists by topic from _data/research_topics.yml. The `llm` topic is the
+highlight (cards); collapsed topics go into a <details> block.
+{%- endcomment -%}
+{%- for topic in site.data.research_topics.topics -%}
+{%- if topic.id == "llm" -%}
+<h3 id="{{ topic.id }}">{{ topic.title }}</h3>
+<p>{{ topic.intro }}</p>
+<div class="row card-grid">
+    {%- for item in topic.papers -%}
+    {%- assign p = site.data.papers[item.key] -%}
+    <div class="col-12 col-md-6">
+        <div class="info-card">
+            <span class="model-name">{{ item.model }}</span>
+            <p class="mt-2">{{ item.note }}</p>
+            <p class="paper-meta mb-2"><a href="{{ p.url }}">{{ p.title }}</a><br>{{ p.authors }}{% if p.venue != "" %} · {{ p.venue }}{% endif %} · {{ p.year }}</p>
+        </div>
+    </div>
+    {%- endfor -%}
+</div>
+{%- elsif topic.collapsed -%}
+<details class="topic-more" id="{{ topic.id }}">
+    <summary>{{ topic.title }} <span class="topic-count">({{ topic.papers.size }})</span></summary>
+    {% if topic.intro %}<p class="mt-2">{{ topic.intro }}</p>{% endif %}
+    <ul class="paper-list">
+        {%- for key in topic.papers -%}{% include paper.html key=key %}{%- endfor -%}
+    </ul>
+</details>
+{%- else -%}
+<h3 id="{{ topic.id }}">{{ topic.title }} <span class="topic-count">({{ topic.papers.size }})</span></h3>
+<ul class="paper-list">
+    {%- for key in topic.papers -%}{% include paper.html key=key %}{%- endfor -%}
+</ul>
+{%- endif -%}
+{%- endfor -%}

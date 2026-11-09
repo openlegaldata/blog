@@ -1,0 +1,128 @@
+# Curated grouping of the papers in _data/papers.yml (generated from
+# oldp-citations by scripts/build_papers.py). Every citekey must appear in
+# exactly one topic or under `hidden`; `uv run scripts/build_papers.py --check`
+# enforces that.
+#
+# The first topic (`llm`) is rendered as highlight cards on the research page
+# and the homepage. Its `model` and `note` fields are checked against each
+# paper's full text: only list work where Open Legal Data is part of the
+# training data or corpus, not work that only cites the platform.
+
+topics:
+  - id: llm
+    title: Language models trained on Open Legal Data
+    intro: >-
+      German court decisions and laws from Open Legal Data are part of the
+      training data of several open language models and pretraining corpora.
+    papers:
+      - key: chan2020german
+        model: GBERT & GELECTRA
+        note: German BERT and ELECTRA models; 2.4 GB of Open Legal Data court decisions in the pretraining corpus.
+      - key: ostendorff2023efficient
+        model: BLOOM-CLP German
+        note: German GPT-style models; web text complemented with court decisions from Open Legal Data.
+      - key: dada2023impact
+        model: GeBERTa
+        note: German DeBERTa models; pretraining data includes Open Legal Data cases and laws.
+      - key: brandizzi2024data
+        model: OpenGPT-X (Teuken)
+        note: Open Legal Data is one of the curated sources in the OpenGPT-X pretraining data.
+      - key: gonzalez2025salamandra
+        model: Salamandra
+        note: Multilingual LLMs (2B to 40B); training corpus includes Open Legal Data court decisions and laws.
+      - key: tamayo2026mrbert
+        model: MrBERT
+        note: Multilingual encoders; training data includes Open Legal Data court decisions and laws.
+      - key: ostendorff2024llm
+        model: LLM-datasets
+        note: Open framework for building LLM pretraining corpora; ships Open Legal Data as a German legal source.
+      - key: gienapp2025german
+        model: German Commons
+        note: 154 billion tokens of openly licensed German text; Open Legal Data is part of its legal subset.
+
+  - id: datasets
+    title: Datasets and benchmarks
+    papers:
+      - darji2026bundesrecht
+      - darji2025segmentation
+      - braun2024agb
+      - hamotskyi2024fincorpus
+      - darji2024challenges
+      - braun2024beg
+      - darji2023dataset
+      - wrzalik2021gerdalir
+
+  - id: retrieval
+    title: Legal search, question answering and RAG
+    papers:
+      - siddig2026verifiable
+      - craciun2025graf
+      - hindi2025enhancing
+      - agater2024slango
+      - wrzalik2024beyond
+      - ostendorff2023aspect
+      - hoppe2022collaborative
+      - hoppe2021towards
+      - ostendorff2021evaluating
+      - darji2021exploring
+      - ostendorff2020contextual
+
+  - id: citations
+    title: Citation networks and knowledge graphs
+    papers:
+      - wendlinger2025missing
+      - milz2023law
+      - milz2021analysis
+
+  - id: legal-nlp
+    title: Legal NLP and AI
+    papers:
+      - furst2024challenges
+      - greco2024bringing
+      - breit2023combining
+      - steinigen2023semantic
+      - braun2022tracking
+      - braun2022clause
+      - dehio2022claim
+      - smuadu2022legal
+      - braun2021automated
+      - braun2021nlp
+
+  - id: infrastructure
+    title: Open legal data and legal tech
+    papers:
+      - smaili2023path
+      - flatt2023model
+      - frosterus2023building
+      - iskandarova2023exploring
+      - flatt2022model
+      - fitsilis2022legal
+      - harper2021legal
+
+  - id: other
+    title: Further citing work
+    intro: German NLP and other work that cites Open Legal Data.
+    collapsed: true
+    papers:
+      - momenzada2025domain
+      - snigula2025vergleich
+      - ali2024survey
+      - idrissi2024comprehensive
+      - luhrs2024self
+      - nie2024multilingual
+      - nikhil2024advancing
+      - idrissi2023domain
+      - schultenkamper2023privacy
+      - gritto2022application
+      - lentzen2022critical
+      - rudolf2022speech
+      - assenmacher2021re
+      - calizzano2021dfki
+      - corvonato2021re
+      - hildebrandt2021data
+      - pimienta2021multilingual
+      - thomethematische
+
+# Duplicates of another entry (flattmodel: undated copy of flatt2023model).
+hidden:
+  - flattmodel

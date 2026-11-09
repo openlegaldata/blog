@@ -1,0 +1,5 @@
+{%- assign p = site.data.papers[include.key] -%}
+<li>
+    <a class="paper-title" href="{{ p.url }}">{{ p.title }}</a><br>
+    <span class="paper-meta">{{ p.authors }}{% if p.venue != "" %} · {{ p.venue }}{% endif %}{% if p.year %} · {{ p.year }}{% endif %}</span>
+</li>

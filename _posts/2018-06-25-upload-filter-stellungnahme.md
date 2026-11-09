@@ -1,5 +1,6 @@
 ---
 layout: post
+published: false
 title: "Upload Filter Stellungnahme von OPENLEGALDATA.IO"
 categories: statements
 author: Saskia

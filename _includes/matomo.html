@@ -1,0 +1,23 @@
+{%- comment -%}
+Self-hosted, cookieless Matomo, configured like the tracker on
+de.openlegaldata.io (oldp: templates/tracking/matomo.html): no cookies, no
+browser feature detection, Do Not Track respected. Only rendered in production
+builds (JEKYLL_ENV=production) once matomo_site_id is set in _config.yml.
+{%- endcomment -%}
+{%- if jekyll.environment == 'production' and site.matomo_url and site.matomo_site_id != "" -%}
+<script>
+  var _paq = window._paq = window._paq || [];
+  _paq.push(["setDoNotTrack", true]);
+  _paq.push(["disableCookies"]);
+  _paq.push(["disableBrowserFeatureDetection"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="{{ site.matomo_url }}";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '{{ site.matomo_site_id }}']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+{%- endif -%}
