@@ -1,5 +1,6 @@
 ---
 layout: post
+published: false
 title: Open Legal Data bei der Mittelstandskonferenz 2018
 categories: events
 author: Saskia
