@@ -3,10 +3,10 @@
 <head>
     <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <title>About - Open Legal Data</title>
-    <meta name="description" content="Free Access to Legal Information." />
+    <meta name="description" content="Free access to legal information: open German court decisions and laws as open data, REST API and MCP server for AI assistants." />
 
     <link rel="stylesheet" href="/assets/css/main.css">
 
@@ -18,9 +18,22 @@
     <link rel="alternate" type="application/rss+xml" title="Open Legal Data" href="/feed.xml" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon image_src" href="/assets/apple-touch-icon.png">
-    <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
     
-    
+    <script>
+  var _paq = window._paq = window._paq || [];
+  _paq.push(["setDoNotTrack", true]);
+  _paq.push(["disableCookies"]);
+  _paq.push(["disableBrowserFeatureDetection"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://matomo.openlegaldata.io/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '3']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
 </head>
 
 </head>
@@ -34,9 +47,8 @@
 
         <div class="container">
 
-    <div class="container">
-    <section class="text-justify">
-        <h2 id="about">About</h2>
+    <div class="page-content">
+    <h2 id="about">About</h2>
 
 <p><strong>OPENLEGALDATA.IO</strong> is a free and open platform that makes legal documents and information accessible to the public. 
 Our goal is to enhance the transparency of the jurisdiction with the help of open data and by supporting people 
@@ -64,73 +76,32 @@ We hope that we can encourage more researchers
 and policymakers to work together with us on our vision. 
 Together, we want to develop instruments that facilitate the understanding of the German legal system by not only providing the jurisdictional decisions but also the contained information in a comprehensible way.</p>
 
+<p>Today, the platform is used by people looking for court decisions and laws,
+by developers through the <a href="/open-data/#api">REST API</a>,
+by AI assistants through our <a href="/open-data/#mcp">MCP server</a>
+and by researchers through the <a href="/open-data/#datasets">open datasets</a>,
+which have become part of the training data of several
+<a href="/research/#llm">open language models</a>.</p>
 
-    </section>
-</div>
+<h3 id="contribute">Contribute</h3>
 
-<div class="container">
-    <div class="section">		
-		<!--   Icon Section   -->
-        <div class="row row-eq-height">
-            <div class="col s12 m3">
-				<a href="/transparency">
-                <section class="icon-block">
-                    <h2 class="text-center"><i class="fa fa-eye"></i></h2>
-                    <h5 class="text-center">Increase Transparency</h5>
-                    <p class="text-justify"></p>
-                </section>
-				</a>
-            </div>
+<p>Open Legal Data is run by volunteers in their spare time, and we depend on
+your support. We are looking for developers, legal experts, researchers,
+journalists, analysts and anyone who wants to make the rule of law more
+transparent with open data. Ways to help:</p>
 
-            <div class="col s12 m3">
-				<a href="/team">
-                <section class="icon-block">
-                    <h2 class="text-center"><i class="fa fa-users"></i></h2>
-                    <h5 class="text-center">Join the team!</h5>
-                    <p class="text-justify"></p>
-                </section>
-				</a>
-            </div>
+<ul>
+  <li><strong>Use the data</strong> in your app, research or reporting, and tell us what you built.</li>
+  <li><strong>Add sources:</strong> write scrapers for courts and legislation that are not covered yet, or send us court decisions.</li>
+  <li><strong>Improve the platform:</strong> fix bugs, improve data quality, work on new features. The code is on <a href="https://github.com/openlegaldata">GitHub</a> under the MIT license.</li>
+  <li><strong>Bring Open Legal Data to <a href="/your-country/">your country</a>.</strong></li>
+</ul>
 
-            <div class="col s12 m3">
-				<a href="/open-data">
-                <section class="icon-block">
-                    <h2 class="text-center"><i class="fa fa-lock"></i></h2>
-                    <h5 class="text-center">Open Data</h5>
-                    <p class="text-justify"></p>
-                </section>
-				</a>
-            </div>
+<p>Join us on <a href="https://discord.gg/WCy3aq25ZF">Discord</a>, open an issue on
+<a href="https://github.com/openlegaldata/oldp/issues">GitHub</a> or write to
+<a href="mailto:hello@openlegaldata.io">hello@openlegaldata.io</a>.</p>
 
 
-            <div class="col s12 m3">
-				<a href="/research">
-                <section class="icon-block">
-                    <h2 class="text-center"><i class="fa fa-flask"></i></h2>
-                    <h5 class="text-center">Legal Research</h5>
-                    <p class="text-justify"></p>
-                </section>
-				</a>
-            </div>
-        </div>
-	</div>
-</div>
-
-<div class="container">	
-    <section class="view img-rounded" style="background-image: url('/assets/img/background.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; min-height:100px;">
-        <p> 
-		<div class="row align-items-center justify-content-md-center justify-content-xs-center justify-content-sm-center">
-			<div class="col align-self-center input-group" style="max-width: 420px; margin-top:25px;">
-				<select class="form-control" id="sel1">
-					<option>Germany / Deutschland</option>
-				</select>
-				<div class="input-group-append">
-					<a href="//de.openlegaldata.io/" class="btn btn-md btn-primary" type="button" id="button-addon2">Enter Platform</a>
-				</div>
-			</div>   
-		</div>		
-        </p>
-    </section>
 </div>
 
 
@@ -142,14 +113,16 @@ Together, we want to develop instruments that facilitate the understanding of th
     <footer class="bd-footer text-muted">
         <div class="container p-3 p-md-5">
             <ul class="bd-footer-links">
-
-                <li><a href="/about">About</a></li>
-                <li><a href="/imprint">Imprint</a></li>
-                <li><a href="/privacy">Privacy</a></li>
-                <li><a href="/blog">Blog</a></li>
-
+                <li><a href="/about/">About</a></li>
+                <li><a href="/open-data/">Open Data &amp; AI</a></li>
+                <li><a href="/research/">Research</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/imprint/">Imprint</a></li>
+                <li><a href="/privacy/">Privacy</a></li>
+                <li><a href="https://de.openlegaldata.io/"><img src="/assets/flags/de.svg" alt="" class="btn-flag"> Platform</a></li>
+                <li><a href="https://discord.gg/WCy3aq25ZF"><i class="fa-brands fa-discord" aria-hidden="true"></i> Discord</a></li>
                 <li><a href="https://github.com/openlegaldata"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a></li>
-
+                <li><a href="https://huggingface.co/openlegaldata">🤗 Hugging Face</a></li>
             </ul>
         </div>
     </footer>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2026-05-22T20:38:39+00:00</updated><id>/feed.xml</id><title type="html">Open Legal Data</title><subtitle>Free Access to Legal Information.
-</subtitle><author><name>Open Legal Data</name></author><entry><title type="html">May 2026 Dataset Available: 423,941 Court Decisions, 113,537 Laws, 7,438,459 Citations</title><link href="/research/2026/05/22/may-2026-dataset-available.html" rel="alternate" type="text/html" title="May 2026 Dataset Available: 423,941 Court Decisions, 113,537 Laws, 7,438,459 Citations" /><published>2026-05-22T00:00:00+00:00</published><updated>2026-05-22T00:00:00+00:00</updated><id>/research/2026/05/22/may-2026-dataset-available</id><content type="html" xml:base="/research/2026/05/22/may-2026-dataset-available.html"><![CDATA[<p>We just published a fresh snapshot of the <a href="https://de.openlegaldata.io">Open Legal Data</a>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2026-11-09T07:28:28+00:00</updated><id>/feed.xml</id><title type="html">Open Legal Data</title><subtitle>Free access to legal information: open German court decisions and laws as open data, REST API and MCP server for AI assistants.</subtitle><author><name>Open Legal Data</name></author><entry><title type="html">May 2026 Dataset Available: 423,941 Court Decisions, 113,537 Laws, 7,438,459 Citations</title><link href="/research/2026/05/22/may-2026-dataset-available.html" rel="alternate" type="text/html" title="May 2026 Dataset Available: 423,941 Court Decisions, 113,537 Laws, 7,438,459 Citations" /><published>2026-05-22T00:00:00+00:00</published><updated>2026-05-22T00:00:00+00:00</updated><id>/research/2026/05/22/may-2026-dataset-available</id><content type="html" xml:base="/research/2026/05/22/may-2026-dataset-available.html"><![CDATA[<p>We just published a fresh snapshot of the <a href="https://de.openlegaldata.io">Open Legal Data</a>
 corpus to the Hugging Face Hub. The 2026-05-20 dump covers every
 available record in the platform: <strong>423,941 German court
 decisions</strong>, <strong>113,537 laws</strong> across
@@ -1081,9 +1080,7 @@ aus der Spruchpraxis ziehen, aus denen wiederum der Gesetzgeber seine
 Schlüsse ziehen kann.</p>
 
 <p>Herr Breyer, vielen Dank für das Interview.
-<em>Das Interview führte Saskia Ostendorff.</em></p>]]></content><author><name>Saskia</name></author><category term="interviews" /><summary type="html"><![CDATA[Wir haben mit dem Bürgerrechtler Patrick Breyer ein Interview zum Thema Urteilsveröffentlichungen und Open Data in der Justiz geführt. Er ist einer derjenige, der sich für eine transparente Justiz stark macht und im vergangenen Jahr eine Antrag auf Herausgabe einer anonymisierten Urteilsabschrift in der sog. Rocker-Affäre in Schleswig Holstein stellte. Er hatte als Landtagsabgeordneter den Vorwurf aufgedeckt, dass Kieler Kriminalbeamte in einem Strafverfahren gegen Rocker entlastende Aussagen unterdrückt haben sollen. Der Antrag wurde abgelehnt. Patrick Breyer hat 2017 erreicht, dass der EuGH gerichtliche Schriftsätze öffentlich zugänglich machen muss (Az.C-213/15P).]]></summary></entry><entry><title type="html">BMJV übernimmt Open Legal Data</title><link href="/events/2019/04/01/bmjv-uebernimmt-open-legal-data.html" rel="alternate" type="text/html" title="BMJV übernimmt Open Legal Data" /><published>2019-04-01T00:00:00+00:00</published><updated>2019-04-01T00:00:00+00:00</updated><id>/events/2019/04/01/bmjv-uebernimmt-open-legal-data</id><content type="html" xml:base="/events/2019/04/01/bmjv-uebernimmt-open-legal-data.html"><![CDATA[<h1 id="april-april">April April!</h1>
-
-<p>:-P</p>]]></content><author><name>Malte</name></author><category term="events" /><summary type="html"><![CDATA[April April!]]></summary></entry><entry><title type="html">Demo Day - Prototypefund: Alles Ende ist ein Anfang!</title><link href="/events/2019/03/02/demoday.html" rel="alternate" type="text/html" title="Demo Day - Prototypefund: Alles Ende ist ein Anfang!" /><published>2019-03-02T00:00:00+00:00</published><updated>2019-03-02T00:00:00+00:00</updated><id>/events/2019/03/02/demoday</id><content type="html" xml:base="/events/2019/03/02/demoday.html"><![CDATA[<p>Am Samstag, den 02.03.2019, haben wir unsere Abschlusspräsentation der Förderung des Prototypefunds gehalten. 
+<em>Das Interview führte Saskia Ostendorff.</em></p>]]></content><author><name>Saskia</name></author><category term="interviews" /><summary type="html"><![CDATA[Wir haben mit dem Bürgerrechtler Patrick Breyer ein Interview zum Thema Urteilsveröffentlichungen und Open Data in der Justiz geführt. Er ist einer derjenige, der sich für eine transparente Justiz stark macht und im vergangenen Jahr eine Antrag auf Herausgabe einer anonymisierten Urteilsabschrift in der sog. Rocker-Affäre in Schleswig Holstein stellte. Er hatte als Landtagsabgeordneter den Vorwurf aufgedeckt, dass Kieler Kriminalbeamte in einem Strafverfahren gegen Rocker entlastende Aussagen unterdrückt haben sollen. Der Antrag wurde abgelehnt. Patrick Breyer hat 2017 erreicht, dass der EuGH gerichtliche Schriftsätze öffentlich zugänglich machen muss (Az.C-213/15P).]]></summary></entry><entry><title type="html">Demo Day - Prototypefund: Alles Ende ist ein Anfang!</title><link href="/events/2019/03/02/demoday.html" rel="alternate" type="text/html" title="Demo Day - Prototypefund: Alles Ende ist ein Anfang!" /><published>2019-03-02T00:00:00+00:00</published><updated>2019-03-02T00:00:00+00:00</updated><id>/events/2019/03/02/demoday</id><content type="html" xml:base="/events/2019/03/02/demoday.html"><![CDATA[<p>Am Samstag, den 02.03.2019, haben wir unsere Abschlusspräsentation der Förderung des Prototypefunds gehalten. 
 Es war eine wunderbare Veranstaltung und wir danken dem Prototypefund, dem DLR Deutschland und dem Bundesministerium 
 für Bildung und Forschung, dass sie den erheblichen Fortschritt von Open Legal Data in den letzten 5 Monaten unterstützt
 haben.</p>
@@ -1141,4 +1138,134 @@ and will present their prototype soon in New York in front of an even bigger aud
 
 <p>We are proud see that other projects start using our data. 
 This is what we started Open Legal Data for. If you build something cool with our API, please contact us. 
-We are excited to see what else can be done with the data.</p>]]></content><author><name>Malte</name></author><category term="events" /><summary type="html"><![CDATA[During the last week the 2019 edition of the Legal Tech Center conference took place in Berlin. Aside the conference and as part of the Global Legal Hackathon, also a hackathon was organized. Within just a single day several teams developed prototypes in the area of legal tech and presented their results to a jury. Team VizLaw were selected as winner by the jury. VizLaw won the competition with their visual exploration tool for court decisions, which heavily relies on our API and the citation dataset. As winner of the Berlin hackathon, VizLaw has qualified for the final round the Global Legal Hackathon and will present their prototype soon in New York in front of an even bigger audience.]]></summary></entry></feed>
+We are excited to see what else can be done with the data.</p>]]></content><author><name>Malte</name></author><category term="events" /><summary type="html"><![CDATA[During the last week the 2019 edition of the Legal Tech Center conference took place in Berlin. Aside the conference and as part of the Global Legal Hackathon, also a hackathon was organized. Within just a single day several teams developed prototypes in the area of legal tech and presented their results to a jury. Team VizLaw were selected as winner by the jury. VizLaw won the competition with their visual exploration tool for court decisions, which heavily relies on our API and the citation dataset. As winner of the Berlin hackathon, VizLaw has qualified for the final round the Global Legal Hackathon and will present their prototype soon in New York in front of an even bigger audience.]]></summary></entry><entry><title type="html">Open Legal Data releases dataset of 100,000 German court decisions and 444,000 citations</title><link href="/research/2019/02/19/court-decision-dataset.html" rel="alternate" type="text/html" title="Open Legal Data releases dataset of 100,000 German court decisions and 444,000 citations" /><published>2019-02-19T00:00:00+00:00</published><updated>2019-02-19T00:00:00+00:00</updated><id>/research/2019/02/19/court-decision-dataset</id><content type="html" xml:base="/research/2019/02/19/court-decision-dataset.html"><![CDATA[<p>Our initiative has made a large dataset of Germany court decisions and the corresponding citation network publicly 
+available to help the community to development new techniques for processing legal text. 
+As far as we know there is no similar dataset for German court decisions yet. 
+Having no data available, limits the opportunities for researchers and start-ups likewise. 
+With the release of the dataset, Open Legal Data hopes to foster both areas, especially in Germany.</p>
+
+<p>All decisions are anonymized by the responsible court and have additional meta data, e.g. date and decision type.
+Citation were automatically extracted with our <a href="https://github.com/openlegaldata/legal-reference-extraction">Legal Reference Extraction</a> 
+tool that is also freely available under an Open Source license.</p>
+
+<p>We are excited to see what the community can achieve with the dataset. 
+Feel free to share your results with us or to contact us if you have any questions.</p>
+
+<h3 id="download">Download</h3>
+
+<p>The datasets are now hosted on Hugging Face:</p>
+
+<ul>
+  <li><a href="https://huggingface.co/datasets/openlegaldata/court-decisions-germany">German court decisions</a></li>
+  <li><a href="https://huggingface.co/datasets/openlegaldata/legal-citation-graph-germany">Citation network</a></li>
+</ul>
+
+<p>They contain newer and larger snapshots than the 2019 release described in this post, which is no longer hosted.
+Only its citation list is still available, in the <a href="https://huggingface.co/datasets/openlegaldata/legal-citation-graph">deprecated citation dataset</a>.</p>
+
+<h3 id="what-can-you-do-with-the-data">What can you do with the data?</h3>
+
+<p>One of the principals of Open Data is, that you should release data and let the people decide what to do with it.
+However, if you are not creative enough, just have a look at our examples:</p>
+
+<ul>
+  <li><a href="https://github.com/openlegaldata/oldp-notebooks/blob/master/notebooks/references.ipynb">Citation analysis</a>: 
+  What cites what?</li>
+  <li><a href="https://github.com/openlegaldata/oldp-notebooks/blob/master/notebooks/litigation_value.ipynb">Litigation value extraction</a>: 
+  Extract information from the raw text</li>
+  <li><a href="https://github.com/openlegaldata/oldp-notebooks/blob/master/notebooks/ngram_model.ipynb">Learning a Predictive N-Gram Model</a></li>
+</ul>
+
+<h3 id="what-is-in-the-data">What is in the data?</h3>
+
+<p>In the following we presents some statistics on the dataset so you can a quick overview of its content:</p>
+
+<h4 id="court-decisions">Court decisions</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; SELECT COUNT(*) FROM cases_case;
++----------+
+| COUNT(*) |
++----------+
+|   104763 |
++----------+
+
+&gt; SELECT YEAR(`date`), COUNT(*) FROM cases_case GROUP BY YEAR(`date`) ORDER BY COUNT(*) DESC LIMIT 15;
++--------------+----------+
+| YEAR(`date`) | COUNT(*) |
++--------------+----------+
+|         2015 |    16430 |
+|         2016 |    15249 |
+|         2014 |    15180 |
+|         2017 |     9117 |
+|         2013 |     7597 |
+|         2012 |     7358 |
+|         2010 |     7221 |
+|         2018 |     7100 |
+|         2011 |     6339 |
+|         2009 |     2529 |
+|         2008 |     2127 |
+|         2006 |     1986 |
+|         2007 |     1976 |
+|         2005 |     1761 |
+|         2004 |     1617 |
++--------------+----------+
+
+&gt; SELECT s.name, COUNT(*) FROM cases_case c INNER JOIN courts_court cc ON c.court_id = cc.id INNER JOIN courts_state s ON cc.state_id = s.id GROUP BY cc.state_id ORDER BY COUNT(*) DESC LIMIT 15;
++----------------------------+----------+
+| name                       | COUNT(*) |
++----------------------------+----------+
+| Bundesrepublik Deutschland |    31267 |
+| Nordrhein-Westfalen        |    22782 |
+| Baden-Württemberg          |    15245 |
+| Rheinland-Pfalz            |     8142 |
+| Niedersachsen              |     6661 |
+| Sachsen-Anhalt             |     5569 |
+| Schleswig-Holstein         |     4057 |
+| Mecklenburg-Vorpommern     |     3751 |
+| Hamburg                    |     2526 |
+| Saarland                   |     2226 |
+| Europäische Union          |     2115 |
+| Bayern                     |      405 |
+| Sachsen                    |       17 |
++----------------------------+----------+
+</code></pre></div></div>
+
+<h4 id="citations">Citations</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ wc -l refs.csv 
+444034 refs.csv
+</code></pre></div></div>
+
+<p>What law books are cited most often?</p>
+
+<p><img src="/assets/img/ref_law_books.png" alt="What law books are cited most often?" /></p>
+
+<p>Citing states</p>
+
+<p><img src="/assets/img/ref_case_states.png" alt="Citing states" /></p>
+
+<h3 id="citation">Citation</h3>
+
+<p>If you end up using our dataset, please link to this blog post or cite the following <a href="https://arxiv.org/abs/2005.13342">research paper</a>:</p>
+
+<div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">10.1145/3383583.3398616</span><span class="p">,</span>
+<span class="na">author</span> <span class="p">=</span> <span class="s">{Ostendorff, Malte and Blume, Till and Ostendorff, Saskia}</span><span class="p">,</span>
+<span class="na">title</span> <span class="p">=</span> <span class="s">{Towards an Open Platform for Legal Information}</span><span class="p">,</span>
+<span class="na">year</span> <span class="p">=</span> <span class="s">{2020}</span><span class="p">,</span>
+<span class="na">isbn</span> <span class="p">=</span> <span class="s">{9781450375856}</span><span class="p">,</span>
+<span class="na">publisher</span> <span class="p">=</span> <span class="s">{Association for Computing Machinery}</span><span class="p">,</span>
+<span class="na">address</span> <span class="p">=</span> <span class="s">{New York, NY, USA}</span><span class="p">,</span>
+<span class="na">url</span> <span class="p">=</span> <span class="s">{https://doi.org/10.1145/3383583.3398616}</span><span class="p">,</span>
+<span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1145/3383583.3398616}</span><span class="p">,</span>
+<span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the ACM/IEEE Joint Conference on Digital Libraries in 2020}</span><span class="p">,</span>
+<span class="na">pages</span> <span class="p">=</span> <span class="s">{385–388}</span><span class="p">,</span>
+<span class="na">numpages</span> <span class="p">=</span> <span class="s">{4}</span><span class="p">,</span>
+<span class="na">keywords</span> <span class="p">=</span> <span class="s">{open data, open source, legal information system, legal data}</span><span class="p">,</span>
+<span class="na">location</span> <span class="p">=</span> <span class="s">{Virtual Event, China}</span><span class="p">,</span>
+<span class="na">series</span> <span class="p">=</span> <span class="s">{JCDL '20}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="update">Update</h3>
+
+<p>For more recent dumps, please refer to our Huggingface datasets: <a href="https://huggingface.co/openlegaldata/datasets">https://huggingface.co/openlegaldata/datasets</a></p>]]></content><author><name>Malte</name></author><category term="research" /><summary type="html"><![CDATA[Our initiative has made a large dataset of Germany court decisions and the corresponding citation network publicly available to help the community to development new techniques for processing legal text. As far as we know there is no similar dataset for German court decisions yet. Having no data available, limits the opportunities for researchers and start-ups likewise. With the release of the dataset, Open Legal Data hopes to foster both areas, especially in Germany.]]></summary></entry></feed>

@@ -3,7 +3,7 @@
 <head>
     <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <title>Open Legal Data releases dataset of 100,000 German court decisions and 444,000 citations - Open Legal Data</title>
     <meta name="description" content="Our initiative has made a large dataset of Germany court decisions and the corresponding citation network publicly available to help the community to develop..." />
@@ -18,9 +18,22 @@
     <link rel="alternate" type="application/rss+xml" title="Open Legal Data" href="/feed.xml" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon image_src" href="/assets/apple-touch-icon.png">
-    <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
     
-    
+    <script>
+  var _paq = window._paq = window._paq || [];
+  _paq.push(["setDoNotTrack", true]);
+  _paq.push(["disableCookies"]);
+  _paq.push(["disableBrowserFeatureDetection"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://matomo.openlegaldata.io/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '3']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
 </head>
 
 </head>
@@ -65,10 +78,15 @@ Feel free to share your results with us or to contact us if you have any questio
 
 <h3 id="download">Download</h3>
 
+<p>The datasets are now hosted on Hugging Face:</p>
+
 <ul>
-  <li><a href="https://huggingface.co/datasets/openlegaldata/court-decisions-germany">German court decisions</a> (json.gz: 772M)</li>
-  <li><a href="https://huggingface.co/datasets/openlegaldata/legal-citation-graph">Citation network</a> (csv.gz: 4.4M)</li>
+  <li><a href="https://huggingface.co/datasets/openlegaldata/court-decisions-germany">German court decisions</a></li>
+  <li><a href="https://huggingface.co/datasets/openlegaldata/legal-citation-graph-germany">Citation network</a></li>
 </ul>
+
+<p>They contain newer and larger snapshots than the 2019 release described in this post, which is no longer hosted.
+Only its citation list is still available, in the <a href="https://huggingface.co/datasets/openlegaldata/legal-citation-graph">deprecated citation dataset</a>.</p>
 
 <h3 id="what-can-you-do-with-the-data">What can you do with the data?</h3>
 
@@ -78,8 +96,6 @@ However, if you are not creative enough, just have a look at our examples:</p>
 <ul>
   <li><a href="https://github.com/openlegaldata/oldp-notebooks/blob/master/notebooks/references.ipynb">Citation analysis</a>: 
   What cites what?</li>
-  <li><a href="http://openlegaldata.io/de/citation-network.html">Citation network visualization</a>: 
-  An inactive plot where you can zoom and click on each nodes.</li>
   <li><a href="https://github.com/openlegaldata/oldp-notebooks/blob/master/notebooks/litigation_value.ipynb">Litigation value extraction</a>: 
   Extract information from the raw text</li>
   <li><a href="https://github.com/openlegaldata/oldp-notebooks/blob/master/notebooks/ngram_model.ipynb">Learning a Predictive N-Gram Model</a></li>
@@ -181,8 +197,6 @@ However, if you are not creative enough, just have a look at our examples:</p>
 
 
   </div>
-
-  
 </article>
 </section>
 
@@ -195,14 +209,16 @@ However, if you are not creative enough, just have a look at our examples:</p>
     <footer class="bd-footer text-muted">
         <div class="container p-3 p-md-5">
             <ul class="bd-footer-links">
-
-                <li><a href="/about">About</a></li>
-                <li><a href="/imprint">Imprint</a></li>
-                <li><a href="/privacy">Privacy</a></li>
-                <li><a href="/blog">Blog</a></li>
-
+                <li><a href="/about/">About</a></li>
+                <li><a href="/open-data/">Open Data &amp; AI</a></li>
+                <li><a href="/research/">Research</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/imprint/">Imprint</a></li>
+                <li><a href="/privacy/">Privacy</a></li>
+                <li><a href="https://de.openlegaldata.io/"><img src="/assets/flags/de.svg" alt="" class="btn-flag"> Platform</a></li>
+                <li><a href="https://discord.gg/WCy3aq25ZF"><i class="fa-brands fa-discord" aria-hidden="true"></i> Discord</a></li>
                 <li><a href="https://github.com/openlegaldata"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a></li>
-
+                <li><a href="https://huggingface.co/openlegaldata">🤗 Hugging Face</a></li>
             </ul>
         </div>
     </footer>

@@ -3,10 +3,10 @@
 <head>
     <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <title>Open Legal Data</title>
-    <meta name="description" content="Free Access to Legal Information." />
+    <meta name="description" content="Free access to legal information: open German court decisions and laws as open data, REST API and MCP server for AI assistants." />
 
     <link rel="stylesheet" href="/assets/css/main.css">
 
@@ -18,9 +18,22 @@
     <link rel="alternate" type="application/rss+xml" title="Open Legal Data" href="/feed.xml" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon image_src" href="/assets/apple-touch-icon.png">
-    <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
     
-    
+    <script>
+  var _paq = window._paq = window._paq || [];
+  _paq.push(["setDoNotTrack", true]);
+  _paq.push(["disableCookies"]);
+  _paq.push(["disableBrowserFeatureDetection"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://matomo.openlegaldata.io/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '3']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
 </head>
 
 </head>
@@ -32,165 +45,228 @@
         </a>
     </header>
 
-        <div class="container">
+    
 
-    <div class="row align-items-center">
-    <div class="col-6 mx-auto col-md-6 order-md-2 homepage-logo">
-        <img class="img-fluid mb-3 mb-md-0 d-none d-md-block" src="/assets/logo.svg" alt="" width="500" height="500">
-    </div>
-    <div class="col-md-6 order-md-1 text-center text-md-left pr-md-5">
-        <h1 class="mb-3">Free Access to Legal Information</h1>
-        <p class="lead">
-            Our open data platform is currently available for the following countries:
-        </p>
-        <p>
-            <a class="btn btn-primary" href="https://de.openlegaldata.io/" style="font-size: 1.2rem;">
-                <img src="/assets/flags/de.svg" alt="" style="height: 20px; display: inline; vertical-align:middle;">
-                Germany / Deutschland
-                <i class="fa fa-arrow-circle-right"></i>
-            </a>
-        </p>
-        <p>
-            <a class="" href="/your-country/" style="font-size: 1.2rem;">
-                <i class="fa fa-warning"></i>
 
-                Is your country missing here?
-                <!--<i class="fa fa-arrow-circle-right"></i>-->
-            </a>
-        </p>
 
-    </div>
-</div>
-
-<div class="section">
-    <div class="row">
-        <div class="col">
-            <section>
-                <p class="text-justify" style="padding-top: 15px;">
-                    <strong>OPENLEGALDATA.IO</strong> is a free and open platform that makes legal documents and information
-                    accessible to the public. Our goal is to enhance the transparency of the jurisdiction with the
-                    help of open data and by supporting people without legal education to understand the justice
-                    system. The project is committed to the Open Data Principles and the Free Access to Law Movement.
-
-                    <a href="/about">Read more about the project.</a>
+<div class="home-masthead bd-masthead">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-7 col-lg-6">
+                <h1 class="mb-3">Free Access to Legal Information</h1>
+                <p class="lead">
+                    Open German court decisions and laws for everyone: search them on our platform,
+                    query them through the REST API, connect your AI assistant via MCP or download the
+                    complete datasets.
                 </p>
-            </section>
-        </div>
-    </div>
-
-    <!--   Icon Section   -->
-    <div class="row row-eq-height">
-        <div class="col s12 m3">
-            <a href="/transparency">
-            <section class="icon-block">
-                <h2 class="text-center"><i class="fa fa-eye"></i></h2>
-                <h5 class="text-center">Increase Transparency</h5>
-                <p class="text-justify"></p>
-            </section>
-            </a>
-        </div>
-
-        <div class="col s12 m3">
-            <a href="/team">
-            <section class="icon-block">
-                <h2 class="text-center"><i class="fa fa-users"></i></h2>
-                <h5 class="text-center">Join the team!</h5>
-                <p class="text-justify"></p>
-            </section>
-            </a>
-        </div>
-
-        <div class="col s12 m3">
-            <a href="/open-data">
-            <section class="icon-block">
-                <h2 class="text-center"><i class="fa fa-lock"></i></h2>
-                <h5 class="text-center">Open Data</h5>
-                <p class="text-justify"></p>
-            </section>
-            </a>
-        </div>
-
-
-        <div class="col s12 m3">
-            <a href="/research">
-            <section class="icon-block">
-                <h2 class="text-center"><i class="fa fa-flask"></i></h2>
-                <h5 class="text-center">Legal Research</h5>
-                <p class="text-justify"></p>
-            </section>
-            </a>
-        </div>
-    </div>
-
-</div>
-
-<div class="row">
-    <div class="col">
-        <section class="blog">
-            <h2>Our Blog</h2>
-            
-                
-                <div class="post-item">
-                    <div class="post-title">
-                        <a class="post-link" href="/research/2026/05/22/may-2026-dataset-available.html">May 2026 Dataset Available: 423,941 Court Decisions, 113,537 Laws, 7,438,459 Citations</a>
-                    </div>
-                    <div class="post-meta">
-                        Published on 05/22
-                    </div>
+                <div class="btn-row mb-3">
+                    <a class="btn btn-primary" href="https://de.openlegaldata.io/">
+                        <img src="/assets/flags/de.svg" alt="" class="btn-flag">
+                        Germany / Deutschland <i class="fa fa-arrow-circle-right"></i>
+                    </a>
                 </div>
-            
-                
-                <div class="post-item">
-                    <div class="post-title">
-                        <a class="post-link" href="/statements/2021/01/12/stellungnahme-egovg.html">Stellungnahme zum Referentenentwurf eines Gesetzes zur Änderung des E-Government-Gesetzes (eGovG) und zur Einführung des Gesetzes für die Nutzung von Daten des öffentlichen Sektors</a>
-                    </div>
-                    <div class="post-meta">
-                        Published on 01/12
-                    </div>
+                <div class="btn-row mb-3">
+                    <a class="btn btn-outline-primary" href="/open-data/#mcp">MCP for AI agents</a>
+                    <a class="btn btn-outline-primary" href="/open-data/#api">REST API</a>
+                    <a class="btn btn-outline-primary" href="/open-data/#datasets">Datasets</a>
                 </div>
-            
-                
-                <div class="post-item">
-                    <div class="post-title">
-                        <a class="post-link" href="/events/2019/12/28/36c3.html">Open Legal Data beim 36C3 in Leipzig</a>
-                    </div>
-                    <div class="post-meta">
-                        Published on 12/28
-                    </div>
-                </div>
-            
-                
-                <div class="post-item">
-                    <div class="post-title">
-                        <a class="post-link" href="/2019/12/23/jahresrueckblick.html">Jahresrückblick 2019 - Der Weg zu offenen juristischen Daten!</a>
-                    </div>
-                    <div class="post-meta">
-                        Published on 12/23
-                    </div>
-                </div>
-            
-                
-                <div class="post-item">
-                    <div class="post-title">
-                        <a class="post-link" href="/events/2019/06/03/interview-urteilsveroeffentlichung-georgien.html">Zugang zum Recht für Jeden in Georgien - Interview mit Tamara Ergemlidze, LL.M</a>
-                    </div>
-                    <div class="post-meta">
-                        Published on 06/03
-                    </div>
-                </div>
-            
-            <p>
-                <a href="/blog" class="btn btn-default">Show more posts</a>
-            </p>
-        </section>
-
-
+                <p class="mb-0">
+                    <a href="/your-country/"><i class="fa fa-globe"></i> Is your country missing?</a>
+                </p>
+            </div>
+            <div class="col-md-5 col-lg-6 homepage-logo d-none d-md-block text-center">
+                <img class="img-fluid" src="/assets/logo.svg" alt="" width="420" height="420">
+            </div>
+        </div>
     </div>
 </div>
 
-
-
+<div class="stats">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-md-3 stat">
+                <span class="stat-value">+400,000</span>
+                <span class="stat-label">court decisions</span>
+            </div>
+            <div class="col-6 col-md-3 stat">
+                <span class="stat-value">+100,000</span>
+                <span class="stat-label">law sections</span>
+            </div>
+            <div class="col-6 col-md-3 stat">
+                <span class="stat-value">+7 million</span>
+                <span class="stat-label">citations between them</span>
+            </div>
+            <div class="col-6 col-md-3 stat">
+                <span class="stat-value">+65</span>
+                <span class="stat-label">research papers</span>
+            </div>
+        </div>
+        <div class="stats-note text-center">
+            Available as <a href="/open-data/#datasets">open datasets</a>.
+            The platform adds new decisions daily.
+        </div>
     </div>
+</div>
+
+<div class="masthead-followup row m-0 border border-white">
+    <div class="col-12 col-lg-4 p-4 p-lg-5 bg-light border border-white d-flex flex-column">
+        <h3>AI agents &amp; MCP</h3>
+        <p>
+            Connect Claude, ChatGPT, Cursor or your own agent to German case law and legislation.
+            Our <a href="https://modelcontextprotocol.io">MCP</a> server lets AI assistants search decisions
+            and laws, read full texts, check citations and follow the citation graph, with sources
+            you can verify.
+        </p>
+        <code class="server-url">https://de.openlegaldata.io/mcp</code>
+        <p>Works without an account. A free account gives you a higher limit.</p>
+        <div class="homepage-actions mt-auto">
+            <hr class="half-rule">
+            <div class="btn-row">
+                <a class="btn btn-outline-primary" href="/open-data/#mcp">Connect via MCP</a>
+                <a class="btn btn-outline-primary" href="https://openlegaldata.github.io/oldp/mcp.html">MCP tools</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-lg-4 p-4 p-lg-5 bg-light border border-white d-flex flex-column">
+        <h3>REST API</h3>
+        <p>
+            All court decisions, laws and courts as JSON, with full-text search, filters and
+            citation lookups. Build your own apps, scripts and notebooks on top of it.
+        </p>
+        <p>
+            Like MCP, the API works without an account; with a free API token the limits are
+            considerably higher.
+        </p>
+        <div class="homepage-actions mt-auto">
+            <hr class="half-rule">
+            <div class="btn-row">
+                <a class="btn btn-outline-primary" href="/open-data/#api">Get started</a>
+                <a class="btn btn-outline-primary" href="https://de.openlegaldata.io/api/docs/">Try it out!</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-lg-4 p-4 p-lg-5 bg-light border border-white d-flex flex-column">
+        <h3>Open datasets</h3>
+        <p>
+            The complete corpus for analysis, research and machine learning: court decisions, laws and
+            the citation graph on <a href="https://huggingface.co/openlegaldata">Hugging Face</a>, versioned per dump
+            and with small samples for a quick start.
+        </p>
+        <p>
+            Court decisions and laws are in the public domain in Germany (§ 5 UrhG); the collection is
+            released under the <a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database License (ODbL)</a>.
+        </p>
+        <div class="homepage-actions mt-auto">
+            <hr class="half-rule">
+            <div class="btn-row">
+                <a class="btn btn-outline-primary" href="https://huggingface.co/openlegaldata">Hugging Face</a>
+                <a class="btn btn-outline-primary" href="/open-data/#datasets">Overview</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="masthead-followup row m-0 border border-white">
+    <div class="col-12 col-lg-4 p-4 p-lg-5 bg-light border border-white d-flex flex-column">
+        <h3>Legal research</h3>
+        <p>
+            Open Legal Data is cited in 65 research papers, and its court decisions and laws are part of
+            the training data of open language models such as:
+        </p>
+        <ul class="model-list">
+            
+            <li><a href="https://arxiv.org/abs/2010.10906">GBERT & GELECTRA</a></li>
+            
+            <li><a href="https://arxiv.org/abs/2301.09626">BLOOM-CLP German</a></li>
+            
+            <li><a href="https://arxiv.org/abs/2310.07321">GeBERTa</a></li>
+            
+            <li><a href="https://arxiv.org/abs/2410.08800">OpenGPT-X (Teuken)</a></li>
+            
+            <li><a href="https://arxiv.org/abs/2502.08489">Salamandra</a></li>
+            
+            <li><a href="https://arxiv.org/abs/2602.21379">MrBERT</a></li>
+            
+        </ul>
+        <div class="homepage-actions mt-auto">
+            <hr class="half-rule">
+            <div class="btn-row">
+                <a class="btn btn-outline-primary" href="/research/">Research papers</a>
+                <a class="btn btn-outline-primary" href="/research/#cite">Cite us</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-lg-4 p-4 p-lg-5 bg-light border border-white d-flex flex-column">
+        <h3>Contribute</h3>
+        <p>
+            Open Legal Data is run by volunteers in their spare time, and we depend on your support.
+            We are looking for developers, legal experts, researchers, journalists and anyone who wants
+            to make the rule of law more transparent with open data.
+        </p>
+        <p>
+            Use the data and tell us what you built, add scrapers for more courts, improve data quality,
+            report bugs, work on new features or <a href="/your-country/">bring the platform to your country</a>.
+            All code is open source under the MIT license.
+        </p>
+        <div class="homepage-actions mt-auto">
+            <hr class="half-rule">
+            <div class="btn-row">
+                <a class="btn btn-outline-primary" href="https://discord.gg/WCy3aq25ZF">Discord</a>
+                <a class="btn btn-outline-primary" href="https://github.com/openlegaldata">GitHub</a>
+                <a class="btn btn-outline-primary" href="mailto:hello@openlegaldata.io">Email</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-lg-4 p-4 p-lg-5 bg-light border border-white d-flex flex-column">
+        <h3>From our blog</h3>
+        <ul class="post-list">
+            
+            <li>
+                <a href="/research/2026/05/22/may-2026-dataset-available.html">May 2026 Dataset Available: 423,941 Court Decisions, 113,537 Laws, 7,438,459 Citations</a>
+                <span class="post-date">May 22, 2026</span>
+            </li>
+            
+            <li>
+                <a href="/statements/2021/01/12/stellungnahme-egovg.html">Stellungnahme zum Referentenentwurf eines Gesetzes zur Änderung des E-Government-Gesetzes (eGovG) und zur Einführung des Gesetzes für die Nutzung von Daten des öffentlichen Sektors</a>
+                <span class="post-date">Jan 12, 2021</span>
+            </li>
+            
+            <li>
+                <a href="/events/2019/12/28/36c3.html">Open Legal Data beim 36C3 in Leipzig</a>
+                <span class="post-date">Dec 28, 2019</span>
+            </li>
+            
+            <li>
+                <a href="/2019/12/23/jahresrueckblick.html">Jahresrückblick 2019 - Der Weg zu offenen juristischen Daten!</a>
+                <span class="post-date">Dec 23, 2019</span>
+            </li>
+            
+        </ul>
+        <div class="homepage-actions mt-auto">
+            <div class="btn-row justify-content-lg-center">
+                <a class="btn btn-outline-primary" href="/blog/">All posts</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="masthead-followup row m-0 border border-white">
+    <div class="col-12 p-4 p-lg-5 bg-light border border-white">
+        <h3>About the project</h3>
+        <p class="mb-0" style="max-width: 60rem;">
+            <strong>OPENLEGALDATA.IO</strong> is a free and open platform that makes legal documents and
+            information accessible to the public. Our goal is to make the judiciary more transparent with
+            open data and to help people without legal training understand the justice system. The project
+            is committed to the <a href="https://opendefinition.org/od/2.1/en/">Open Data Principles</a> and
+            the <a href="http://www.fatlm.org/">Free Access to Law Movement</a>.
+            <a href="/about/">Read more about the project.</a>
+        </p>
+    </div>
+</div>
 
 
     <br>
@@ -198,14 +274,16 @@
     <footer class="bd-footer text-muted">
         <div class="container p-3 p-md-5">
             <ul class="bd-footer-links">
-
-                <li><a href="/about">About</a></li>
-                <li><a href="/imprint">Imprint</a></li>
-                <li><a href="/privacy">Privacy</a></li>
-                <li><a href="/blog">Blog</a></li>
-
+                <li><a href="/about/">About</a></li>
+                <li><a href="/open-data/">Open Data &amp; AI</a></li>
+                <li><a href="/research/">Research</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/imprint/">Imprint</a></li>
+                <li><a href="/privacy/">Privacy</a></li>
+                <li><a href="https://de.openlegaldata.io/"><img src="/assets/flags/de.svg" alt="" class="btn-flag"> Platform</a></li>
+                <li><a href="https://discord.gg/WCy3aq25ZF"><i class="fa-brands fa-discord" aria-hidden="true"></i> Discord</a></li>
                 <li><a href="https://github.com/openlegaldata"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a></li>
-
+                <li><a href="https://huggingface.co/openlegaldata">🤗 Hugging Face</a></li>
             </ul>
         </div>
     </footer>

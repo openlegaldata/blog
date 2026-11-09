@@ -3,10 +3,10 @@
 <head>
     <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <title>Legal Research - Open Legal Data</title>
-    <meta name="description" content="Free Access to Legal Information." />
+    <title>Research - Open Legal Data</title>
+    <meta name="description" content="Free access to legal information: open German court decisions and laws as open data, REST API and MCP server for AI assistants." />
 
     <link rel="stylesheet" href="/assets/css/main.css">
 
@@ -18,9 +18,22 @@
     <link rel="alternate" type="application/rss+xml" title="Open Legal Data" href="/feed.xml" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon image_src" href="/assets/apple-touch-icon.png">
-    <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
     
-    
+    <script>
+  var _paq = window._paq = window._paq || [];
+  _paq.push(["setDoNotTrack", true]);
+  _paq.push(["disableCookies"]);
+  _paq.push(["disableBrowserFeatureDetection"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://matomo.openlegaldata.io/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '3']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
 </head>
 
 </head>
@@ -34,149 +47,347 @@
 
         <div class="container">
 
-    <div class="container">
-    <section class="text-justify">
-        <h2 id="legal-research">Legal Research</h2>
+    <div class="page-content">
+    
+<h2 id="legal-research">Legal Research</h2>
 
-<p>Recently, there has been an increasing interest in legal data mining tools and applications around the world. 
-For Open Legal Data, we focus mainly on two areas: 
-(1) Finding and Providing Legal Documents and 
-(2) Text Mining on Legal Documents.</p>
+<p>Open Legal Data started as a research project and is built for research: the
+court decisions, laws and citations are available as
+<a href="/open-data/#datasets">open datasets</a>, through a
+<a href="/open-data/#api">REST API</a> and through an
+<a href="/open-data/#mcp">MCP server</a> for AI assistants.
+Our approach is described in
+<a href="https://doi.org/10.1145/3383583.3398616">Towards an Open Platform for Legal Information</a>
+(JCDL 2020, <a href="https://arxiv.org/abs/2005.13342">arXiv</a>).</p>
 
-<p>Our general approach is described in the following research paper:<br />
-<a href="https://ostendorff.org/assets/pdf/ostendorff2020b.pdf">Towards an Open Platform for Legal Information; In Proceedings of the ACM/IEEE Joint Conference on Digital Libraries (JCDL 2020).</a></p>
+<p>Since then, Open Legal Data has been cited in <strong>65 papers</strong>:
+it is part of the training data of open language models, the basis of new
+legal datasets and benchmarks, and used in work on legal search, question
+answering, citation analysis and legal NLP.</p>
 
-<h4 id="finding-and-providing-legal-documents">Finding and Providing Legal Documents</h4>
-
-<p>The Free Law Project is a California non-profit public benefit corporation.
-The Free Law Project (and its service CourtListener) selfdeclared
-its mission to be “to provide free, public, and permanent
-access to primary legal materials on the Internet for educational,
-charitable, and scientific purposes to the benefit of the general public
-and the public interest” <sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>. 
-Online distribution of the opinions occurs through their CourtListener project. 
-CourtListener.com aims to ease this problem by providing a free and open source platform for the aggregation, organization, search and retrieval of legal documents.
-CourtListener.com seeks to collect and freely distribute
-online all United States court opinions, both state and federal, both
-historical and current.</p>
-
-<p>Frosterus et al. <sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> present how they transferred the Finnish
-government web service Finlex to a Linked Open Data Service for
-Finnish law and related judicial documents. 
-The original Finlex service made already documents openly available. However, the data
-was provided only as traditional XML schema without considering
-the Linked Data principles. They show how to model legislation
-and court decisions in RDF. They demonstrate the usefulness of
-linked open data for content producers, application developers and
-data analysts.</p>
-
-<p>In summary, there exist successful data collection efforts of legal
-documents across the world. However, in Germany, there is a clear
-gap.</p>
-
-<h4 id="text-mining-on-legal-documents">Text Mining on Legal Documents</h4>
-
-<p>Aletras et al. <sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">3</a></sup> present that NLP and ML techniques can be
-used to predict decisions of the European Court of Human Rights.
-They build a SVM model that predicts the decisions with a accuracy
-of 79% on average. As features sole textual representations of the
-case, i. e., N-grams, and topics, are used. As data source, Aletras et
-al. <sup id="fnref:3:1"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">3</a></sup> rely on a small sub-set of 80-250 cases that were available for a
-particular articles of the European Convention on Human Rights.
-Lippi et al. <sup id="fnref:4"><a href="#fn:4" class="footnote" rel="footnote" role="doc-noteref">4</a></sup> automatically evaluate terms of services of online
-platforms that is another resource of legal documents that is
-ubiquitous available.</p>
-
-<h4 id="references">References</h4>
-
-<p>Wolfgang Micklitz, Giovanni Sartor, and Paolo Torroni: CLAUDETTE: an
-Automated Detector of Potentially Unfair Clauses in Online Terms of Service.
-arXiv (2018).</p>
-<div class="footnotes" role="doc-endnotes">
-  <ol>
-    <li id="fn:1">
-      <p>Michael Lissner: CourtListener.com: A platform for researching and staying abreast of the latest in the law. (2010). <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:2">
-      <p>Matias Frosterus, Jouni Tuominen, and Eero Hyvönen: Facilitating Re-use of Legal Data in Applications - Finnish Law as a Linked Open Data Service. Legal Knowledge and Information Systems: JURIX 2014: The Twenty-Seventh Annual Conference (2014), 115–124. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:3">
-      <p>Nikolaos Aletras, Dimitrios Tsarapatsanis, Daniel Preotiuc-Pietro, Vasileios Lampos: Predicting judicial decisions of the European Court of Human Rights: a Natural Language Processing perspective. PeerJ Computer Science 2: e93 (2016) <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:3:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
-    </li>
-    <li id="fn:4">
-      <p>Marco Lippi, Przemyslaw Palka, Giuseppe Contissa, Francesca Lagioia, Hans- <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
-
-    </section>
-</div>
-
-<div class="container">
-    <div class="section">		
-		<!--   Icon Section   -->
-        <div class="row row-eq-height">
-            <div class="col s12 m3">
-				<a href="/about">
-                <section class="icon-block">
-                    <h2 class="text-center"><i class="fa fa-info"></i></h2>
-                    <h5 class="text-center">About Open Legal Data</h5>
-                    <p class="text-justify"></p>
-                </section>
-				</a>
-            </div>
-
-           <div class="col s12 m3">
-				<a href="/transparency">
-                <section class="icon-block">
-                    <h2 class="text-center"><i class="fa fa-eye"></i></h2>
-                    <h5 class="text-center">Increase Transparency</h5>
-                    <p class="text-justify"></p>
-                </section>
-				</a>
-            </div>
-
-            <div class="col s12 m3">
-				<a href="/team">
-                <section class="icon-block">
-                    <h2 class="text-center"><i class="fa fa-users"></i></h2>
-                    <h5 class="text-center">Join the team!</h5>
-                    <p class="text-justify"></p>
-                </section>
-				</a>
-            </div>
-
-            <div class="col s12 m3">
-				<a href="/open-data">
-                <section class="icon-block">
-                    <h2 class="text-center"><i class="fa fa-lock"></i></h2>
-                    <h5 class="text-center">Open Data</h5>
-                    <p class="text-justify"></p>
-                </section>
-				</a>
-            </div>
+<h3 id="llm">Language models trained on Open Legal Data</h3>
+<p>German court decisions and laws from Open Legal Data are part of the training data of several open language models and pretraining corpora.</p>
+<div class="row card-grid"><div class="col-12 col-md-6">
+        <div class="info-card">
+            <span class="model-name">GBERT &amp; GELECTRA</span>
+            <p class="mt-2">German BERT and ELECTRA models; 2.4 GB of Open Legal Data court decisions in the pretraining corpus.</p>
+            <p class="paper-meta mb-2"><a href="https://arxiv.org/abs/2010.10906">German's next language model</a><br />Branden Chan, Stefan Schweter and Timo Möller · arXiv · 2020</p>
         </div>
-	</div>
+    </div><div class="col-12 col-md-6">
+        <div class="info-card">
+            <span class="model-name">BLOOM-CLP German</span>
+            <p class="mt-2">German GPT-style models; web text complemented with court decisions from Open Legal Data.</p>
+            <p class="paper-meta mb-2"><a href="https://arxiv.org/abs/2301.09626">Efficient language model training through cross-lingual and progressive transfer learning</a><br />Malte Ostendorff and Georg Rehm · arXiv · 2023</p>
+        </div>
+    </div><div class="col-12 col-md-6">
+        <div class="info-card">
+            <span class="model-name">GeBERTa</span>
+            <p class="mt-2">German DeBERTa models; pretraining data includes Open Legal Data cases and laws.</p>
+            <p class="paper-meta mb-2"><a href="https://arxiv.org/abs/2310.07321">On the impact of cross-domain data on German language models</a><br />Amin Dada, Aokun Chen, Cheng Peng et al. · arXiv · 2023</p>
+        </div>
+    </div><div class="col-12 col-md-6">
+        <div class="info-card">
+            <span class="model-name">OpenGPT-X (Teuken)</span>
+            <p class="mt-2">Open Legal Data is one of the curated sources in the OpenGPT-X pretraining data.</p>
+            <p class="paper-meta mb-2"><a href="https://arxiv.org/abs/2410.08800">Data Processing for the OpenGPT-X Model Family</a><br />Nicolo' Brandizzi, Hammam Abdelwahab, Anirban Bhowmick et al. · arXiv · 2024</p>
+        </div>
+    </div><div class="col-12 col-md-6">
+        <div class="info-card">
+            <span class="model-name">Salamandra</span>
+            <p class="mt-2">Multilingual LLMs (2B to 40B); training corpus includes Open Legal Data court decisions and laws.</p>
+            <p class="paper-meta mb-2"><a href="https://arxiv.org/abs/2502.08489">Salamandra Technical Report</a><br />Aitor Gonzalez-Agirre, Marc Pàmies, Joan Llop et al. · arXiv · 2025</p>
+        </div>
+    </div><div class="col-12 col-md-6">
+        <div class="info-card">
+            <span class="model-name">MrBERT</span>
+            <p class="mt-2">Multilingual encoders; training data includes Open Legal Data court decisions and laws.</p>
+            <p class="paper-meta mb-2"><a href="https://arxiv.org/abs/2602.21379">MrBERT: Modern Multilingual Encoders via Vocabulary, Domain, and Dimensional Adaptation</a><br />Daniel Tamayo, Iñaki Lacunza, Paula Rivera-Hidalgo et al. · arXiv · 2026</p>
+        </div>
+    </div><div class="col-12 col-md-6">
+        <div class="info-card">
+            <span class="model-name">LLM-datasets</span>
+            <p class="mt-2">Open framework for building LLM pretraining corpora; ships Open Legal Data as a German legal source.</p>
+            <p class="paper-meta mb-2"><a href="https://scholar.google.com/scholar?q=%22LLM-datasets%3A%20An%20open%20framework%20for%20pretraining%20datasets%20of%20large%20language%20models%22">LLM-datasets: An open framework for pretraining datasets of large language models</a><br />Malte Ostendorff, Pedro Ortiz Suarez, Lucas Fonseca Lage et al. · First conference on language modeling · 2024</p>
+        </div>
+    </div><div class="col-12 col-md-6">
+        <div class="info-card">
+            <span class="model-name">German Commons</span>
+            <p class="mt-2">154 billion tokens of openly licensed German text; Open Legal Data is part of its legal subset.</p>
+            <p class="paper-meta mb-2"><a href="https://arxiv.org/abs/2510.13996">The German Commons -- 154 Billion Tokens of Openly Licensed Text for German Language Models</a><br />Lukas Gienapp, Christopher Schröder, Stefan Schweter et al. · arXiv · 2025</p>
+        </div>
+    </div></div>
+<h3 id="datasets">Datasets and benchmarks <span class="topic-count">(8)</span></h3>
+<ul class="paper-list"><li>
+    <a class="paper-title" href="https://arxiv.org/abs/2605.31338">Bundesrecht: An Open Library and Corpus for German Statutory Reference Processing</a><br />
+    <span class="paper-meta">Harshil Darji, Martin Heckelmann, Christina Kratsch et al. · arXiv · 2026</span>
+</li>
+<li>
+    <a class="paper-title" href="https://doi.org/10.3233/FAIA251597">Segmentation and Processing of German Court Decisions from Open Legal Data</a><br />
+    <span class="paper-meta">Harshil Darji, Martin Heckelmann, Christina Kratsch et al. · Legal Knowledge and Information Systems (JURIX 2025) · 2025</span>
+</li>
+<li>
+    <a class="paper-title" href="https://arxiv.org/abs/2406.06809">AGB-DE: a corpus for the automated legal assessment of clauses in German consumer contracts</a><br />
+    <span class="paper-meta">Daniel Braun and Florian Matthes · arXiv · 2024</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22FinCorpus-DE10k%3A%20A%20corpus%20for%20the%20German%20financial%20domain%22">FinCorpus-DE10k: A corpus for the German financial domain</a><br />
+    <span class="paper-meta">Serhii Hamotskyi, Nata Kozaeva and Christian Hänig · Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024) · 2024</span>
+</li>
+<li>
+    <a class="paper-title" href="https://arxiv.org/abs/2407.17503">Challenges and considerations in annotating legal data: A comprehensive overview</a><br />
+    <span class="paper-meta">Harshil Darji, Jelena Mitrović and Michael Granitzer · arXiv · 2024</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22I%20beg%20to%20differ%3A%20how%20disagreement%20is%20handled%20in%20the%20annotation%20of%20legal%20machine%20learning%20data%20sets%22">I beg to differ: how disagreement is handled in the annotation of legal machine learning data sets</a><br />
+    <span class="paper-meta">Daniel Braun · Artificial intelligence and law · 2024</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22A%20dataset%20of%20German%20legal%20reference%20annotations%22">A dataset of German legal reference annotations</a><br />
+    <span class="paper-meta">Harshil Darji, Jelena Mitrović and Michael Granitzer · Proceedings of the Nineteenth International Conference on Artificial Intelligence and Law · 2023</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22GerDaLIR%3A%20A%20German%20dataset%20for%20legal%20information%20retrieval%22">GerDaLIR: A German dataset for legal information retrieval</a><br />
+    <span class="paper-meta">Marco Wrzalik and Dirk Krechel · Proceedings of the natural legal language processing workshop 2021 · 2021</span>
+</li>
+</ul>
+<h3 id="retrieval">Legal search, question answering and RAG <span class="topic-count">(11)</span></h3>
+<ul class="paper-list"><li>
+    <a class="paper-title" href="https://arxiv.org/abs/2610.13695">Verifiable Retrieval for Legal Reasoning through Structure-driven Knowledge Graph</a><br />
+    <span class="paper-meta">Ibrahim Siddig, Sviatoslav Tugeev and Munir Georges · arXiv · 2026</span>
+</li>
+<li>
+    <a class="paper-title" href="https://doi.org/10.18653/v1/2025.findings-acl.659">GRAF: Graph Retrieval Augmented by Facts for Romanian Legal Multi-Choice Question Answering</a><br />
+    <span class="paper-meta">Cristian-George Crăciun, Răzvan-Alexandru Smădu, Dumitru-Clementin Cercel et al. · Findings of the Association for Computational Linguistics: ACL 2025 · 2025</span>
+</li>
+<li>
+    <a class="paper-title" href="https://doi.org/10.1109/ACCESS.2025.3550145">Enhancing the Precision and Interpretability of Retrieval-Augmented Generation (RAG) in Legal Technology: A Survey</a><br />
+    <span class="paper-meta">Mahd Hindi, Linda Mohammed, Ommama Maaz et al. · IEEE Access · 2025</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22SLANGO-The%20Initial%20Blueprint%20of%20Privacy-Oriented%20Legal%20Query%20Assistance%3A%20Exploring%20the%20Potential%20of%20Retrieval-Augmented%20Generation%20for%20German%20Law%20Using%20SPR%22">SLANGO-The Initial Blueprint of Privacy-Oriented Legal Query Assistance: Exploring the Potential of Retrieval-Augmented Generation for German Law Using SPR</a><br />
+    <span class="paper-meta">Jérôme Agater and Ammar Memari · International Conference on Innovative Techniques and Applications of Artificial Intelligence · 2024</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Beyond%20Mere%20Words%3A%20Advanced%20Text%20Representations%20for%20Practical%20Similarity%20Analysis%22">Beyond Mere Words: Advanced Text Representations for Practical Similarity Analysis</a><br />
+    <span class="paper-meta">Marco Wrzalik · PhD thesis · 2024</span>
+</li>
+<li>
+    <a class="paper-title" href="https://doi.org/10.53846/goediss-9937">Aspect-based Document Similarity for Literature Recommender Systems</a><br />
+    <span class="paper-meta">Malte Ostendorff · PhD thesis, Georg-August-Universität Göttingen · 2023</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Collaborative%20system%20for%20question%20answering%20in%20german%20case%20law%20documents%22">Collaborative system for question answering in german case law documents</a><br />
+    <span class="paper-meta">Christoph Hoppe, Nico Migenda, David Pelkmann et al. · Working Conference on Virtual Enterprises · 2022</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Towards%20intelligent%20legal%20advisors%20for%20document%20retrieval%20and%20question-answering%20in%20german%20legal%20documents%22">Towards intelligent legal advisors for document retrieval and question-answering in german legal documents</a><br />
+    <span class="paper-meta">Christoph Hoppe, David Pelkmann, Nico Migenda et al. · 2021 IEEE Fourth International Conference on Artificial Intelligence and Knowledge Engineering (AIKE) · 2021</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Evaluating%20document%20representations%20for%20content-based%20legal%20literature%20recommendations%22">Evaluating document representations for content-based legal literature recommendations</a><br />
+    <span class="paper-meta">Malte Ostendorff, Elliott Ash, Terry Ruas et al. · Proceedings of the eighteenth international conference on artificial intelligence and law · 2021</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Exploring%20Semantic%20Similarity%20Between%20German%20Legal%20Texts%20and%20Referred%20Laws%22">Exploring Semantic Similarity Between German Legal Texts and Referred Laws</a><br />
+    <span class="paper-meta">Harshil Darji, Jelena Mitrović and Michael Granitzer · International Joint Conference on Knowledge Discovery, Knowledge Engineering, and Knowledge Management · 2021</span>
+</li>
+<li>
+    <a class="paper-title" href="https://arxiv.org/abs/2008.00202">Contextual document similarity for content-based literature recommender systems</a><br />
+    <span class="paper-meta">Malte Ostendorff · arXiv · 2020</span>
+</li>
+</ul>
+<h3 id="citations">Citation networks and knowledge graphs <span class="topic-count">(3)</span></h3>
+<ul class="paper-list"><li>
+    <a class="paper-title" href="https://doi.org/10.1007/978-3-032-02088-8_14">The Missing Link: Joint Legal Citation Prediction Using Heterogeneous Graph Enrichment</a><br />
+    <span class="paper-meta">Lorenz Wendlinger, Simon Alexander Nonn, Abdullah Al Zubaer et al. · Database and Expert Systems Applications (DEXA 2025) · 2025</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Law%20in%20Order%3A%20An%20Open%20Legal%20Citation%20Network%20for%20New%20Zealand%22">Law in Order: An Open Legal Citation Network for New Zealand</a><br />
+    <span class="paper-meta">Tobias Milz, Elizabeth Macpherson and Varvara Vetrova · Australasian Conference on Data Science and Machine Learning · 2023</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Analysis%20of%20a%20German%20Legal%20Citation%20Network.%22">Analysis of a German Legal Citation Network.</a><br />
+    <span class="paper-meta">Tobias Milz, Michael Granitzer and Jelena Mitrovic · KDIR · 2021</span>
+</li>
+</ul>
+<h3 id="legal-nlp">Legal NLP and AI <span class="topic-count">(10)</span></h3>
+<ul class="paper-list"><li>
+    <a class="paper-title" href="https://arxiv.org/abs/2412.06543">Challenges and Opportunities for Visual Analytics in Jurisprudence</a><br />
+    <span class="paper-meta">Daniel Fürst, Mennatallah El-Assady, Daniel A Keim et al. · arXiv · 2024</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Bringing%20order%20into%20the%20realm%20of%20Transformer-based%20language%20models%20for%20artificial%20intelligence%20and%20law%22">Bringing order into the realm of Transformer-based language models for artificial intelligence and law</a><br />
+    <span class="paper-meta">Candida M Greco and Andrea Tagarelli · Artificial Intelligence and Law · 2024</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Combining%20semantic%20web%20and%20machine%20learning%20for%20auditable%20legal%20key%20element%20extraction%22">Combining semantic web and machine learning for auditable legal key element extraction</a><br />
+    <span class="paper-meta">Anna Breit, Laura Waltersdorfer, Fajar J Ekaputra et al. · European Semantic Web Conference · 2023</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Semantic%20Extraction%20of%20Key%20Figures%20and%20Their%20Properties%20From%20Tax%20Legal%20Texts%20Using%20Neural%20Models.%22">Semantic Extraction of Key Figures and Their Properties From Tax Legal Texts Using Neural Models.</a><br />
+    <span class="paper-meta">Daniel Steinigen, Marcin Namysl, Markus Hepperle et al. · ASAIL@ ICAIL · 2023</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Tracking%20Semantic%20Shifts%20in%20German%20Court%20Decisions%20with%20Diachronic%20Word%20Embeddings%22">Tracking Semantic Shifts in German Court Decisions with Diachronic Word Embeddings</a><br />
+    <span class="paper-meta">Daniel Braun · Proceedings of the Natural Legal Language Processing Workshop 2022 · 2022</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Clause%20topic%20classification%20in%20German%20and%20English%20standard%20form%20contracts%22">Clause topic classification in German and English standard form contracts</a><br />
+    <span class="paper-meta">Daniel Braun and Florian Matthes · The 5th Workshop on e-Commerce and NLP, ECNLP 2022 · 2022</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Claim%20extraction%20and%20law%20matching%20for%20covid-19-related%20legislation%22">Claim extraction and law matching for covid-19-related legislation</a><br />
+    <span class="paper-meta">Niklas Dehio, Malte Ostendorff and Georg Rehm · Proceedings of the Thirteenth Language Resources and Evaluation Conference · 2022</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Legal%20named%20entity%20recognition%20with%20multi-task%20domain%20adaptation%22">Legal named entity recognition with multi-task domain adaptation</a><br />
+    <span class="paper-meta">Răzvan-Alexandru Smădu, Ion-Robert Dinică, Andrei-Marius Avram et al. · Proceedings of the Natural Legal Language Processing Workshop 2022 · 2022</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Automated%20semantic%20analysis%2C%20legal%20assessment%2C%20and%20summarization%20of%20standard%20form%20contracts%22">Automated semantic analysis, legal assessment, and summarization of standard form contracts</a><br />
+    <span class="paper-meta">Daniel Braun · 2021</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22NLP%20for%20consumer%20protection%3A%20Battling%20illegal%20clauses%20in%20German%20terms%20and%20conditions%20in%20online%20shopping%22">NLP for consumer protection: Battling illegal clauses in German terms and conditions in online shopping</a><br />
+    <span class="paper-meta">Daniel Braun and Florian Matthes · Proceedings of the 1st Workshop on NLP for Positive Impact · 2021</span>
+</li>
+</ul>
+<h3 id="infrastructure">Open legal data and legal tech <span class="topic-count">(7)</span></h3>
+<ul class="paper-list"><li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22The%20Path%20to%20an%20Open%20Digital%20Platform%20for%20Legal%20Information%20Case%20of%20Kingdom%20of%20Morocco%22">The Path to an Open Digital Platform for Legal Information Case of Kingdom of Morocco</a><br />
+    <span class="paper-meta">Anass Smaili · International Conference on Advanced Technologies for Humanity · 2023</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Model-driven%20development%20of%20akoma%20ntoso%20application%20profiles%3A%20a%20conceptual%20framework%20for%20model-based%20generation%20of%20xml%20subschemas%22">Model-driven development of akoma ntoso application profiles: a conceptual framework for model-based generation of xml subschemas</a><br />
+    <span class="paper-meta">Amelie Flatt, Arne Langner and Olof Leps · Springer Nature · 2023</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Building%20Ontology%20and%20Data%20Infrastructure%20for%20Semantic%20Web%20Applications%22">Building Ontology and Data Infrastructure for Semantic Web Applications</a><br />
+    <span class="paper-meta">Matias Frosterus · Aalto University · 2023</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Exploring%20Nonprofit%20and%20government%20agency%20AI%20policies%20and%20Regulations%3A%20Systems%20Leadership%22">Exploring Nonprofit and government agency AI policies and Regulations: Systems Leadership</a><br />
+    <span class="paper-meta">Sevinj Iskandarova and Margaret F Sloan · 2023 IEEE Global Conference on Artificial Intelligence and Internet of Things (GCAIoT) · 2023</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Model-Driven%20Development%20of%20AKN%20Application%20Profiles%3A%20Background%20and%20Requirements%22">Model-Driven Development of AKN Application Profiles: Background and Requirements</a><br />
+    <span class="paper-meta">Amelie Flatt, Arne Langner and Olof Leps · Model-Driven Development of Akoma Ntoso Application Profiles: A Conceptual Framework for Model-Based Generation of XML Subschemas · 2022</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Legal%20informatics%20tools%20for%20evidence-based%20policy%20creation%20in%20parliaments%22">Legal informatics tools for evidence-based policy creation in parliaments</a><br />
+    <span class="paper-meta">Fotios Fitsilis, Dimitris Koryzis and Günther Schefbeck · International Journal of Parliamentary Studies · 2022</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Legal%20tech%20and%20lawtech%3A%20Towards%20a%20framework%20for%20technological%20trends%20in%20the%20legal%20services%20industry%22">Legal tech and lawtech: Towards a framework for technological trends in the legal services industry</a><br />
+    <span class="paper-meta">Ciaran M Harper and S Sarah Zhang · Market engineering: insights from two decades of research on markets and information · 2021</span>
+</li>
+</ul>
+<details class="topic-more" id="other">
+    <summary>Further citing work <span class="topic-count">(18)</span></summary>
+    <p class="mt-2">German NLP and other work that cites Open Legal Data.</p>
+    <ul class="paper-list"><li>
+    <a class="paper-title" href="https://doi.org/10.1109/ACCESS.2025.3559135">Domain-Generalized Emotion Recognition on German Text Corpora</a><br />
+    <span class="paper-meta">Oweys Momenzada, Michael Palk and Stefan Voß · IEEE Access · 2025</span>
+</li>
+<li>
+    <a class="paper-title" href="https://monami.hs-mittweida.de/frontdoor/index/index/docId/16649">Vergleich traditioneller und neuronaler Klassifikationsmodelle zur Erkennung von Hatespeech in sozialen Medien</a><br />
+    <span class="paper-meta">Rouven Snigula · Bachelor's thesis, Hochschule Mittweida · 2025</span>
+</li>
+<li>
+    <a class="paper-title" href="https://arxiv.org/abs/2408.15040">A survey of large language models for european languages</a><br />
+    <span class="paper-meta">Wazir Ali and Sampo Pyysalo · arXiv · 2024</span>
+</li>
+<li>
+    <a class="paper-title" href="https://arxiv.org/abs/2404.05694">Comprehensive study on German language models for clinical and biomedical text understanding</a><br />
+    <span class="paper-meta">Ahmad Idrissi-Yaghir, Amin Dada, Henning Schäfer et al. · arXiv · 2024</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Self-supervised%20Domain%20Adaptation%20of%20Language%20Models%20for%20the%20Process%20Industry%22">Self-supervised Domain Adaptation of Language Models for the Process Industry</a><br />
+    <span class="paper-meta">Jonas Lührs · PhD thesis, Georg-August-Universität Göttingen · 2024</span>
+</li>
+<li>
+    <a class="paper-title" href="https://arxiv.org/abs/2407.05740">Do Multilingual Large Language Models Mitigate Stereotype Bias?</a><br />
+    <span class="paper-meta">Shangrui Nie, Michael Fromm, Charles Welch et al. · arXiv · 2024</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Advancing%20Dravidian%20Language%20Processing%20Beyond%20the%20Sentence%20Level%22">Advancing Dravidian Language Processing Beyond the Sentence Level</a><br />
+    <span class="paper-meta">E Nikhil · PhD thesis, International Institute of Information Technology Hyderabad · 2024</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Domain%20adaptation%20of%20transformer-based%20models%20using%20unlabeled%20data%20for%20relevance%20and%20polarity%20classification%20of%20german%20customer%20feedback%22">Domain adaptation of transformer-based models using unlabeled data for relevance and polarity classification of german customer feedback</a><br />
+    <span class="paper-meta">Ahmad Idrissi-Yaghir, Henning Schäfer, Nadja Bauer et al. · SN Computer Science · 2023</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Privacy%20risks%20in%20german%20patient%20forums%3A%20a%20NER-based%20approach%20to%20enrich%20digital%20twins%22">Privacy risks in german patient forums: a NER-based approach to enrich digital twins</a><br />
+    <span class="paper-meta">Sergej Schultenkämper and Frederik Simon Bäumer · International Conference on Information and Software Technologies · 2023</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Application%20of%20neural%20topic%20models%20to%20twitter%20data%20from%20German%20politicians%22">Application of neural topic models to twitter data from German politicians</a><br />
+    <span class="paper-meta">Anne Gritto · PhD thesis · 2022</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Critical%20assessment%20of%20transformer-based%20AI%20models%20for%20German%20clinical%20notes%22">Critical assessment of transformer-based AI models for German clinical notes</a><br />
+    <span class="paper-meta">Manuel Lentzen, Sumit Madan, Vanessa Lage-Rupprecht et al. · JAMIA open · 2022</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Speech%20Translation%20for%20Swiss%20German%22">Speech Translation for Swiss German</a><br />
+    <span class="paper-meta">Silas Rudolf and Mark Cieliebak · 2022</span>
+</li>
+<li>
+    <a class="paper-title" href="https://arxiv.org/abs/2102.12330">Re-evaluating germeval17 using german pre-trained language models</a><br />
+    <span class="paper-meta">Matthias Aßenmacher, Alessandra Corvonato and Christian Heumann · arXiv · 2021</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22DFKI%20SLT%20at%20GermEval%202021%3A%20Multilingual%20Pre-training%20and%20Data%20Augmentation%20for%20the%20Classification%20of%20Toxicity%20in%20Social%20Media%20Comments%22">DFKI SLT at GermEval 2021: Multilingual Pre-training and Data Augmentation for the Classification of Toxicity in Social Media Comments</a><br />
+    <span class="paper-meta">Remi Calizzano, Malte Ostendorff and Georg Rehm · Proceedings of the GermEval 2021 Shared Task on the Identification of Toxic, Engaging, and Fact-Claiming Comments · 2021</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Re-Evaluating%20GermEval%202017%3A%20Document-Level%20and%20Aspect-Based%20Sentiment%20Analysis%20Using%20Pre-Trained%20Language%20Models%22">Re-Evaluating GermEval 2017: Document-Level and Aspect-Based Sentiment Analysis Using Pre-Trained Language Models</a><br />
+    <span class="paper-meta">Alessandra Corvonato · PhD thesis · 2021</span>
+</li>
+<li>
+    <a class="paper-title" href="https://arxiv.org/abs/2109.02383">Data science kitchen at GermEval 2021: A fine selection of hand-picked features, delivered fresh from the oven</a><br />
+    <span class="paper-meta">Niclas Hildebrandt, Benedikt Boenninghoff, Dennis Orth et al. · arXiv · 2021</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Multilingual%20lexical%20simplification%22">Multilingual lexical simplification</a><br />
+    <span class="paper-meta">Jorge S Pimienta Castillo · 2021</span>
+</li>
+<li>
+    <a class="paper-title" href="https://scholar.google.com/scholar?q=%22Thematische%20Klassifikation%20von%20Partizipationsverfahren%20mit%20Active%20Learning%22">Thematische Klassifikation von Partizipationsverfahren mit Active Learning</a><br />
+    <span class="paper-meta">Boris Thome</span>
+</li>
+</ul>
+</details>
+
+<h3 id="missing-a-paper">Missing a paper?</h3>
+
+<p>The list is generated from
+<a href="https://github.com/openlegaldata/oldp-citations">openlegaldata/oldp-citations</a>. If you use Open
+Legal Data in your research and your paper is missing, open a pull request
+there or write to <a href="mailto:hello@openlegaldata.io">hello@openlegaldata.io</a>.</p>
+
+<h3 id="cite">Cite Open Legal Data</h3>
+
+<p>If you use the platform, the API or the datasets, please cite our paper:</p>
+
+<div class="cite-box">
+
+  <div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">ostendorff2020oldp</span><span class="p">,</span>
+  <span class="na">author</span>    <span class="p">=</span> <span class="s">{Ostendorff, Malte and Blume, Till and Ostendorff, Saskia}</span><span class="p">,</span>
+  <span class="na">title</span>     <span class="p">=</span> <span class="s">{Towards an Open Platform for Legal Information}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the ACM/IEEE Joint Conference on Digital Libraries in 2020}</span><span class="p">,</span>
+  <span class="na">series</span>    <span class="p">=</span> <span class="s">{JCDL '20}</span><span class="p">,</span>
+  <span class="na">year</span>      <span class="p">=</span> <span class="s">{2020}</span><span class="p">,</span>
+  <span class="na">pages</span>     <span class="p">=</span> <span class="s">{385--388}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{Association for Computing Machinery}</span><span class="p">,</span>
+  <span class="na">doi</span>       <span class="p">=</span> <span class="s">{10.1145/3383583.3398616}</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>  </div>
+
 </div>
 
-<div class="container">	
-    <section class="view img-rounded" style="background-image: url('/assets/img/background.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; min-height:100px;">
-        <p> 
-		<div class="row align-items-center justify-content-md-center justify-content-xs-center justify-content-sm-center">
-			<div class="col align-self-center input-group" style="max-width: 420px; margin-top:25px;">
-				<select class="form-control" id="sel1">
-					<option>Germany / Deutschland</option>
-				</select>
-				<div class="input-group-append">
-					<a href="//de.openlegaldata.io/" class="btn btn-md btn-primary" type="button" id="button-addon2">Enter Platform</a>
-				</div>
-			</div>   
-		</div>		
-        </p>
-    </section>
 </div>
-
-
 
 
     </div>
@@ -187,14 +398,16 @@ arXiv (2018).</p>
     <footer class="bd-footer text-muted">
         <div class="container p-3 p-md-5">
             <ul class="bd-footer-links">
-
-                <li><a href="/about">About</a></li>
-                <li><a href="/imprint">Imprint</a></li>
-                <li><a href="/privacy">Privacy</a></li>
-                <li><a href="/blog">Blog</a></li>
-
+                <li><a href="/about/">About</a></li>
+                <li><a href="/open-data/">Open Data &amp; AI</a></li>
+                <li><a href="/research/">Research</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/imprint/">Imprint</a></li>
+                <li><a href="/privacy/">Privacy</a></li>
+                <li><a href="https://de.openlegaldata.io/"><img src="/assets/flags/de.svg" alt="" class="btn-flag"> Platform</a></li>
+                <li><a href="https://discord.gg/WCy3aq25ZF"><i class="fa-brands fa-discord" aria-hidden="true"></i> Discord</a></li>
                 <li><a href="https://github.com/openlegaldata"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a></li>
-
+                <li><a href="https://huggingface.co/openlegaldata">🤗 Hugging Face</a></li>
             </ul>
         </div>
     </footer>

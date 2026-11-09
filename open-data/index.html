@@ -3,10 +3,10 @@
 <head>
     <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <title>Open Data - Open Legal Data</title>
-    <meta name="description" content="Free Access to Legal Information." />
+    <title>Open Data &amp; AI - Open Legal Data</title>
+    <meta name="description" content="Free access to legal information: open German court decisions and laws as open data, REST API and MCP server for AI assistants." />
 
     <link rel="stylesheet" href="/assets/css/main.css">
 
@@ -18,9 +18,22 @@
     <link rel="alternate" type="application/rss+xml" title="Open Legal Data" href="/feed.xml" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon image_src" href="/assets/apple-touch-icon.png">
-    <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
     
-    
+    <script>
+  var _paq = window._paq = window._paq || [];
+  _paq.push(["setDoNotTrack", true]);
+  _paq.push(["disableCookies"]);
+  _paq.push(["disableBrowserFeatureDetection"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://matomo.openlegaldata.io/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '3']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
 </head>
 
 </head>
@@ -34,98 +47,193 @@
 
         <div class="container">
 
-    <div class="container">
-    <section class="text-justify">
-        <h2 id="open-data">Open Data</h2>
+    <div class="page-content">
+    <h2 id="open-data-api-and-mcp">Open Data, API and MCP</h2>
 
-<p>Open data is the idea that some data should be freely available to everyone to use and republish as they wish, without restrictions from copyright, patents or other mechanisms of control [1].
-In OPENLEGALDATA.IO, we consume and provide open data.</p>
+<p>Open Legal Data collects German court decisions and laws from official
+sources, extracts metadata and the citations between them, and publishes
+everything as open data. Pick the access that fits your use case:</p>
 
-<p>We collect, annotate, and enrich legal documents from trustworthy sources. 
-Together with domain experts, we aim to create a high-quality annotated and interlinked dataset with rich metadata fields for German legal documents that we publish as (linked) open data.
-Moreover, we develop an open processing pipeline to enable researchers and journalists to directly work on our data and to publish their results.</p>
+<div class="row card-grid">
+    <div class="col-12 col-md-4">
+        <div class="info-card">
+            <h4>MCP for AI agents</h4>
+            <p>Let Claude, ChatGPT or your own agent research case law and legislation with verifiable sources.</p>
+            <a class="card-link" href="#mcp">Connect your assistant →</a>
+        </div>
+    </div>
+    <div class="col-12 col-md-4">
+        <div class="info-card">
+            <h4>REST API</h4>
+            <p>Search and fetch decisions, laws, courts and citations as JSON for your apps and scripts.</p>
+            <a class="card-link" href="#api">Get started →</a>
+        </div>
+    </div>
+    <div class="col-12 col-md-4">
+        <div class="info-card">
+            <h4>Datasets</h4>
+            <p>Download the complete corpus from Hugging Face for analysis, research and model training.</p>
+            <a class="card-link" href="#datasets">Browse datasets →</a>
+        </div>
+    </div>
+</div>
 
-<p>We currently work on linking entities to open knowledge graphs such as Wikidata or YAGO. 
-This additional knowledge can be presented as
-background information, for example, to help understand the legal argumentation behind a certain jurisdictional decision.</p>
+<h3 id="mcp">MCP server for AI assistants</h3>
+
+<p>With the <a href="https://modelcontextprotocol.io">Model Context Protocol</a>, AI
+assistants can work directly with Open Legal Data: search court decisions and
+laws, read full texts, validate citations and follow the citation graph
+between cases and laws. Answers can link to the sources, so you can check
+them.</p>
+
+<p>Server URL:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://de.openlegaldata.io/mcp
+</code></pre></div></div>
+
+<ul>
+  <li><strong>claude.ai and Claude Desktop:</strong> add a custom connector under
+<em>Settings → Connectors</em> and enter the server URL.</li>
+  <li><strong>Claude Code:</strong> <code class="language-plaintext highlighter-rouge">claude mcp add --transport http oldp https://de.openlegaldata.io/mcp</code></li>
+  <li><strong>ChatGPT:</strong> add a custom MCP server in the browser on chatgpt.com
+(depending on your plan); the step-by-step guide is on our
+<a href="https://de.openlegaldata.io/pages/api/#mcp">API page</a> and in the
+<a href="https://help.openai.com/en/articles/12584461-developer-mode-and-mcp-apps-in-chatgpt">ChatGPT help</a>.</li>
+  <li><strong>Other clients</strong> (Cursor, your own agents, …): add the URL as a
+“Streamable HTTP” server. Clients without OAuth can send an API token in the
+<code class="language-plaintext highlighter-rouge">Authorization: Token …</code> header.</li>
+</ul>
+
+<p>The server works without an account. Signing in via OAuth (or using an API
+token) gives you a personal, higher request budget, shared with the REST API.</p>
+
+<p>Example prompts:</p>
+
+<ul>
+  <li>“Which decisions of the Federal Court of Justice since 2020 deal with § 823 BGB and personality rights?”</li>
+  <li>“Summarise the decision [file number] and list the laws it cites.”</li>
+  <li>“Check whether these citations exist: [file numbers, ECLI or sections]”</li>
+</ul>
+
+<p>All tools and parameters are described in the
+<a href="https://openlegaldata.github.io/oldp/mcp.html">MCP documentation</a>.</p>
+
+<h3 id="api">REST API</h3>
+
+<p>The API at <code class="language-plaintext highlighter-rouge">https://de.openlegaldata.io/api/</code> returns JSON (or XML with
+<code class="language-plaintext highlighter-rouge">?format=xml</code>). Try requests in the
+<a href="https://de.openlegaldata.io/api/docs/">Swagger UI</a> or start with:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Decisions mentioning "Mietminderung" (rent reduction)</span>
+curl <span class="s2">"https://de.openlegaldata.io/api/cases/search/?text=Mietminderung"</span>
+
+<span class="c"># Decisions citing § 823 BGB that mention "Persönlichkeitsrecht"</span>
+curl <span class="nt">-G</span> <span class="s2">"https://de.openlegaldata.io/api/cases/search/"</span> <span class="se">\</span>
+  <span class="nt">--data-urlencode</span> <span class="s2">"text=Persönlichkeitsrecht"</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="nv">cited_law_book</span><span class="o">=</span>bgb <span class="nt">-d</span> <span class="nv">cited_law_section</span><span class="o">=</span>823
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Area</th>
+      <th>Endpoints</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Court decisions</td>
+      <td><code class="language-plaintext highlighter-rouge">/api/cases/</code>, <code class="language-plaintext highlighter-rouge">/api/cases/search/</code></td>
+    </tr>
+    <tr>
+      <td>Laws</td>
+      <td><code class="language-plaintext highlighter-rouge">/api/law_books/</code>, <code class="language-plaintext highlighter-rouge">/api/laws/</code>, <code class="language-plaintext highlighter-rouge">/api/laws/search/</code></td>
+    </tr>
+    <tr>
+      <td>Courts</td>
+      <td><code class="language-plaintext highlighter-rouge">/api/courts/</code></td>
+    </tr>
+    <tr>
+      <td>Citations</td>
+      <td><code class="language-plaintext highlighter-rouge">/api/cases/&lt;id&gt;/references/</code>, <code class="language-plaintext highlighter-rouge">/api/cases/&lt;id&gt;/citing_cases/</code>, <code class="language-plaintext highlighter-rouge">/api/citations/validate/</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Requests work without an account. With a
+<a href="https://de.openlegaldata.io/accounts/signup/">free account</a> and an API token the limits are
+considerably higher. Endpoints, limits and token setup are documented on the
+<a href="https://de.openlegaldata.io/pages/api/">API page</a> (in German); developer documentation is
+on <a href="https://openlegaldata.github.io/oldp/">openlegaldata.github.io/oldp</a>.
+Please do not page through the API to download everything: use the datasets
+instead.</p>
+
+<h3 id="datasets">Datasets</h3>
+
+<p>We publish regular snapshots of the database on
+<a href="https://huggingface.co/openlegaldata">Hugging Face</a>. Each dataset is versioned per
+dump and has random 1k and 10k samples for quick experiments.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dataset</th>
+      <th>Content</th>
+      <th>Size</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://huggingface.co/datasets/openlegaldata/court-decisions-germany">court-decisions-germany</a></td>
+      <td>Court decisions with metadata, HTML and Markdown</td>
+      <td>+400,000</td>
+    </tr>
+    <tr>
+      <td><a href="https://huggingface.co/datasets/openlegaldata/laws-germany">laws-germany</a></td>
+      <td>Laws, one row per section, HTML and Markdown</td>
+      <td>+100,000</td>
+    </tr>
+    <tr>
+      <td><a href="https://huggingface.co/datasets/openlegaldata/legal-citation-graph-germany">legal-citation-graph-germany</a></td>
+      <td>Citations between decisions and laws</td>
+      <td>+7 million</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">datasets</span> <span class="kn">import</span> <span class="n">load_dataset</span>
+
+<span class="n">cases</span> <span class="o">=</span> <span class="nf">load_dataset</span><span class="p">(</span>
+    <span class="sh">"</span><span class="s">openlegaldata/court-decisions-germany</span><span class="sh">"</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">dump-20260520-1k</span><span class="sh">"</span><span class="p">,</span>  <span class="c1"># see the dataset card for the latest dump
+</span>    <span class="n">split</span><span class="o">=</span><span class="sh">"</span><span class="s">train</span><span class="sh">"</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<p>The dataset cards list the available dumps; the release posts on our
+<a href="/blog/">blog</a> have statistics per dump. To process the raw data yourself, use the
+<a href="https://github.com/openlegaldata/oldp-toolkit">oldp-toolkit</a>.</p>
+
+<h4 id="license">License</h4>
+
+<p>In Germany, laws, official decrees and court decisions are not protected by
+copyright (§ 5 UrhG). The collection and its metadata are released under the
+<a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database License (ODbL) v1.0</a>.
+If you use the data in research, please <a href="/research/#cite">cite our paper</a>.</p>
+
+<h3 id="how-it-works">How it works</h3>
 
 <p><img src="/assets/img/oldp_system_overview.png" alt="OLDP System Overview" title="OLDP System Overview" /></p>
 
-<p><strong>Figure 1: The OPENLEGALDATA.IO approach: Harvesting legal documents from official sources, extracting information from the raw documents and enriching the documents with data from additional sources. The platform content accessible through an API to facilitate analysis and retrieval tasks.</strong></p>
+<p><em>Open Legal Data harvests legal documents from official sources, extracts
+information from the raw documents and enriches them with data from
+additional sources. The content is available through the website, the API,
+the MCP server and the datasets.</em></p>
 
-<ol>
-  <li>Auer, S. R.; Bizer, C.; Kobilarov, G.; Lehmann, J.; Cyganiak, R.; Ives, Z. (2007). “DBpedia: A Nucleus for a Web of Open Data”. The Semantic Web. Lecture Notes in Computer Science. 4825. p. 722.</li>
-</ol>
+<p>All code is open source on <a href="https://github.com/openlegaldata">GitHub</a> under the MIT
+license. Questions or ideas? Join us on <a href="https://discord.gg/WCy3aq25ZF">Discord</a>.</p>
 
-
-    </section>
 </div>
-
-<div class="container">
-    <div class="section">		
-		<!--   Icon Section   -->
-        <div class="row row-eq-height">
-            <div class="col s12 m3">
-				<a href="/about">
-                <section class="icon-block">
-                    <h2 class="text-center"><i class="fa fa-info"></i></h2>
-                    <h5 class="text-center">About Open Legal Data</h5>
-                    <p class="text-justify"></p>
-                </section>
-				</a>
-            </div>
-
-           <div class="col s12 m3">
-				<a href="/transparency">
-                <section class="icon-block">
-                    <h2 class="text-center"><i class="fa fa-eye"></i></h2>
-                    <h5 class="text-center">Increase Transparency</h5>
-                    <p class="text-justify"></p>
-                </section>
-				</a>
-            </div>
-
-            <div class="col s12 m3">
-				<a href="/team">
-                <section class="icon-block">
-                    <h2 class="text-center"><i class="fa fa-users"></i></h2>
-                    <h5 class="text-center">Join the team!</h5>
-                    <p class="text-justify"></p>
-                </section>
-				</a>
-            </div>
-
-            <div class="col s12 m3">
-				<a href="/research">
-                <section class="icon-block">
-                    <h2 class="text-center"><i class="fa fa-flask"></i></h2>
-                    <h5 class="text-center">Legal Research</h5>
-                    <p class="text-justify"></p>
-                </section>
-				</a>
-            </div>
-        </div>
-	</div>
-</div>
-
-<div class="container">	
-    <section class="view img-rounded" style="background-image: url('/assets/img/background.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; min-height:100px;">
-        <p> 
-		<div class="row align-items-center justify-content-md-center justify-content-xs-center justify-content-sm-center">
-			<div class="col align-self-center input-group" style="max-width: 420px; margin-top:25px;">
-				<select class="form-control" id="sel1">
-					<option>Germany / Deutschland</option>
-				</select>
-				<div class="input-group-append">
-					<a href="//de.openlegaldata.io/" class="btn btn-md btn-primary" type="button" id="button-addon2">Enter Platform</a>
-				</div>
-			</div>   
-		</div>		
-        </p>
-    </section>
-</div>
-
-
 
 
     </div>
@@ -136,14 +244,16 @@ background information, for example, to help understand the legal argumentation 
     <footer class="bd-footer text-muted">
         <div class="container p-3 p-md-5">
             <ul class="bd-footer-links">
-
-                <li><a href="/about">About</a></li>
-                <li><a href="/imprint">Imprint</a></li>
-                <li><a href="/privacy">Privacy</a></li>
-                <li><a href="/blog">Blog</a></li>
-
+                <li><a href="/about/">About</a></li>
+                <li><a href="/open-data/">Open Data &amp; AI</a></li>
+                <li><a href="/research/">Research</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/imprint/">Imprint</a></li>
+                <li><a href="/privacy/">Privacy</a></li>
+                <li><a href="https://de.openlegaldata.io/"><img src="/assets/flags/de.svg" alt="" class="btn-flag"> Platform</a></li>
+                <li><a href="https://discord.gg/WCy3aq25ZF"><i class="fa-brands fa-discord" aria-hidden="true"></i> Discord</a></li>
                 <li><a href="https://github.com/openlegaldata"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a></li>
-
+                <li><a href="https://huggingface.co/openlegaldata">🤗 Hugging Face</a></li>
             </ul>
         </div>
     </footer>

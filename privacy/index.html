@@ -3,10 +3,10 @@
 <head>
     <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <title>Privacy - Open Legal Data</title>
-    <meta name="description" content="Free Access to Legal Information." />
+    <meta name="description" content="Free access to legal information: open German court decisions and laws as open data, REST API and MCP server for AI assistants." />
 
     <link rel="stylesheet" href="/assets/css/main.css">
 
@@ -18,9 +18,22 @@
     <link rel="alternate" type="application/rss+xml" title="Open Legal Data" href="/feed.xml" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon image_src" href="/assets/apple-touch-icon.png">
-    <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
     
-    
+    <script>
+  var _paq = window._paq = window._paq || [];
+  _paq.push(["setDoNotTrack", true]);
+  _paq.push(["disableCookies"]);
+  _paq.push(["disableBrowserFeatureDetection"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://matomo.openlegaldata.io/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '3']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
 </head>
 
 </head>
@@ -34,9 +47,8 @@
 
         <div class="container">
 
-    <div class="container">
-    <section class="text-justify">
-        <h2 id="privacy">Privacy</h2>
+    <div class="page-content">
+    <h2 id="privacy">Privacy</h2>
 
 <p>The person responsible under data protection law for the data processing carried out on our website is the</p>
 
@@ -44,7 +56,27 @@
 
 <p>This website is hosted by GitHub. See <a href="https://help.github.com/articles/github-privacy-statement/">GitHub’s privacy statement</a> for more details.</p>
 
-    </section>
+<h3 id="web-analytics-with-matomo">Web analytics with Matomo</h3>
+
+<p>We use the open-source web analytics software Matomo, which we run ourselves
+at matomo.openlegaldata.io on webspace of ALL-INKL.COM – Neue Medien Münnich
+(Friedersdorf, Germany), who processes the data on our behalf (Art. 28 GDPR). No data is passed on to the vendor or other third
+parties. The tracker is configured not to store or read any information on
+your device: it sets no cookies, uses no local storage and does not read
+device properties such as screen resolution or browser plugins. It only sends
+what your browser transmits with every page view anyway (address of the page,
+referrer, browser and operating system from the user agent, language), the
+page title and the time of the visit, and, for clicks on external links or
+downloads, the target address.</p>
+
+<p>Your IP address is shortened by two bytes as soon as it is received; the full
+address is not stored. Page views of one visit are grouped with a checksum
+whose salt changes daily, so you cannot be recognised on later days or across
+websites. Visit data is deleted after 90 days; only aggregated, anonymous
+reports are kept. The legal basis is our legitimate interest in improving the
+website (Art. 6(1)(f) GDPR). You can object at any time (Art. 21 GDPR): if
+“Do Not Track” is enabled in your browser, the tracker sends no data at all.
+You can also block the script from matomo.openlegaldata.io.</p>
 
 </div>
 
@@ -57,14 +89,16 @@
     <footer class="bd-footer text-muted">
         <div class="container p-3 p-md-5">
             <ul class="bd-footer-links">
-
-                <li><a href="/about">About</a></li>
-                <li><a href="/imprint">Imprint</a></li>
-                <li><a href="/privacy">Privacy</a></li>
-                <li><a href="/blog">Blog</a></li>
-
+                <li><a href="/about/">About</a></li>
+                <li><a href="/open-data/">Open Data &amp; AI</a></li>
+                <li><a href="/research/">Research</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/imprint/">Imprint</a></li>
+                <li><a href="/privacy/">Privacy</a></li>
+                <li><a href="https://de.openlegaldata.io/"><img src="/assets/flags/de.svg" alt="" class="btn-flag"> Platform</a></li>
+                <li><a href="https://discord.gg/WCy3aq25ZF"><i class="fa-brands fa-discord" aria-hidden="true"></i> Discord</a></li>
                 <li><a href="https://github.com/openlegaldata"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a></li>
-
+                <li><a href="https://huggingface.co/openlegaldata">🤗 Hugging Face</a></li>
             </ul>
         </div>
     </footer>
