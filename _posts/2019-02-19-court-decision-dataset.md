@@ -21,8 +21,13 @@ Feel free to share your results with us or to contact us if you have any questio
 
 ### Download
 
-- [German court decisions](https://huggingface.co/datasets/openlegaldata/court-decisions-germany) (json.gz: 772M)
-- [Citation network](https://huggingface.co/datasets/openlegaldata/legal-citation-graph) (csv.gz: 4.4M)
+The datasets are now hosted on Hugging Face:
+
+- [German court decisions](https://huggingface.co/datasets/openlegaldata/court-decisions-germany)
+- [Citation network](https://huggingface.co/datasets/openlegaldata/legal-citation-graph-germany)
+
+They contain newer and larger snapshots than the 2019 release described in this post, which is no longer hosted.
+Only its citation list is still available, in the [deprecated citation dataset](https://huggingface.co/datasets/openlegaldata/legal-citation-graph).
 
 
 ### What can you do with the data?
@@ -32,8 +37,6 @@ However, if you are not creative enough, just have a look at our examples:
 
 - [Citation analysis](https://github.com/openlegaldata/oldp-notebooks/blob/master/notebooks/references.ipynb): 
     What cites what?
-- [Citation network visualization](http://openlegaldata.io/de/citation-network.html): 
-    An inactive plot where you can zoom and click on each nodes.
 - [Litigation value extraction](https://github.com/openlegaldata/oldp-notebooks/blob/master/notebooks/litigation_value.ipynb): 
     Extract information from the raw text
 - [Learning a Predictive N-Gram Model](https://github.com/openlegaldata/oldp-notebooks/blob/master/notebooks/ngram_model.ipynb)
