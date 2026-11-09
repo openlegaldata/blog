@@ -29,7 +29,7 @@ links:
 # _includes/matomo.html). Tracking is off while matomo_site_id is empty and
 # in non-production builds.
 matomo_url: https://matomo.openlegaldata.io/
-matomo_site_id: ""
+matomo_site_id: "3"
 
 plugins:
   - jekyll-feed
