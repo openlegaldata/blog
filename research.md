@@ -3,7 +3,7 @@ layout: page
 title: Research
 permalink: /research/
 ---
-{% assign paper_count = site.data.papers.size | minus: site.data.research_topics.hidden.size %}
+{% assign paper_count = site.data.papers.size | minus: site.data.research_topics.hidden.size| minus: site.data.research_topics.not_citing.size %}
 
 ## Legal Research
 

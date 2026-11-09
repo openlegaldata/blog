@@ -40,6 +40,8 @@ The research page lists papers citing Open Legal Data from
 - `_data/research_topics.yml` assigns every paper to a topic. The `llm` topic is the highlight of language models
   trained on Open Legal Data: list a paper there only if its full text says our data is part of the training data
   or corpus.
+- `scripts/extra_papers.bib` holds papers that use our data without citing our paper. List them under `not_citing`
+  in `research_topics.yml` so they are shown but not counted as citations.
 
 After adding citations to oldp-citations (checked out next to this repo):
 

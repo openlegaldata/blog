@@ -18,9 +18,9 @@ topics:
       - key: chan2020german
         model: GBERT & GELECTRA
         note: German BERT and ELECTRA models; 2.4 GB of Open Legal Data court decisions in the pretraining corpus.
-      - key: ostendorff2023efficient
-        model: BLOOM-CLP German
-        note: German GPT-style models; web text complemented with court decisions from Open Legal Data.
+      - key: assenmacher2021re
+        model: German BERT
+        note: "deepset's German BERT, pretrained on Wikipedia, news and the 2.4 GB Open Legal Data dump, as documented in:"
       - key: dada2023impact
         model: GeBERTa
         note: German DeBERTa models; pretraining data includes Open Legal Data cases and laws.
@@ -33,9 +33,9 @@ topics:
       - key: tamayo2026mrbert
         model: MrBERT
         note: Multilingual encoders; training data includes Open Legal Data court decisions and laws.
-      - key: ostendorff2024llm
-        model: LLM-datasets
-        note: Open framework for building LLM pretraining corpora; ships Open Legal Data as a German legal source.
+      - key: niklaus2024multilegalpile
+        model: MultiLegalPile
+        note: 689 GB multilingual legal corpus for pretraining legal RoBERTa and Longformer models; its German case law and legislation come from Open Legal Data.
       - key: gienapp2025german
         model: German Commons
         note: 154 billion tokens of openly licensed German text; Open Legal Data is part of its legal subset.
@@ -49,6 +49,7 @@ topics:
       - hamotskyi2024fincorpus
       - darji2024challenges
       - braun2024beg
+      - ostendorff2024llm
       - darji2023dataset
       - wrzalik2021gerdalir
 
@@ -111,17 +112,22 @@ topics:
       - luhrs2024self
       - nie2024multilingual
       - nikhil2024advancing
+      - ostendorff2023efficient
       - idrissi2023domain
       - schultenkamper2023privacy
       - gritto2022application
       - lentzen2022critical
       - rudolf2022speech
-      - assenmacher2021re
       - calizzano2021dfki
       - corvonato2021re
       - hildebrandt2021data
       - pimienta2021multilingual
       - thomethematische
+
+# Use Open Legal Data but do not cite our paper (from scripts/extra_papers.bib):
+# shown on the page, not counted as citations.
+not_citing:
+  - niklaus2024multilegalpile
 
 # Duplicates of another entry (flattmodel: undated copy of flatt2023model).
 hidden:

@@ -81,12 +81,12 @@ def link(e: dict, title: str) -> str:
     return "https://scholar.google.com/scholar?q=" + urllib.parse.quote(f'"{title}"')
 
 
-def load_entries(bib_dir: str) -> dict:
+def load_entries(bib_dir: str, extra_bib: str) -> dict:
     entries = {}
     paths = sorted(glob.glob(os.path.join(bib_dir, "*.bib")))
     if not paths:
         sys.exit(f"no .bib files in {bib_dir} (pass --bib-dir)")
-    for path in paths:
+    for path in [*paths, extra_bib]:
         parser = BibTexParser(common_strings=True)
         parser.customization = convert_to_unicode
         with open(path, encoding="utf-8") as fh:
@@ -129,18 +129,23 @@ def check(papers: dict, topics_path: str) -> list[str]:
             errors.append(f"{key} is hidden but listed in {seen[key]}")
         seen[key] = "hidden"
     errors += [f"{k} is not assigned to a topic" for k in papers if k not in seen]
+    for key in cfg.get("not_citing", []):
+        if key not in papers or seen.get(key, "hidden") == "hidden":
+            errors.append(f"not_citing: {key} is not shown in any topic")
     return errors
 
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--bib-dir", default=os.path.join(ROOT, "..", "oldp-citations", "bib"))
+    ap.add_argument("--extra-bib", default=os.path.join(ROOT, "scripts", "extra_papers.bib"),
+                    help="papers that use Open Legal Data but do not cite our paper")
     ap.add_argument("--topics", default=os.path.join(ROOT, "_data", "research_topics.yml"))
     ap.add_argument("--out", default=os.path.join(ROOT, "_data", "papers.yml"))
     ap.add_argument("--check", action="store_true", help="only validate, do not write")
     args = ap.parse_args()
 
-    papers = build(load_entries(args.bib_dir))
+    papers = build(load_entries(args.bib_dir, args.extra_bib))
     errors = check(papers, args.topics)
     for err in errors:
         print("ERROR", err, file=sys.stderr)
