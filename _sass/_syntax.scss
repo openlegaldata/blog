@@ -99,3 +99,10 @@
 
 // Inline code outside a `.highlight` block keeps the existing pink Bootstrap
 // look. Override only for code that lives inside highlight blocks above.
+
+// The theme's docs CSS prefixes bash blocks with a "$" prompt, which ends up
+// alone in front of snippets that start with a comment.
+.language-bash::before,
+.language-sh::before {
+  content: none;
+}
