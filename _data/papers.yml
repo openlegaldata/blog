@@ -143,6 +143,12 @@ nikhil2024advancing:
   year: 2024
   venue: PhD thesis, International Institute of Information Technology Hyderabad
   url: https://scholar.google.com/scholar?q=%22Advancing%20Dravidian%20Language%20Processing%20Beyond%20the%20Sentence%20Level%22
+niklaus2024multilegalpile:
+  title: 'MultiLegalPile: A 689GB Multilingual Legal Corpus'
+  authors: Joel Niklaus, Veton Matoshi, Matthias Stürmer et al.
+  year: 2024
+  venue: 'Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)'
+  url: https://doi.org/10.18653/v1/2024.acl-long.805
 ostendorff2024llm:
   title: 'LLM-datasets: An open framework for pretraining datasets of large language models'
   authors: Malte Ostendorff, Pedro Ortiz Suarez, Lucas Fonseca Lage et al.

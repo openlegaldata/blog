@@ -8,7 +8,7 @@ Each box is a flex column with its button row pushed to the bottom (mt-auto)
 so the buttons of one row line up on desktop.
 {% endcomment %}
 {% assign llm = site.data.research_topics.topics | where: "id", "llm" | first %}
-{% assign paper_count = site.data.papers.size | minus: site.data.research_topics.hidden.size %}
+{% assign paper_count = site.data.papers.size | minus: site.data.research_topics.hidden.size| minus: site.data.research_topics.not_citing.size %}
 
 <div class="home-masthead bd-masthead">
     <div class="container">
